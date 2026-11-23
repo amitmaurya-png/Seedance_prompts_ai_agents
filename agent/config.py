@@ -7,9 +7,10 @@ from typing import Optional, Tuple
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-# The skill files the agent loads: folder names under skills/.
-# Each loads skills/<name>/SKILL.md. Set to None to load every skill.
-ACTIVE_SKILLS: Optional[Tuple[str, ...]] = ("seedance-prompt-writer",)
+# Which skill files each node loads: folder names under skills/.
+# Each name loads skills/<name>/SKILL.md.
+WRITER_SKILLS: Tuple[str, ...] = ("seedance-prompt-writer",)
+REVIEWER_SKILLS: Tuple[str, ...] = ("seedance-prompt-reviewer",)
 
 
 @dataclass(frozen=True)
@@ -22,4 +23,5 @@ class LLMConfig:
     system_prompt: str = "You are a helpful assistant. Answer clearly and concisely."
     # Skills in skills/<name>/SKILL.md are appended to the system prompt.
     skills_dir: Path = PROJECT_ROOT / "skills"
-    skills: Optional[Tuple[str, ...]] = ACTIVE_SKILLS
+    # Names of the skills to load. () loads none; None loads every skill.
+    skills: Optional[Tuple[str, ...]] = ()

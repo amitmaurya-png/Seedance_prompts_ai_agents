@@ -23,7 +23,7 @@ class OpenAILLM:
         self.config = config or LLMConfig()
         # Reads OPENAI_API_KEY from the environment by default.
         self.client = client or OpenAI()
-        self.skills = load_skills(self.config.skills_dir)
+        self.skills = load_skills(self.config.skills_dir, self.config.skills)
         self.system_prompt = self._build_system_prompt()
 
     def _build_system_prompt(self) -> str:

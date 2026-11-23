@@ -17,5 +17,5 @@ def build_graph(llm: Optional[OpenAILLM] = None):
     graph = StateGraph(GraphState)
     graph.add_node(LLM_NODE, make_llm_node(llm))
     graph.add_edge(START, LLM_NODE)
-    graph.add_edge(LLM_NODE, END)
+    graph.add_edge(LLM_NODE, END) 
     return graph.compile()

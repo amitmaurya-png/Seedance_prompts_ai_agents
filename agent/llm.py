@@ -6,6 +6,7 @@ from openai import OpenAI
 from openai.types.chat import ChatCompletionMessage
 
 from agent.config import LLMConfig
+from agent.skills import load_skills, render_skills
 from agent.state import Message
 
 
@@ -22,6 +23,13 @@ class OpenAILLM:
         self.config = config or LLMConfig()
         # Reads OPENAI_API_KEY from the environment by default.
         self.client = client or OpenAI()
+        self.skills = load_skills(self.config.skills_dir)
+        self.system_prompt = self._build_system_prompt()
+
+    def _build_system_prompt(self) -> str:
+        """Base instructions followed by any loaded skills."""
+        skills_section = render_skills(self.skills)
+        return "\n\n".join(p for p in (self.config.system_prompt, skills_section) if p)
 
     def chat(self, messages: List[Message]) -> ChatCompletionMessage:
         """Send the conversation to the model and return its reply message."""
@@ -35,7 +43,7 @@ class OpenAILLM:
         params: Dict[str, Any] = {
             "model": self.config.model,
             "max_completion_tokens": self.config.max_completion_tokens,
-            "messages": [{"role": "system", "content": self.config.system_prompt}]
+            "messages": [{"role": "system", "content": self.system_prompt}]
             + messages,
         }
         if self.config.reasoning_effort:

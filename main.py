@@ -1,13 +1,15 @@
-"""Entry point.
+"""Entry point: skit PDF -> breakdown.json -> prompt.json -> curl_commands.json.
 
     source .venv/bin/activate
     pip install -U -r requirements.txt
-    python main.py "Your question"
+    python main.py                 # uses data/TSL.pdf
+    python main.py path/to/skit.pdf
 
 Reads OPENAI_API_KEY (and optionally OPENAI_MODEL) from .env.
-Each node's skills are set in agent/config.py (WRITER_SKILLS, REVIEWER_SKILLS).
+Per-node skills, paths and MAX_SCENES are set in agent/config.py.
 """
 
+import logging
 import sys
 
 from dotenv import load_dotenv
@@ -16,18 +18,26 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from agent import build_graph, initial_state  # noqa: E402
-
-DEFAULT_QUESTION = "A cat exploring a rainy Tokyo street at night"
+from agent.config import CURL_JSON, PROMPT_JSON, SKIT_PDF  # noqa: E402
 
 
 def main() -> None:
-    question = " ".join(sys.argv[1:]) or DEFAULT_QUESTION
-    result = build_graph().invoke(initial_state(question))
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+    pdf_path = sys.argv[1] if len(sys.argv) > 1 else str(SKIT_PDF)
 
-    print("=== Draft (writer) ===")
-    print(result["draft"])
-    print("\n=== Final (reviewer) ===")
-    print(result["answer"])
+    result = build_graph().invoke(initial_state(pdf_path))
+
+    clips = result["clips"]
+    commands = result["curl_commands"]["clips"]
+    ready = sum(1 for c in commands.values() if not c["missing"])
+    print(f"\n{len(clips)} clips, {sum(c['duration_seconds'] for c in clips)} s total")
+    print(f"prompt.json:        {PROMPT_JSON}")
+    print(f"curl commands:      {CURL_JSON} ({ready}/{len(commands)} ready to send)")
+
+    if result["warnings"]:
+        print(f"\n{len(result['warnings'])} warning(s):")
+        for warning in result["warnings"]:
+            print(f"- {warning}")
 
 
 if __name__ == "__main__":

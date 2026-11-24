@@ -5,31 +5,21 @@ from typing import Annotated, Any, Dict, List
 
 from typing_extensions import TypedDict
 
-# A chat message in OpenAI format: {"role": "user" | "assistant", "content": ...}
-Message = Dict[str, Any]
+
+class PipelineState(TypedDict, total=False):
+    # Input
+    pdf_path: str
+    # load_skit: [{"number", "heading", "text"}]
+    scenes: List[Dict[str, Any]]
+    # extract_breakdown: {"source", "scenes": [{"number", "heading", "shots": [...]}]}
+    breakdown: Dict[str, Any]
+    # build_clips -> direct_camera -> render_prompts: the clips of data/prompt.json
+    clips: List[Dict[str, Any]]
+    # build_curl: {"clips": {clip id: {...}}}
+    curl_commands: Dict[str, Any]
+    # Any node can append; `operator.add` concatenates the lists.
+    warnings: Annotated[List[str], operator.add]
 
 
-class GraphState(TypedDict):
-    # `operator.add` appends each node's returned messages to the history.
-    messages: Annotated[List[Message], operator.add]
-    # First version of the answer, written by the writer node.
-    draft: str
-    # Final answer, written by the reviewer node.
-    answer: str
-
-
-def initial_state(user_input: str) -> GraphState:
-    """Build the starting state for a single user question."""
-    return {
-        "messages": [{"role": "user", "content": user_input}],
-        "draft": "",
-        "answer": "",
-    }
-
-
-def latest_user_message(state: GraphState) -> str:
-    """Text of the most recent user message in the history."""
-    for message in reversed(state["messages"]):
-        if message["role"] == "user":
-            return message["content"]
-    return ""
+def initial_state(pdf_path: str) -> PipelineState:
+    return {"pdf_path": pdf_path, "warnings": []}

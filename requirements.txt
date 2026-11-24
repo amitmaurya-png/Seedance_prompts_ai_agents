@@ -2,3 +2,4 @@ openai
 langgraph
 python-dotenv
 typing_extensions
+pypdf

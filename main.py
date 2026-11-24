@@ -12,6 +12,7 @@ Per-node skills, paths and MAX_SCENES are set in agent/config.py.
 import logging
 import sys
 
+import openai
 from dotenv import load_dotenv
 
 # Load .env before anything creates the OpenAI client.
@@ -19,13 +20,17 @@ load_dotenv()
 
 from agent import build_graph, initial_state  # noqa: E402
 from agent.config import CURL_JSON, PROMPT_JSON, SKIT_PDF  # noqa: E402
+from agent.errors import describe_openai_error  # noqa: E402
 
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     pdf_path = sys.argv[1] if len(sys.argv) > 1 else str(SKIT_PDF)
 
-    result = build_graph().invoke(initial_state(pdf_path))
+    try:
+        result = build_graph().invoke(initial_state(pdf_path))
+    except openai.OpenAIError as error:
+        sys.exit(f"\nStopped: {describe_openai_error(error)}")
 
     clips = result["clips"]
     commands = result["curl_commands"]["clips"]

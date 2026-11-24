@@ -3,3 +3,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Presigned download URLs; regenerated each run
+skills/seedance-curl/references/last_frames

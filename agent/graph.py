@@ -9,12 +9,10 @@ from typing import Optional
 from langgraph.graph import END, START, StateGraph
 from openai import OpenAI
 
-from agent.config import CAMERA_SKILLS, CLIP_SKILLS, EXTRACT_SKILLS, LLMConfig
+from agent import config, prompts
+from agent.config import LLMConfig
 from agent.llm import OpenAILLM
 from agent.nodes import (
-    CAMERA_SYSTEM,
-    CLIPS_SYSTEM,
-    EXTRACT_SYSTEM,
     build_curl,
     load_skit,
     make_build_clips,
@@ -24,38 +22,33 @@ from agent.nodes import (
 )
 from agent.state import PipelineState
 
-PIPELINE = (
-    "load_skit",
-    "extract_breakdown",
-    "build_clips",
-    "direct_camera",
-    "render_prompts",
-    "build_curl",
-)
-
 
 def build_graph(client: Optional[OpenAI] = None):
     # All LLM nodes share one OpenAI client; each loads only its own skills.
     client = client or OpenAI()
-    extract_llm = OpenAILLM(LLMConfig(system_prompt=EXTRACT_SYSTEM, skills=EXTRACT_SKILLS,
-                                      include_references=False), client)
-    clips_llm = OpenAILLM(LLMConfig(system_prompt=CLIPS_SYSTEM, skills=CLIP_SKILLS), client)
-    camera_llm = OpenAILLM(LLMConfig(system_prompt=CAMERA_SYSTEM, skills=CAMERA_SKILLS), client)
 
-    nodes = {
-        "load_skit": load_skit,
-        "extract_breakdown": make_extract_breakdown(extract_llm),
-        "build_clips": make_build_clips(clips_llm),
-        "direct_camera": make_direct_camera(camera_llm),
-        "render_prompts": render_prompts,
-        "build_curl": build_curl,
-    }
+    def llm(system_prompt: str, skills, include_references: bool = True) -> OpenAILLM:
+        cfg = LLMConfig(
+            system_prompt=system_prompt, skills=skills, include_references=include_references
+        )
+        return OpenAILLM(cfg, client)
+
+    # Nodes in run order.
+    pipeline = [
+        ("load_skit", load_skit),
+        ("extract_breakdown", make_extract_breakdown(
+            llm(prompts.EXTRACT_SYSTEM, config.EXTRACT_SKILLS, include_references=False))),
+        ("build_clips", make_build_clips(llm(prompts.CLIPS_SYSTEM, config.CLIP_SKILLS))),
+        ("direct_camera", make_direct_camera(llm(prompts.CAMERA_SYSTEM, config.CAMERA_SKILLS))),
+        ("render_prompts", render_prompts),
+        ("build_curl", build_curl),
+    ]
 
     graph = StateGraph(PipelineState)
-    for name in PIPELINE:
-        graph.add_node(name, nodes[name])
-    graph.add_edge(START, PIPELINE[0])
-    for current, following in zip(PIPELINE, PIPELINE[1:]):
+    for name, node in pipeline:
+        graph.add_node(name, node)
+
+    names = [name for name, _ in pipeline]
+    for current, following in zip([START] + names, names + [END]):
         graph.add_edge(current, following)
-    graph.add_edge(PIPELINE[-1], END)
     return graph.compile()

@@ -1,8 +1,8 @@
-"""Node 4 (LLM, skills: skit-to-prompt-json, seedance-prompting): breakdown -> clips.
+"""Node 5 (LLM, skill: stylized-3d-film-director): breakdown -> clips.
 
-The LLM writes each clip's story fields. Fields the skills define as fixed
-(id, format, style, base constraints, continuity hand-off, API params) are
-added in code by `finish_clip`.
+The LLM groups each scene's shots into clips (at most 4 shots, 4-15 s). Fixed
+fields (id, style, base constraints, continuity hand-off, API params) are added
+in code by `finish_clip`.
 """
 
 import logging
@@ -13,16 +13,17 @@ from agent.helpers.seedance_request import read_url_file
 from agent.helpers.verbatim import check_verbatim, shot_pieces
 from agent.llm import OpenAILLM
 from agent.nodes.retry import Reply, ask_until_valid
-from agent.prompts import clips_request
+from agent.prompts import plan_request
 from agent.state import PipelineState
 
 log = logging.getLogger("agent")
 
 Clip = Dict[str, Any]
+MAX_SHOTS = 4  # stylized-3d-film-director: at most 4 shots per generation
 
 
-def make_build_clips(llm: OpenAILLM):
-    def build_clips(state: PipelineState) -> Dict[str, Any]:
+def make_plan_clips(llm: OpenAILLM):
+    def plan_clips(state: PipelineState) -> Dict[str, Any]:
         image_names = sorted(read_url_file(config.CURL_REFERENCES_DIR / "image_urls"))
         clips: List[Clip] = []
         warnings: List[str] = []
@@ -31,7 +32,7 @@ def make_build_clips(llm: OpenAILLM):
             log.info("Clips: scene %d %s", scene["number"], scene["heading"])
             reply, problems = ask_until_valid(
                 llm,
-                clips_request(scene, image_names),
+                plan_request(scene, image_names),
                 find_problems=lambda r: _clip_problems(r, scene),
             )
             warnings += [f"clips scene {scene['number']}: {p}" for p in problems]
@@ -42,7 +43,7 @@ def make_build_clips(llm: OpenAILLM):
 
         return {"clips": clips, "warnings": warnings}
 
-    return build_clips
+    return plan_clips
 
 
 # --- Checks ------------------------------------------------------------------
@@ -61,8 +62,14 @@ def _clip_problems(reply: Reply, scene: Dict[str, Any]) -> List[str]:
         seconds = clip.get("duration_seconds", 0)
         if not 4 <= seconds <= 15:
             problems.append(f"clip {clip.get('source')} is {seconds}s (must be 4-15)")
-        if len(clip.get("shot_details", [])) > 3:
-            problems.append(f"clip {clip.get('source')} has more than 3 shots")
+        shots = clip.get("shot_details", [])
+        if not 1 <= len(shots) <= MAX_SHOTS:
+            problems.append(f"clip {clip.get('source')} has {len(shots)} shots (must be 1-{MAX_SHOTS})")
+        shot_seconds = sum(s.get("seconds", 0) for s in shots)
+        if shot_seconds != seconds:
+            problems.append(
+                f"clip {clip.get('source')}: shots add up to {shot_seconds}s, not {seconds}s"
+            )
     return problems
 
 
@@ -91,10 +98,8 @@ def finish_clip(
             "duration": seconds,
             "return_last_frame": config.SEEDANCE.return_last_frame,
         },
-        "format": _format_line(seconds, len(shots)),
         "style": config.STYLE_LINE,
         "references": sorted(raw.get("references", []), key=lambda r: r["n"]),
-        "subjects": raw.get("subjects", []),
         "scene_setting": f"{scene['heading']} (@Image {scene_image})" if scene_image else scene["heading"],
         "shot_details": shots,
         "audio": raw.get("audio", {}),
@@ -108,11 +113,6 @@ def finish_clip(
 
     clip["constraints"] += [c for c in raw.get("constraints", []) if c not in clip["constraints"]]
     return clip
-
-
-def _format_line(seconds: int, shot_count: int) -> str:
-    cuts = "one continuous shot" if shot_count == 1 else f"{shot_count} shots / soft cuts"
-    return f"{seconds}s / {config.SEEDANCE.ratio} / {cuts}"
 
 
 def _add_handoff(clip: Clip, previous_id: Optional[str]) -> None:

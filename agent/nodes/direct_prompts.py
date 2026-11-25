@@ -1,8 +1,8 @@
-"""Node 8 (LLM, skills: cinedance-director, acting-system, stylized-3d-film-director):
-each clip's template prompt -> the final Seedance 2.0 prompt -> data/prompt.json.
+"""Node 6 (LLM, skills: cinedance-director, acting-system, stylized-3d-film-director):
+each planned clip -> its Seedance 2.0 prompt -> data/prompt.json.
 
-The template draft is kept in the clip as `template_prompt`. Code checks that
-the rewrite keeps the dialogue, the @Image tags, the style line and the voices.
+Code checks that the prompt keeps the dialogue, the @Image tags, the style
+line and the voices, and asks again with the problems listed.
 """
 
 import logging
@@ -10,9 +10,9 @@ import re
 from typing import Any, Dict, List
 
 from agent import config
+from agent.helpers.json_files import write_prompt_json
 from agent.helpers.verbatim import check_verbatim, normalize
 from agent.llm import OpenAILLM
-from agent.nodes.render_prompts import write_prompt_json
 from agent.nodes.retry import Reply, ask_until_valid
 from agent.prompts import director_request
 from agent.state import PipelineState
@@ -40,12 +40,12 @@ def make_direct_prompts(llm: OpenAILLM):
             )
             warnings += [f"director {clip['id']}: {p}" for p in problems]
 
-            prompt = (reply.get("prompt") or "").strip()
-            if prompt:
-                clip["template_prompt"] = clip["prompt"]
-                clip["prompt"] = prompt
+            clip["prompt"] = (reply.get("prompt") or "").strip()
 
-        write_prompt_json(state["pdf_path"], clips, skills=list(config.DIRECTOR_SKILLS))
+        write_prompt_json(
+            config.PROMPT_JSON, state["pdf_path"], clips, skills=list(config.DIRECTOR_SKILLS)
+        )
+        log.info("Wrote %d clips to %s", len(clips), config.PROMPT_JSON)
         return {"clips": clips, "warnings": warnings}
 
     return direct_prompts
@@ -62,7 +62,7 @@ def _speakers(clip: Clip) -> List[str]:
 def _profiles_in_clip(clip: Clip, characters: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Profiles of characters who speak in the clip or are named in it."""
     text = " ".join(
-        clip.get("subjects", [])
+        [r["role"] for r in clip["references"]]
         + [shot.get("action", "") for shot in clip["shot_details"]]
     ).lower()
     speakers = set(_speakers(clip))

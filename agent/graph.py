@@ -1,7 +1,7 @@
 """Graph wiring:
 
-START -> load_skit -> extract_breakdown -> profile_characters -> build_clips
-      -> direct_camera -> render_prompts -> direct_prompts -> build_curl -> END
+START -> load_skit -> extract_breakdown -> profile_characters -> asset_prompts
+      -> plan_clips -> direct_prompts -> build_curl -> END
 """
 
 from typing import Optional
@@ -15,12 +15,11 @@ from agent.llm import OpenAILLM
 from agent.nodes import (
     build_curl,
     load_skit,
-    make_build_clips,
-    make_direct_camera,
+    make_asset_prompts,
     make_direct_prompts,
     make_extract_breakdown,
+    make_plan_clips,
     make_profile_characters,
-    render_prompts,
 )
 from agent.state import PipelineState
 
@@ -39,12 +38,12 @@ def build_graph(client: Optional[OpenAI] = None):
     pipeline = [
         ("load_skit", load_skit),
         ("extract_breakdown", make_extract_breakdown(
-            llm(prompts.EXTRACT_SYSTEM, config.EXTRACT_SKILLS, include_references=False))),
+            llm(prompts.EXTRACT_SYSTEM, config.EXTRACT_SKILLS))),
         ("profile_characters", make_profile_characters(
             llm(prompts.PROFILE_SYSTEM, config.PROFILE_SKILLS))),
-        ("build_clips", make_build_clips(llm(prompts.CLIPS_SYSTEM, config.CLIP_SKILLS))),
-        ("direct_camera", make_direct_camera(llm(prompts.CAMERA_SYSTEM, config.CAMERA_SKILLS))),
-        ("render_prompts", render_prompts),
+        ("asset_prompts", make_asset_prompts(
+            llm(prompts.ASSET_SYSTEM, config.ASSET_SKILLS))),
+        ("plan_clips", make_plan_clips(llm(prompts.PLAN_SYSTEM, config.PLAN_SKILLS))),
         ("direct_prompts", make_direct_prompts(
             llm(prompts.DIRECTOR_SYSTEM, config.DIRECTOR_SKILLS))),
         ("build_curl", build_curl),

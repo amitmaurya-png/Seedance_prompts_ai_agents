@@ -1,4 +1,4 @@
-"""Entry point: skit PDF -> breakdown.json -> prompt.json -> curl_commands.json.
+"""Entry point: skit PDF -> breakdown, acting profiles, asset prompts -> prompt.json -> curl_commands.json.
 
     source .venv/bin/activate
     pip install -U -r requirements.txt
@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from agent import build_graph, initial_state  # noqa: E402
-from agent.config import CURL_JSON, PROMPT_JSON, SKIT_PDF  # noqa: E402
+from agent.config import ASSET_PROMPTS_JSON, CHARACTERS_JSON, CURL_JSON, PROMPT_JSON, SKIT_PDF  # noqa: E402
 from agent.errors import describe_openai_error  # noqa: E402
 
 
@@ -36,6 +36,8 @@ def main() -> None:
     commands = result["curl_commands"]["clips"]
     ready = sum(1 for c in commands.values() if not c["missing"])
     print(f"\n{len(clips)} clips, {sum(c['duration_seconds'] for c in clips)} s total")
+    print(f"acting profiles:    {CHARACTERS_JSON} ({len(result['characters'])} characters)")
+    print(f"asset prompts:      {ASSET_PROMPTS_JSON} ({len(result['asset_prompts'])} images to make)")
     print(f"prompt.json:        {PROMPT_JSON}")
     print(f"curl commands:      {CURL_JSON} ({ready}/{len(commands)} ready to send)")
 

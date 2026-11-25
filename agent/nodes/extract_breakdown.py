@@ -1,4 +1,4 @@
-"""Node 2 (LLM, skill: skit-to-prompt-json): scenes -> data/breakdown.json."""
+"""Node 2 (LLM, no skill): scenes -> verbatim breakdown -> data/breakdown.json."""
 
 import logging
 from typing import Any, Dict, List

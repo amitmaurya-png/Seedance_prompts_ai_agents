@@ -14,31 +14,30 @@ DATA_DIR = PROJECT_ROOT / "data"
 SKIT_PDF = DATA_DIR / "TSL.pdf"
 BREAKDOWN_JSON = DATA_DIR / "breakdown.json"
 CHARACTERS_JSON = DATA_DIR / "characters.json"
+ASSET_PROMPTS_JSON = DATA_DIR / "asset_prompts.json"
 PROMPT_JSON = DATA_DIR / "prompt.json"
 CURL_JSON = PROJECT_ROOT / "curl" / "curl_commands.json"
 CURL_REFERENCES_DIR = SKILLS_DIR / "seedance-curl" / "references"
 
 # --- Which skills each LLM node loads (folder names under skills/) -----------
 
-EXTRACT_SKILLS: Tuple[str, ...] = ("skit-to-prompt-json",)
-CLIP_SKILLS: Tuple[str, ...] = ("skit-to-prompt-json", "seedance-prompting")
-CAMERA_SKILLS: Tuple[str, ...] = ("camera-knowledge",)
+EXTRACT_SKILLS: Tuple[str, ...] = ()  # plain verbatim copying; no skill needed
 PROFILE_SKILLS: Tuple[str, ...] = ("acting-system", "stylized-3d-film-director")
+ASSET_SKILLS: Tuple[str, ...] = ("lira-image-prompts", "stylized-3d-film-director")
+PLAN_SKILLS: Tuple[str, ...] = ("stylized-3d-film-director",)
 DIRECTOR_SKILLS: Tuple[str, ...] = (
     "cinedance-director",
     "acting-system",
     "stylized-3d-film-director",
 )
-# render_prompts and build_curl are plain code: they follow the template in
-# skit-to-prompt-json/references/prompt_json_rules.md and the rules in
-# seedance-curl/SKILL.md, and read the URL files in seedance-curl/references/.
+# build_curl is plain code: it follows seedance-curl/SKILL.md and reads the URL
+# files in seedance-curl/references/.
 
 # --- Run settings ------------------------------------------------------------
 
 # Process only the first N scenes (useful for cheap test runs). None = all.
 MAX_SCENES: Optional[int] = None
-# How many times an LLM node is asked again when its output fails the
-# verbatim check.
+# How many times an LLM node is asked again when its output fails its checks.
 VERBATIM_RETRIES = 1
 
 # --- Project rules -----------------------------------------------------------
@@ -49,7 +48,7 @@ STYLE_LINE = (
     "details, heartfelt tone with light comedy"
 )
 
-# Added to every clip's CONSTRAINTS (skit-to-prompt-json rules).
+# Added to every clip's constraints; the director keeps their meaning in each prompt.
 BASE_CONSTRAINTS: Tuple[str, ...] = (
     "One camera move per shot",
     "Render everything in stylized 3D animation; use the reference images for "

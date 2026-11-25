@@ -9,6 +9,7 @@ import logging
 from typing import Any, Dict, List
 
 from agent import config
+from agent.helpers.breakdown_text import script_text, speakers as find_speakers
 from agent.helpers.json_files import save_json
 from agent.llm import OpenAILLM
 from agent.nodes.retry import Reply, ask_until_valid
@@ -21,12 +22,12 @@ log = logging.getLogger("agent")
 def make_profile_characters(llm: OpenAILLM):
     def profile_characters(state: PipelineState) -> Dict[str, Any]:
         scenes = state["breakdown"]["scenes"]
-        speakers = _speakers(scenes)
+        speakers = find_speakers(scenes)
         log.info("Profiles: %d speaking characters", len(speakers))
 
         reply, problems = ask_until_valid(
             llm,
-            profile_request(_script(scenes), speakers),
+            profile_request(script_text(scenes), speakers),
             find_problems=lambda r: _profile_problems(r, speakers),
         )
         characters = {
@@ -41,33 +42,6 @@ def make_profile_characters(llm: OpenAILLM):
         }
 
     return profile_characters
-
-
-def _speakers(scenes: List[Dict[str, Any]]) -> List[str]:
-    """Speaking characters, in order of their first line."""
-    names: List[str] = []
-    for scene in scenes:
-        for shot in scene["shots"]:
-            for line in shot.get("dialogue", []):
-                name = line.get("character", "").strip().upper()
-                if name and name not in names:
-                    names.append(name)
-    return names
-
-
-def _script(scenes: List[Dict[str, Any]]) -> str:
-    """The breakdown as plain script text: heading, actions and lines."""
-    parts = []
-    for scene in scenes:
-        parts.append(scene["heading"])
-        for shot in scene["shots"]:
-            if shot.get("action"):
-                parts.append(shot["action"])
-            for line in shot.get("dialogue", []):
-                note = f" {line['parenthetical']}" if line.get("parenthetical") else ""
-                parts.append(f"{line.get('character', '')}{note}: {line.get('line', '')}")
-        parts.append("")
-    return "\n".join(parts)
 
 
 def _profile_problems(reply: Reply, speakers: List[str]) -> List[str]:

@@ -16,7 +16,9 @@ class PipelineState(TypedDict, total=False):
     # profile_characters: {CHARACTER NAME: {"name", "master_profile", "caps_rules",
     #                      "forbidden_readings", "voice"}}
     characters: Dict[str, Dict[str, Any]]
-    # build_clips -> direct_camera -> render_prompts: the clips of data/prompt.json
+    # asset_prompts: [{"name", "kind", "model", "platform_settings", "prompt", "notes"}]
+    asset_prompts: List[Dict[str, Any]]
+    # plan_clips -> direct_prompts: the clips of data/prompt.json
     clips: List[Dict[str, Any]]
     # build_curl: {"clips": {clip id: {...}}}
     curl_commands: Dict[str, Any]

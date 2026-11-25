@@ -1,10 +1,13 @@
 """Read and write the pipeline's JSON files."""
 
 import json
+import logging
 import shutil
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
+
+log = logging.getLogger("agent")
 
 
 def save_json(path: Path, data: Any) -> None:
@@ -30,3 +33,27 @@ def write_prompt_json(path: Path, pdf_path: str, clips: List[Dict[str, Any]], sk
             "clips": clips,
         },
     )
+
+
+def load_saved(path: Path, pdf_path: str) -> Optional[Dict[str, Any]]:
+    """A node's saved output, if it exists and was made from this skit.
+
+    Returns None when the file is missing, unreadable, or from another PDF, so
+    the node calls the LLM instead. Delete the file to make the node run again.
+    """
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        log.warning("Ignoring %s (%s); calling the LLM instead", path.name, error)
+        return None
+    if not isinstance(data, dict):
+        log.warning("Ignoring %s (not a JSON object); calling the LLM instead", path.name)
+        return None
+    # Files written before "source" was added are trusted as this skit's.
+    source = data.get("source")
+    if source and Path(source).resolve() != Path(pdf_path).resolve():
+        log.info("%s is from another skit (%s); calling the LLM instead", path.name, source)
+        return None
+    return data

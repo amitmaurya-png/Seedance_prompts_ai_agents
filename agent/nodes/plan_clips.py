@@ -6,7 +6,7 @@ in code by `finish_clip`.
 """
 
 import logging
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from agent import config
 from agent.helpers.seedance_request import read_url_file
@@ -83,9 +83,9 @@ def finish_clip(
     index_in_scene: int,
     previous_id: Optional[str],
 ) -> Clip:
-    seconds = int(raw.get("duration_seconds", 8))
-    shots = raw.get("shot_details", [])
-    scene_image = raw.get("scene_image")
+    seconds = int(raw.get("duration_seconds") or 8)
+    shots = raw.get("shot_details") or []
+    references, scene_image = _number_references(raw)
 
     clip: Clip = {
         "id": f"clip-{number:02d}",
@@ -99,7 +99,7 @@ def finish_clip(
             "return_last_frame": config.SEEDANCE.return_last_frame,
         },
         "style": config.STYLE_LINE,
-        "references": sorted(raw.get("references", []), key=lambda r: r["n"]),
+        "references": references,
         "scene_setting": f"{scene['heading']} (@Image {scene_image})" if scene_image else scene["heading"],
         "shot_details": shots,
         "audio": raw.get("audio", {}),
@@ -113,6 +113,24 @@ def finish_clip(
 
     clip["constraints"] += [c for c in raw.get("constraints", []) if c not in clip["constraints"]]
     return clip
+
+
+def _number_references(raw: Clip) -> Tuple[List[Dict[str, Any]], Optional[int]]:
+    """Number the references 1..N in the order listed; the model's `n` can be
+    missing or null. Returns the references and the scene image's new number.
+    """
+    refs = [r for r in raw.get("references") or [] if isinstance(r, dict) and r.get("role")]
+
+    numbered, old_to_new = [], {}
+    for new_n, ref in enumerate(refs, start=1):
+        if isinstance(ref.get("n"), int):
+            old_to_new[ref["n"]] = new_n
+        numbered.append({"n": new_n, "role": ref["role"]})
+
+    scene_image = old_to_new.get(raw.get("scene_image"))
+    if scene_image is None:  # fall back to the reference named as the scene
+        scene_image = next((r["n"] for r in numbered if "scene" in r["role"].lower()), None)
+    return numbered, scene_image
 
 
 def _add_handoff(clip: Clip, previous_id: Optional[str]) -> None:

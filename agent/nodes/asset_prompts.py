@@ -2,6 +2,9 @@
 breakdown -> image prompts for character sheets and location plates
 -> data/asset_prompts.json.
 
+If data/asset_prompts.json already exists for this skit, it is used and no
+LLM call is made.
+
 Generate these images (Soul 2.0, Soul Cinema, NBP ...), host them, and add each
 one's URL under its NAME in skills/seedance-curl/references/image_urls. The
 clips then send them as their @Image references.
@@ -13,7 +16,7 @@ from typing import Any, Dict, List
 
 from agent import config
 from agent.helpers.breakdown_text import locations, script_text, speakers
-from agent.helpers.json_files import save_json
+from agent.helpers.json_files import load_saved, save_json
 from agent.helpers.seedance_request import read_url_file
 from agent.helpers.verbatim import normalize
 from agent.llm import OpenAILLM
@@ -31,6 +34,16 @@ def make_asset_prompts(llm: OpenAILLM):
     def asset_prompts(state: PipelineState) -> Dict[str, Any]:
         scenes = state["breakdown"]["scenes"]
         characters = list(dict.fromkeys(speakers(scenes) + list(state.get("characters", {}))))
+
+        saved = load_saved(config.ASSET_PROMPTS_JSON, state["pdf_path"])
+        if saved and saved.get("assets"):
+            sheets = {a.get("name", "").strip().upper() for a in saved["assets"] if a.get("kind") == "character"}
+            missing = [name for name in characters if name not in sheets]
+            if not missing:
+                log.info("Assets: using saved %s (no LLM call)", config.ASSET_PROMPTS_JSON.name)
+                return {"asset_prompts": saved["assets"]}
+            log.info("Assets: saved file has no sheet for %s; calling the LLM", ", ".join(missing))
+
         places = locations(scenes)
         image_names = sorted(read_url_file(config.CURL_REFERENCES_DIR / "image_urls"))
         log.info("Assets: %d characters, %d locations", len(characters), len(places))

@@ -1,10 +1,13 @@
-"""Node 2 (LLM, no skill): scenes -> verbatim breakdown -> data/breakdown.json."""
+"""Node 2 (LLM, no skill): scenes -> verbatim breakdown -> data/breakdown.json.
+
+If data/breakdown.json already holds these scenes, it is used and no LLM call is made.
+"""
 
 import logging
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from agent import config
-from agent.helpers.json_files import save_json
+from agent.helpers.json_files import load_saved, save_json
 from agent.helpers.verbatim import check_verbatim, find_dropped_text, shot_pieces
 from agent.llm import OpenAILLM
 from agent.nodes.retry import Reply, ask_until_valid
@@ -16,6 +19,11 @@ log = logging.getLogger("agent")
 
 def make_extract_breakdown(llm: OpenAILLM):
     def extract_breakdown(state: PipelineState) -> Dict[str, Any]:
+        saved = _saved_breakdown(state)
+        if saved:
+            log.info("Breakdown: using saved %s (no LLM calls)", config.BREAKDOWN_JSON.name)
+            return {"breakdown": saved}
+
         scenes, warnings = [], []
         total = len(state["scenes"])
 
@@ -34,6 +42,19 @@ def make_extract_breakdown(llm: OpenAILLM):
         return {"breakdown": breakdown, "warnings": warnings}
 
     return extract_breakdown
+
+
+def _saved_breakdown(state: PipelineState) -> Optional[Dict[str, Any]]:
+    """The saved breakdown, if it has every scene this run needs."""
+    saved = load_saved(config.BREAKDOWN_JSON, state["pdf_path"])
+    if not saved:
+        return None
+    by_number = {s.get("number"): s for s in saved.get("scenes", [])}
+    needed = [scene["number"] for scene in state["scenes"]]
+    if not all(n in by_number for n in needed):
+        log.info("Breakdown: saved file lacks some scenes; calling the LLM")
+        return None
+    return {"source": saved["source"], "scenes": [by_number[n] for n in needed]}
 
 
 def _breakdown_scene(scene: Dict[str, Any], shots: List[Dict[str, Any]]) -> Dict[str, Any]:

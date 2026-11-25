@@ -2,15 +2,23 @@
 
 The LLM groups each scene's shots into clips (at most 4 shots, 4-15 s). Fixed
 fields (id, style, base constraints, continuity hand-off, API params) are added
-in code by `finish_clip`. After every scene's LLM call, the reply and the
-finished clips are saved to data/clip_plans.json.
+in code by `finish_clip`.
+
+Calls are kept low:
+- Durations are repaired in code (clamped to 4-15 s, shot seconds rescaled to
+  add up), so the LLM is asked again only for text or shot-count problems.
+- After every scene's LLM call, its reply is saved to data/clip_plans.json. A
+  later run reuses a saved scene when its breakdown is unchanged and the reply
+  still passes the checks, so only new or failed scenes cost a call.
 """
 
+import copy
 import logging
+import re
 from typing import Any, Dict, List, Optional, Tuple
 
 from agent import config
-from agent.helpers.json_files import ProgressFile
+from agent.helpers.json_files import ProgressFile, fingerprint
 from agent.helpers.seedance_request import read_url_file
 from agent.helpers.verbatim import check_verbatim, shot_pieces
 from agent.llm import OpenAILLM
@@ -22,6 +30,7 @@ log = logging.getLogger("agent")
 
 Clip = Dict[str, Any]
 MAX_SHOTS = 4  # stylized-3d-film-director: at most 4 shots per generation
+OLD_HANDOFF = re.compile(r"Continue the same moment from @Image \d+:[^;]*?exactly as in that frame(?:; )?")
 
 
 def make_plan_clips(llm: OpenAILLM):
@@ -31,33 +40,104 @@ def make_plan_clips(llm: OpenAILLM):
         warnings: List[str] = []
         progress = ProgressFile(config.CLIP_PLANS_JSON, state["pdf_path"], key="scenes")
 
+        reused = 0
+
         for scene in state["breakdown"]["scenes"]:
-            log.info("Clips: scene %d %s", scene["number"], scene["heading"])
-            reply, problems = ask_until_valid(
-                llm,
-                plan_request(scene, image_names),
-                find_problems=lambda r: _clip_problems(r, scene),
-            )
-            warnings += [f"clips scene {scene['number']}: {p}" for p in problems]
+            scene_id = str(scene["number"])
+            shots_hash = fingerprint(scene["shots"])
+            reply = _saved_reply(progress.saved(scene_id), scene, shots_hash)
+            was_reused = reply is not None
+            if was_reused:
+                problems: List[str] = []
+                reused += 1
+            else:
+                log.info("Clips: scene %d %s", scene["number"], scene["heading"])
+                reply, problems = ask_until_valid(
+                    llm,
+                    plan_request(scene, image_names),
+                    find_problems=lambda r: _clip_problems(r, scene),
+                    repair=_repair_durations,
+                )
+                warnings += [f"clips scene {scene['number']}: {p}" for p in problems]
 
             first_new = len(clips)
             for index_in_scene, raw in enumerate(reply.get("clips", [])):
                 previous_id = clips[-1]["id"] if clips else None
                 clips.append(finish_clip(raw, len(clips) + 1, scene, index_in_scene, previous_id))
 
-            progress.add(
-                str(scene["number"]),
-                {
-                    "heading": scene["heading"],
-                    "problems": problems,
-                    "reply": reply,  # the LLM's clips, as returned
-                    "clips": clips[first_new:],  # the same clips after finish_clip
-                },
-            )
+            entry = {
+                "heading": scene["heading"],
+                "shots_hash": shots_hash,
+                "problems": problems,
+                "reply": reply,  # the LLM's clips, as returned (durations repaired)
+                "clips": clips[first_new:],  # the same clips after finish_clip
+            }
+            if was_reused:
+                progress.keep(scene_id, entry)  # already in the file; no rewrite
+            else:
+                progress.add(scene_id, entry)
+
+        if reused:
+            log.info("Clips: reused %d saved scene(s) from %s", reused, config.CLIP_PLANS_JSON.name)
 
         return {"clips": clips, "warnings": warnings}
 
     return plan_clips
+
+
+# --- Reuse and repair --------------------------------------------------------
+
+
+def _saved_reply(entry: Optional[Dict[str, Any]], scene: Dict[str, Any], shots_hash: str) -> Optional[Reply]:
+    """The saved reply for this scene, if its input is unchanged and it still passes.
+
+    Entries saved before `shots_hash` existed are checked against the
+    breakdown instead (the verbatim check catches a changed scene).
+    """
+    if not entry or entry.get("heading") != scene["heading"] or not entry.get("reply"):
+        return None
+    if entry.get("shots_hash") not in (None, shots_hash):
+        return None
+    reply = _repair_durations(entry["reply"])
+    return None if _clip_problems(reply, scene) else reply
+
+
+def _repair_durations(reply: Reply) -> Reply:
+    """Clamp each clip to 4-15 s and rescale its shots' seconds to add up to it."""
+    for clip in reply.get("clips") or []:
+        shots = clip.get("shot_details") or []
+        try:
+            seconds = int(round(float(clip.get("duration_seconds") or 0)))
+        except (TypeError, ValueError):
+            seconds = 0
+        if not seconds:  # no clip duration: use the shots' total
+            seconds = int(sum(_number(s.get("seconds")) for s in shots))
+        seconds = min(max(seconds, 4), 15)
+        clip["duration_seconds"] = seconds
+        if shots and len(shots) <= seconds:
+            for shot, shot_seconds in zip(shots, _split(seconds, [_number(s.get("seconds")) for s in shots])):
+                shot["seconds"] = shot_seconds
+    return reply
+
+
+def _number(value: Any) -> float:
+    try:
+        return max(float(value), 0.0)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _split(total: int, weights: List[float]) -> List[int]:
+    """Whole seconds in proportion to weights (equal if none), each at least 1, summing to total."""
+    if sum(weights) <= 0:
+        weights = [1.0] * len(weights)
+    spare = total - len(weights)  # every shot gets 1 s first
+    shares = [spare * w / sum(weights) for w in weights]
+    parts = [1 + int(share) for share in shares]
+    by_remainder = sorted(range(len(shares)), key=lambda i: shares[i] - int(shares[i]), reverse=True)
+    for i in by_remainder[: total - sum(parts)]:
+        parts[i] += 1
+    return parts
 
 
 # --- Checks ------------------------------------------------------------------
@@ -97,6 +177,7 @@ def finish_clip(
     index_in_scene: int,
     previous_id: Optional[str],
 ) -> Clip:
+    raw = copy.deepcopy(raw)  # the reply is saved as returned; don't change it
     seconds = int(raw.get("duration_seconds") or 8)
     shots = raw.get("shot_details") or []
     references, scene_image = _number_references(raw)
@@ -104,6 +185,7 @@ def finish_clip(
     clip: Clip = {
         "id": f"clip-{number:02d}",
         "scene": scene["heading"],
+        "scene_number": scene["number"],
         "source": raw.get("source", []),
         "duration_seconds": seconds,
         "api_params": {
@@ -160,7 +242,8 @@ def _add_handoff(clip: Clip, previous_id: Optional[str]) -> None:
     )
     shots = clip["shot_details"]
     if shots:
-        note = shots[0].get("continuity", "")
+        # Saved replies may already carry a hand-off line; replace it.
+        note = OLD_HANDOFF.sub("", shots[0].get("continuity", "")).strip()
         shots[0]["continuity"] = f"{handoff}; {note}" if note else handoff
 
     clip["constraints"].append(

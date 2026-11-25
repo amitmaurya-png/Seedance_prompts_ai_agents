@@ -1,5 +1,6 @@
 """Read and write the pipeline's JSON files."""
 
+import hashlib
 import json
 import logging
 import shutil
@@ -60,18 +61,35 @@ def load_saved(path: Path, pdf_path: str) -> Optional[Dict[str, Any]]:
 
 
 class ProgressFile:
-    """A JSON file rewritten after every LLM call, so finished work survives a crash.
+    """A checkpoint file rewritten after every LLM call, so finished work survives
+    a crash and the next run can reuse it.
 
-    The first write of a run backs up the previous run's file; later writes
-    in the same run overwrite it without a backup.
+    `saved(id)` returns the previous run's entry. `keep` carries a reused entry
+    over without writing; `add` stores a new result and rewrites the file. The
+    first write of a run backs up the previous run's file.
     """
 
     def __init__(self, path: Path, pdf_path: str, key: str):
         self.path, self.key = path, key
+        previous = load_saved(path, pdf_path) or {}
+        self._previous: Dict[str, Any] = previous.get(key) or {}
         self.data: Dict[str, Any] = {"source": pdf_path, key: {}}
         self._first_write = True
+
+    def saved(self, item_id: str) -> Optional[Dict[str, Any]]:
+        entry = self._previous.get(item_id)
+        return entry if isinstance(entry, dict) else None
+
+    def keep(self, item_id: str, entry: Dict[str, Any]) -> None:
+        self.data[self.key][item_id] = entry
 
     def add(self, item_id: str, result: Dict[str, Any]) -> None:
         self.data[self.key][item_id] = result
         save_json(self.path, self.data, backup=self._first_write)
         self._first_write = False
+
+
+def fingerprint(data: Any) -> str:
+    """A short hash of a node's input, to tell whether a saved result still fits."""
+    text = json.dumps(data, ensure_ascii=False, sort_keys=True)
+    return hashlib.sha1(text.encode("utf-8")).hexdigest()[:16]

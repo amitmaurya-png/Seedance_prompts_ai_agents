@@ -181,14 +181,43 @@ DIRECTOR_SYSTEM = (
 
 
 def director_request(
-    clip: Dict[str, Any], profiles: List[Dict[str, Any]], style_line: str
+    clips: List[Dict[str, Any]], profiles: List[Dict[str, Any]], style_line: str
 ) -> str:
-    references = "\n".join(f"- @Image {r['n']}: {r['role']}" for r in clip["references"])
+    """One request for several clips of the same scene."""
+    sections = "\n\n".join(_clip_section(clip) for clip in clips)
+    ids = ", ".join(clip["id"] for clip in clips)
+    acting = json.dumps(profiles, ensure_ascii=False, indent=1) if profiles else "none"
+    return f"""Write the final Seedance 2.0 prompt for each of these clips of one scene: {ids}.
+
+Each prompt is generated on its own, so each one must stand alone: never refer to another clip's prompt ("as before", "same as clip-03"). Keep the scene's geography, screen direction, lighting and acting consistent from one clip to the next.
+
+Rules for every clip:
+- Use that clip's reference images with their exact tags, and name each character by their tag, e.g. "Miri (@Image 1)". Use no other @Image, @Video or @Audio tags; voice references are attached automatically after you.
+- If a reference is the "last frame of clip-NN", the clip opens exactly on that image: same positions, lighting, props and appearance.
+- Style block, pasted word for word: {style_line}
+- Speak only that clip's lines, each word for word, in order, by its speaker.
+- Keep the clip's shots, their order and their seconds. Duration, ratio and resolution are set by the API, so leave them out of the prompt.
+- Keep the meaning of every constraint, as positive constraints or local locks.
+- In AUDIO, include one line starting with "- Voices:" that names each speaker, and exactly one "no background music" line. For each character who speaks, paste their "voice" text word for word into AUDIO.
+
+Acting profiles of the characters in these clips (adapt them to each clip; never paste them unchanged):
+{acting}
+
+The clips, as planned from the script (actions and dialogue are verbatim):
+
+{sections}
+
+Reply with JSON, one prompt per clip id:
+{{"prompts": {{"{clips[0]['id']}": "SCENE CONTEXT\\n..."}}}}"""
+
+
+def _clip_section(clip: Dict[str, Any]) -> str:
+    references = "\n".join(f"  - @Image {r['n']}: {r['role']}" for r in clip["references"])
     dialogue = "\n".join(
-        f"- {line.get('character')}: {line['line']}"
+        f"  - {line.get('character')}: {line['line']}"
         for shot in clip["shot_details"]
         for line in shot.get("dialogue", [])
-    ) or "- none (no one speaks in this clip)"
+    ) or "  - none (no one speaks in this clip)"
     brief = {
         "scene": clip["scene_setting"],
         "duration_seconds": clip["duration_seconds"],
@@ -196,26 +225,21 @@ def director_request(
         "audio": clip.get("audio", {}),
         "constraints": clip["constraints"],
     }
-    acting = json.dumps(profiles, ensure_ascii=False, indent=1) if profiles else "none"
-    return f"""Write the final Seedance 2.0 prompt for {clip['id']} ({clip['duration_seconds']} s, {len(clip['shot_details'])} shot(s)).
-
-Fixed facts; keep all of them:
-- Reference images, with these exact tags. Name each character by their tag, e.g. "Miri (@Image 1)". Use no other @Image, @Video or @Audio tags; voice references are attached automatically after you.
+    return f"""=== {clip['id']} ({clip['duration_seconds']} s, {len(clip['shot_details'])} shot(s))
+Reference images:
 {references}
-- If a reference is the "last frame of clip-NN", the clip opens exactly on that image: same positions, lighting, props and appearance.
-- Style block, pasted word for word: {style_line}
-- Spoken lines, each word for word, in this order, by these speakers, and nothing else spoken:
+Spoken lines, in order:
 {dialogue}
-- Keep the shots, their order and their seconds. Duration, ratio and resolution are set by the API, so leave them out of the prompt.
-- Keep the meaning of every constraint, as positive constraints or local locks.
+Plan:
+{json.dumps(brief, ensure_ascii=False, indent=1)}"""
 
-Acting profiles of the characters in this clip (adapt them to this clip; never paste them unchanged). For each character who speaks, paste their "voice" text word for word into AUDIO:
-{acting}
 
-In AUDIO, include one line starting with "- Voices:" that names each speaker, and exactly one "no background music" line.
+def director_fix_request(problems: Dict[str, List[str]]) -> str:
+    """Ask again only for the clips whose prompts failed a check."""
+    listed = "\n".join(
+        f"{clip_id}:\n" + "\n".join(f"- {p}" for p in found) for clip_id, found in problems.items()
+    )
+    return f"""These prompts have problems:
+{listed}
 
-The clip, as planned from the script (actions and dialogue are verbatim):
-{json.dumps(brief, ensure_ascii=False, indent=1)}
-
-Reply with JSON:
-{{"prompt": "SCENE CONTEXT\\n..."}}"""
+Fix them. Reply with JSON holding only the corrected prompts, in full: {{"prompts": {{"<clip id>": "..."}}}} for {", ".join(problems)}."""

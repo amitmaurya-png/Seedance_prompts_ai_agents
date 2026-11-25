@@ -41,6 +41,9 @@ DIRECTOR_SKILLS: Tuple[str, ...] = (
 MAX_SCENES: Optional[int] = None
 # How many times an LLM node is asked again when its output fails its checks.
 VERBATIM_RETRIES = 1
+# direct_prompts writes this many clips of one scene per LLM call; larger
+# scenes are split evenly (10 clips -> 5 + 5).
+DIRECTOR_CLIPS_PER_CALL = 8
 
 # --- Project rules -----------------------------------------------------------
 

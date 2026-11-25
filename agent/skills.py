@@ -105,12 +105,21 @@ def _split_frontmatter(text: str) -> Tuple[Dict[str, str], str]:
         return {}, text.strip()
 
     metadata: Dict[str, str] = {}
+    folding_key = None  # key whose value is a `>` or `|` block on the lines below
     for index, line in enumerate(lines[1:], start=1):
         if line.strip() == FRONTMATTER_DELIMITER:
             body = "\n".join(lines[index + 1 :]).strip()
             return metadata, body
+        # Indented lines continue a multi-line `key: >` value.
+        if folding_key and (line.startswith((" ", "\t")) or not line.strip()):
+            metadata[folding_key] = f"{metadata[folding_key]} {line.strip()}".strip()
+            continue
+        folding_key = None
         key, _, value = line.partition(":")
         if key.strip():
-            metadata[key.strip()] = value.strip()
+            value = value.strip()
+            if value in (">", "|", ">-", "|-"):
+                folding_key, value = key.strip(), ""
+            metadata[key.strip()] = value
 
     raise ValueError("Frontmatter starts with '---' but is never closed")

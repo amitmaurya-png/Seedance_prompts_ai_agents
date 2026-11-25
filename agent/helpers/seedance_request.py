@@ -153,8 +153,12 @@ def _add_voice_line(prompt: str, voices: List[str]) -> str:
         f"@Audio {i} is {name.title()}'s voice" for i, name in enumerate(voices, start=1)
     )
     lines = prompt.split("\n")
-    for index, line in enumerate(lines):
-        if line.startswith("- Voices:"):
-            lines.insert(index + 1, note)
-            return "\n".join(lines)
-    return prompt.replace("\n\nCONSTRAINTS:", f"\n\nAUDIO:\n{note}\n\nCONSTRAINTS:", 1)
+    # Under the "- Voices:" line, else right under the AUDIO heading.
+    for prefix in ("- Voices:", "AUDIO"):
+        for index, line in enumerate(lines):
+            if line.strip().startswith(prefix):
+                lines.insert(index + 1, note)
+                return "\n".join(lines)
+    if "\n\nCONSTRAINTS:" in prompt:
+        return prompt.replace("\n\nCONSTRAINTS:", f"\n\nAUDIO:\n{note}\n\nCONSTRAINTS:", 1)
+    return f"{prompt}\n\nAUDIO:\n{note}"

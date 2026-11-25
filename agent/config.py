@@ -13,6 +13,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 
 SKIT_PDF = DATA_DIR / "TSL.pdf"
 BREAKDOWN_JSON = DATA_DIR / "breakdown.json"
+CHARACTERS_JSON = DATA_DIR / "characters.json"
 PROMPT_JSON = DATA_DIR / "prompt.json"
 CURL_JSON = PROJECT_ROOT / "curl" / "curl_commands.json"
 CURL_REFERENCES_DIR = SKILLS_DIR / "seedance-curl" / "references"
@@ -22,6 +23,12 @@ CURL_REFERENCES_DIR = SKILLS_DIR / "seedance-curl" / "references"
 EXTRACT_SKILLS: Tuple[str, ...] = ("skit-to-prompt-json",)
 CLIP_SKILLS: Tuple[str, ...] = ("skit-to-prompt-json", "seedance-prompting")
 CAMERA_SKILLS: Tuple[str, ...] = ("camera-knowledge",)
+PROFILE_SKILLS: Tuple[str, ...] = ("acting-system", "stylized-3d-film-director")
+DIRECTOR_SKILLS: Tuple[str, ...] = (
+    "cinedance-director",
+    "acting-system",
+    "stylized-3d-film-director",
+)
 # render_prompts and build_curl are plain code: they follow the template in
 # skit-to-prompt-json/references/prompt_json_rules.md and the rules in
 # seedance-curl/SKILL.md, and read the URL files in seedance-curl/references/.

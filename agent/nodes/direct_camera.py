@@ -1,4 +1,4 @@
-"""Node 4 (LLM, skill: camera-knowledge): clips -> Camera: and Placement: lines."""
+"""Node 5 (LLM, skill: camera-knowledge): clips -> Camera: and Placement: lines."""
 
 import logging
 from typing import Any, Dict, List, Tuple

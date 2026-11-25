@@ -13,6 +13,9 @@ class PipelineState(TypedDict, total=False):
     scenes: List[Dict[str, Any]]
     # extract_breakdown: {"source", "scenes": [{"number", "heading", "shots": [...]}]}
     breakdown: Dict[str, Any]
+    # profile_characters: {CHARACTER NAME: {"name", "master_profile", "caps_rules",
+    #                      "forbidden_readings", "voice"}}
+    characters: Dict[str, Dict[str, Any]]
     # build_clips -> direct_camera -> render_prompts: the clips of data/prompt.json
     clips: List[Dict[str, Any]]
     # build_curl: {"clips": {clip id: {...}}}

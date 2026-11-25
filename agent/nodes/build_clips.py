@@ -1,4 +1,4 @@
-"""Node 3 (LLM, skills: skit-to-prompt-json, seedance-prompting): breakdown -> clips.
+"""Node 4 (LLM, skills: skit-to-prompt-json, seedance-prompting): breakdown -> clips.
 
 The LLM writes each clip's story fields. Fields the skills define as fixed
 (id, format, style, base constraints, continuity hand-off, API params) are

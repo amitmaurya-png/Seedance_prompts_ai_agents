@@ -30,7 +30,7 @@ def ask_until_valid(
         reply = repair(reply)
     problems = find_problems(reply)
 
-    for _ in range(config.VERBATIM_RETRIES):
+    for _ in range(config.RETRIES):
         if not problems:
             break
         log.info("  found %d problem(s); asking again", len(problems))

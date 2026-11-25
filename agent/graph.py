@@ -28,11 +28,8 @@ def build_graph(client: Optional[OpenAI] = None):
     # All LLM nodes share one OpenAI client; each loads only its own skills.
     client = client or OpenAI()
 
-    def llm(system_prompt: str, skills, include_references: bool = True) -> OpenAILLM:
-        cfg = LLMConfig(
-            system_prompt=system_prompt, skills=skills, include_references=include_references
-        )
-        return OpenAILLM(cfg, client)
+    def llm(system_prompt: str, skills) -> OpenAILLM:
+        return OpenAILLM(LLMConfig(system_prompt=system_prompt, skills=skills), client)
 
     # Nodes in run order.
     pipeline = [

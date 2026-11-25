@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from agent.config import SeedanceSettings
+from agent.helpers.clips import clip_speakers
 
 URL_LINE = re.compile(r"^(?P<name>.+?)\s*:\s+(?P<url>\S+)\s*$")
 LAST_FRAME = re.compile(r"last frame of (clip-\d+)", re.IGNORECASE)
@@ -96,7 +97,7 @@ def build_request(
         )
 
     voices = []
-    for speaker in _speakers_in_order(clip)[: settings.max_voices]:
+    for speaker in clip_speakers(clip)[: settings.max_voices]:
         url = match_url(speaker, audio_urls)
         if url:
             voices.append(speaker)
@@ -135,16 +136,6 @@ def to_curl(body: Dict[str, Any], endpoint: str) -> str:
     )
 
 
-def _speakers_in_order(clip: Dict[str, Any]) -> List[str]:
-    speakers: List[str] = []
-    for shot in clip["shot_details"]:
-        for line in shot.get("dialogue", []):
-            name = line.get("character", "").strip()
-            if name and name not in speakers:
-                speakers.append(name)
-    return speakers
-
-
 def _add_voice_line(prompt: str, voices: List[str]) -> str:
     """Add '- Voice references: @Audio 1 is Saba's voice, ...' under '- Voices:'."""
     if not voices:
@@ -153,12 +144,10 @@ def _add_voice_line(prompt: str, voices: List[str]) -> str:
         f"@Audio {i} is {name.title()}'s voice" for i, name in enumerate(voices, start=1)
     )
     lines = prompt.split("\n")
-    # Under the "- Voices:" line, else right under the AUDIO heading.
+    # Under the "- Voices:" line, else right under the AUDIO heading, else in a new AUDIO block.
     for prefix in ("- Voices:", "AUDIO"):
         for index, line in enumerate(lines):
             if line.strip().startswith(prefix):
                 lines.insert(index + 1, note)
                 return "\n".join(lines)
-    if "\n\nCONSTRAINTS:" in prompt:
-        return prompt.replace("\n\nCONSTRAINTS:", f"\n\nAUDIO:\n{note}\n\nCONSTRAINTS:", 1)
     return f"{prompt}\n\nAUDIO:\n{note}"

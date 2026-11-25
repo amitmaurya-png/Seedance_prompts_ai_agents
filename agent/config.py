@@ -15,8 +15,8 @@ SKIT_PDF = DATA_DIR / "TSL.pdf"
 BREAKDOWN_JSON = DATA_DIR / "breakdown.json"
 CHARACTERS_JSON = DATA_DIR / "characters.json"
 ASSET_PROMPTS_JSON = DATA_DIR / "asset_prompts.json"
-CLIP_PLANS_JSON = DATA_DIR / "clip_plans.json"  # plan_clips, saved after every scene
-CLIP_PROMPTS_JSON = DATA_DIR / "clip_prompts.json"  # direct_prompts, saved after every clip
+CLIP_PLANS_JSON = DATA_DIR / "clip_plans.json"  # plan_clips checkpoint, written after every scene
+CLIP_PROMPTS_JSON = DATA_DIR / "clip_prompts.json"  # direct_prompts checkpoint, written after every call
 PROMPT_JSON = DATA_DIR / "prompt.json"
 CURL_JSON = PROJECT_ROOT / "curl" / "curl_commands.json"
 CURL_REFERENCES_DIR = SKILLS_DIR / "seedance-curl" / "references"
@@ -39,8 +39,8 @@ DIRECTOR_SKILLS: Tuple[str, ...] = (
 
 # Process only the first N scenes (useful for cheap test runs). None = all.
 MAX_SCENES: Optional[int] = None
-# How many times an LLM node is asked again when its output fails its checks.
-VERBATIM_RETRIES = 1
+# How many times an LLM node is asked again when its reply fails its checks.
+RETRIES = 1
 # direct_prompts writes this many clips of one scene per LLM call; larger
 # scenes are split evenly (10 clips -> 5 + 5).
 DIRECTOR_CLIPS_PER_CALL = 8

@@ -1,9 +1,9 @@
 """Read the breakdown back as script text, speakers and locations."""
 
 import re
-from typing import Any, Dict, List
+from typing import List
 
-Scene = Dict[str, Any]
+from agent.state import Scene
 TIME_OF_DAY = re.compile(r"\s+-\s+[A-Z][A-Z .']*$")
 INT_EXT = re.compile(r"^(?:INT\./EXT\.|INT\.|EXT\.)\s*")
 

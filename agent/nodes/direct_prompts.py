@@ -20,8 +20,9 @@ import re
 from typing import Any, Dict, List, Tuple
 
 from agent import config
+from agent.helpers.checkpoints import ProgressFile, fingerprint
 from agent.helpers.clips import clip_speakers
-from agent.helpers.json_files import ProgressFile, fingerprint, write_prompt_json
+from agent.helpers.json_files import write_prompt_json
 from agent.helpers.prompt_repair import prompt_problems, repair_prompt
 from agent.llm import OpenAILLM
 from agent.prompts import director_fix_request, director_request

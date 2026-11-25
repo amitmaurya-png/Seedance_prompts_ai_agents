@@ -2,9 +2,11 @@
 
 import re
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import List
 
 from pypdf import PdfReader
+
+from agent.state import Scene
 
 SCENE_HEADING = re.compile(r"^(?:INT\.|EXT\.|INT/EXT\.?|EXT/INT\.?)\s.*$", re.MULTILINE)
 PAGE_NUMBER_LINE = re.compile(r"^\s*\d+\.\s*$", re.MULTILINE)
@@ -21,7 +23,7 @@ def read_pdf_text(path: Path) -> str:
     return CONTD.sub("", text)
 
 
-def split_scenes(text: str) -> List[Dict[str, Any]]:
+def split_scenes(text: str) -> List[Scene]:
     """Split the skit at INT./EXT. headings. Text before the first heading is dropped.
 
     Returns [{"number": 1, "heading": "EXT. ...", "text": "..."}].

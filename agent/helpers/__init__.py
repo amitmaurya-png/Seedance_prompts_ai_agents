@@ -6,5 +6,6 @@
     clips             clip rules: durations, fixed fields, hand-offs, speakers
     prompt_repair     fix and check a director prompt
     seedance_request  build Seedance API requests and curl commands
-    json_files        JSON files: backups, saved outputs, checkpoints
+    json_files        write output files (with backups)
+    checkpoints       reuse saved LLM results instead of calling again
 """

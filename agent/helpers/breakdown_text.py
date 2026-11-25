@@ -4,7 +4,9 @@ import re
 from typing import List
 
 from agent.state import Scene
-TIME_OF_DAY = re.compile(r"\s+-\s+[A-Z][A-Z .']*$")
+
+# The " - DAY" / " — MORNING" part of a heading (hyphen, en dash or em dash).
+TIME_OF_DAY = re.compile(r"\s+[-–—]\s+[A-Z][A-Z .']*$")
 INT_EXT = re.compile(r"^(?:INT\./EXT\.|INT\.|EXT\.)\s*")
 
 
@@ -21,7 +23,7 @@ def speakers(scenes: List[Scene]) -> List[str]:
 
 
 def locations(scenes: List[Scene]) -> List[str]:
-    """Distinct places from the scene headings: 'EXT. SABA'S COURTYARD - DAY' -> "SABA'S COURTYARD"."""
+    """Distinct places from the scene headings: 'EXT. SABA'S COURTYARD — DAY' -> "SABA'S COURTYARD"."""
     places: List[str] = []
     for scene in scenes:
         place = TIME_OF_DAY.sub("", INT_EXT.sub("", scene["heading"].strip()))

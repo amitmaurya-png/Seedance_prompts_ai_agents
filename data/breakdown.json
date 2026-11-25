@@ -1,0 +1,2584 @@
+{
+  "source": "/Users/amitmaurya/Documents/Seedance_prompts_ai_agents/data/TSL.pdf",
+  "scenes": [
+    {
+      "number": 1,
+      "heading": "EXT. MIRI’S VILLAGE — MORNING",
+      "shots": [
+        {
+          "action": "Warm sunlight spills over a small ancient village. Clay homes. Woven baskets. Goats nosing through straw. A baker pulls flatbread from a clay oven. Children dart between adults carrying water jars and bundles of reeds.\nMIRI runs through the lane with NIM at her heels. Nim bounds lightly, oversized ears bouncing, nose twitching.\nMiri clutches a small cloth bundle close to her chest.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Is it bread?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "No.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Is it meat?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "No.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Is it bread pretending not to be bread?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-1"
+        },
+        {
+          "action": "MIRI stops beside a low wall and peeks inside the bundle. Three small HONEY-DATE CAKES gleam in the cloth.\nNim gasps as though beholding treasure.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "It is better than bread.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Ima made them for after chores.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "How many chores?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "One.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "And how many cakes?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Three.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "A perfect arrangement. Let no one disturb it.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-2"
+        },
+        {
+          "action": "Miri smiles and folds the cloth shut just as IMA appears from the doorway with a basket of folded linen.",
+          "dialogue": [
+            {
+              "character": "IMA",
+              "line": "Miri, take these to Saba Elior, please. His old sleeves are more patch than sleeve.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Again?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "IMA",
+              "line": "Again. And if you pass Tav on the way, give him one of the honey cakes.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-3"
+        },
+        {
+          "action": "Miri freezes.\nNim freezes too. He slowly turns toward Miri, eyes wide.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Perhaps there are two Tavs. We should confirm before making decisions.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Ima, Tav had a cake yesterday.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "IMA",
+              "line": "And you have three today.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-4"
+        },
+        {
+          "action": "MIRI looks down at the cloth bundle.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "But if I give one away, I will only have two.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "IMA",
+              "line": "That is usually how giving works.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "But I was going to save one for later.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-5"
+        },
+        {
+          "action": "IMA kneels, warm but firm.",
+          "dialogue": [
+            {
+              "character": "IMA",
+              "line": "Small hands can still be open hands.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "But what if there is not enough?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-6"
+        },
+        {
+          "action": "Ima studies her. She does not force it.",
+          "dialogue": [
+            {
+              "character": "IMA",
+              "line": "Then ask Saba what he thinks. He always has a story tucked somewhere.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-7"
+        },
+        {
+          "action": "Miri exhales, not satisfied.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Stories do not fill empty stomachs.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-8"
+        },
+        {
+          "action": "Nim pats his own belly with grave agreement.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "At last, wisdom.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-9"
+        },
+        {
+          "action": "Ima hands Miri the linen basket. Miri tucks the honey cakes deeper inside the cloth.",
+          "dialogue": [],
+          "id": "s1-10"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "heading": "EXT. VILLAGE LANE — MOMENTS LATER",
+      "shots": [
+        {
+          "action": "Miri walks with the linen basket. Nim trots beside her, eyes glued to the hidden cakes.\nTAV, a small boy with dust on his cheeks, sits beside a broken toy cart. One wooden wheel has popped off.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "Miri! Did your mother make cakes?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-1"
+        },
+        {
+          "action": "Miri instinctively shields the basket.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Maybe.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "TAV",
+              "line": "I can smell them.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "A gifted child. Dangerous.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-2"
+        },
+        {
+          "action": "Tav looks hopeful.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "Could I have one?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-3"
+        },
+        {
+          "action": "Miri hesitates. Her hand goes to the cloth. She imagines the three cakes becoming two. Two becoming one. One becoming none.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "I… have to take these to Saba.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "TAV",
+              "line": "The cakes?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "The linen.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "TAV",
+              "line": "Oh.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-4"
+        },
+        {
+          "action": "Miri looks down, feeling a pinch of guilt, but she pushes past it.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Maybe later.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-5"
+        },
+        {
+          "action": "Tav nods, disappointed, and returns to his broken cart.\nMiri hurries away. Nim follows.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "A difficult moment. Very brave of us to continue carrying the cakes.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "I heard that.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "I intended you to. I am supporting the mission.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-6"
+        },
+        {
+          "action": "Miri glances back at Tav. His little cart wobbles, wheel still off.\nShe keeps walking.\nMAIN TITLES\nA warm, painted title card unfurls like parchment.\nLITTLE WITNESSES “THE SMALLEST LUNCH”\nACT ONE",
+          "dialogue": [],
+          "id": "s2-7"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "heading": "EXT. SABA ELIOR’S COURTYARD — LATE MORNING",
+      "shots": [
+        {
+          "action": "SABA ELIOR sits beneath a fig tree, surrounded by several village children. He is repairing a sandal with one hand and gesturing grandly with the other.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "And so the little sparrow said to the great camel, “If your knees bend, perhaps your pride may also.”",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-1"
+        },
+        {
+          "action": "A few children giggle. Others are distracted. One pokes a beetle with a reed. Another tries to balance a fig on his nose.\nMiri enters with the linen basket. She slows, listening.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "But the camel did not listen, because camels are very good at chewing and very poor at hearing wisdom.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-2"
+        },
+        {
+          "action": "Miri smiles despite herself.\nA GIRL spots a group of older children playing with a hoop in the lane.",
+          "dialogue": [
+            {
+              "character": "GIRL",
+              "line": "Come on!",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-3"
+        },
+        {
+          "action": "The children scatter after her, laughing.\nSaba watches them go, amused, not offended.\nMiri remains.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "Ah. One listener left. Either my story improved, or your feet forgot to follow the others.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "What happened to the sparrow?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-4"
+        },
+        {
+          "action": "Saba’s eyes brighten. He pats the ground beside him.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "The right question.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-5"
+        },
+        {
+          "action": "Miri sits. Nim noses around the fig tree roots.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "The sparrow flew where the camel could not see and found water hidden under stones.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Because it was small?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "Because it was willing to look where large eyes had stopped looking.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-6"
+        },
+        {
+          "action": "Miri considers this. Then remembers why she came and pushes the linen basket toward him.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Ima sent sleeves.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-7"
+        },
+        {
+          "action": "SABA takes the linen and inspects his sleeve, which is patched in three places.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "At last. My elbows shall rejoin polite society.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-8"
+        },
+        {
+          "action": "Nim hops up and sniffs the basket.\nSaba sees the movement but not the intention.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "And perhaps one little hunter should not climb inside my clean linen.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-9"
+        },
+        {
+          "action": "Nim freezes, one paw in the basket.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "He suspects nothing.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-10"
+        },
+        {
+          "action": "Miri pulls Nim back.\nSABA notices the cloth bundle tucked beneath the linen.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "You have brought something sweet.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "For after chores.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "A wise time for sweetness.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Ima said I should give one to Tav.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-11"
+        },
+        {
+          "action": "SABA waits.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "But Tav did not help make them. And there were only three. If I gave him one, I would have fewer.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-12"
+        },
+        {
+          "action": "Nim sits up, solemn as a judge.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "The arithmetic is sound.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "Fewer cakes.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Yes.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "And perhaps… less Miri?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "What does that mean?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "You tell me. When your hand opens, do you become smaller?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "No. But what I have becomes smaller.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "Ah.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-13"
+        },
+        {
+          "action": "He stands, joints creaking cheerfully.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "Then we need a story with a very small lunch.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-14"
+        },
+        {
+          "action": "Nim’s ears perk.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "A story about lunch? I withdraw all objections.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-15"
+        },
+        {
+          "action": "Saba gestures toward the doorway of his house.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "Come. Let us see whether the scrolls have eaten before us.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-16"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "heading": "INT. SABA’S HOUSE — CONTINUOUS",
+      "shots": [
+        {
+          "action": "Miri steps inside. The room is warm and crowded with ordinary things: clay cups, woven mats, lamps, baskets, jars of ink, old maps, small tools, herbs drying by a window.\nSaba pulls aside a faded hanging cloth.\nBehind it: THE SCROLL ROOM.",
+          "dialogue": [],
+          "id": "s4-1"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "heading": "INT. SCROLL ROOM — CONTINUOUS",
+      "shots": [
+        {
+          "action": "Miri stops at the threshold.\nThe room is not huge, but it feels endless. Shelves climb the walls. Scrolls of different sizes rest in niches. Some are sealed with cord. Some lie open, edges lifting gently though there is no wind.\nDust motes hang in shafts of light.\nNim peeks around Miri’s legs.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I see no lunch.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "You see old scrolls.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Exactly my concern.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s5-1"
+        },
+        {
+          "action": "Saba moves slowly along the shelves, fingers hovering over scrolls as though greeting old friends.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "There are scrolls about kings, scrolls about rivers, scrolls about storms, scrolls about shepherds who smelled like sheep and prophets who probably wished they smelled better.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s5-2"
+        },
+        {
+          "action": "Miri follows, entranced.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Do the other children ever come in here?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "Sometimes.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Do they see all this?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "They see shelves. Dust. Old words.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "And I see… more.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s5-3"
+        },
+        {
+          "action": "Saba glances at her with fondness.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "That is why I keep a place for you on the floor.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s5-4"
+        },
+        {
+          "action": "He reaches high and draws down a small scroll tied with a cord the color of barley.\nA wax seal bears the shape of a loaf and two fish.\nNim’s whole body goes alert.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Now we are discussing serious matters.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "This is a story of a hillside, a hungry crowd, and one boy who carried almost nothing.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Almost nothing does not feed a crowd.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "No. Not by itself.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s5-5"
+        },
+        {
+          "action": "He sits cross-legged. Miri sits opposite him. Nim curls near Miri, still eyeing the honey cake bundle.\nSaba unties the cord.\nThe scroll exhales softly.\nInk glimmers.\nTiny drawn grains of barley lift off the parchment like fireflies. Lines of ink stretch into hills. The smell of grass and lake wind fills the room.\nSaba’s voice lowers into story.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "There was a day when many people followed Jesus across the hills of Galilee. They came with questions, with sickness, with hope, with children on their shoulders and dust on their feet.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s5-6"
+        },
+        {
+          "action": "The scroll room brightens. Painted hills ripple across the walls. Threads of parchment unfurl overhead like clouds.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "They came to listen. They came to be near Him. And as the sun climbed high, stomachs began to speak almost as loudly as hearts.",
+              "parenthetical": "",
+              "voice_over": true
+            }
+          ],
+          "id": "s5-7"
+        },
+        {
+          "action": "Nim clutches his belly.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I understand these people deeply.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s5-8"
+        },
+        {
+          "action": "The floor beneath Miri becomes soft grass. The shelves stretch upward into bright sky.\nMiri looks to Saba, but he is now beyond the veil of the story, still seated in the Scroll Room, his voice carrying through.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Saba?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "Listen closely, Miri. Some gifts look too small until they are placed in the right hands.",
+              "parenthetical": "",
+              "voice_over": true
+            }
+          ],
+          "id": "s5-9"
+        },
+        {
+          "action": "The light blooms.\nACT TWO",
+          "dialogue": [],
+          "id": "s5-10"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "heading": "EXT. GALILEAN HILLSIDE — DAY",
+      "shots": [
+        {
+          "action": "Miri and Nim stand on a sunlit hillside above a shining blue lake. Grass bends in a warm breeze. Families gather in clusters. Children chase each other around seated adults. Disciples move among the crowd, concerned.\nIn the distance, JESUS stands on a rise. We see Him from behind and slightly to the side: robe moving in the wind, hands open as people listen. His face is not shown.\nThe atmosphere is peaceful, expectant, alive.\nMiri spins, amazed.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "We are inside the story.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "We are inside a story full of hungry people. That is a very specific kind of danger.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "No one can hear you except me.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "A tragedy for the people. I have advice.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s6-1"
+        },
+        {
+          "action": "A group of children rush past. One nearly bumps Miri.",
+          "dialogue": [
+            {
+              "character": "CHILD",
+              "line": "Sorry!",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s6-2"
+        },
+        {
+          "action": "The child does not notice anything unusual about them.\nMiri looks at her own clothes. They fit the world naturally, as if she belongs.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Saba said we listen until the story changes us.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Wonderful. I shall listen near anyone with snacks.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s6-3"
+        },
+        {
+          "action": "They move through the crowd.",
+          "dialogue": [],
+          "id": "s6-4"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "heading": "EXT. HILLSIDE PATH — CONTINUOUS",
+      "shots": [
+        {
+          "action": "Miri spots a boy, YONAH, about her age, weaving through the crowd with a small bundle tucked under his arm. He is careful, bright-eyed, slightly nervous.\nHe stops when he sees a very small GIRL crying beside her mother.",
+          "dialogue": [
+            {
+              "character": "SMALL GIRL",
+              "line": "I’m hungry.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-1"
+        },
+        {
+          "action": "The mother comforts her but has no food.\nYonah looks down at his bundle. He hesitates, then keeps walking, troubled.\nMiri notices.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "You have food.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "A little.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-2"
+        },
+        {
+          "action": "Nim instantly appears beside the bundle.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "How little?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-3"
+        },
+        {
+          "action": "Miri nudges Nim away with her foot.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "I’m Miri.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "Yonah.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Are you saving it?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "My mother packed it for me. Five barley loaves. Two fish.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-4"
+        },
+        {
+          "action": "Nim sways, overcome.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Five. And two. Numbers of beauty.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "That is not enough for all these people.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-5"
+        },
+        {
+          "action": "Yonah glances at the crowd.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "No.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "So you should probably keep it.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-6"
+        },
+        {
+          "action": "Yonah looks at her, unsure.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Do you think so?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-7"
+        },
+        {
+          "action": "Miri looks around at the thousands spread across the hillside.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "If you give some away, you will only have less.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-8"
+        },
+        {
+          "action": "Yonah’s fingers tighten around the bundle.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Less than a little is not much.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "A boy of excellent judgment.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-9"
+        },
+        {
+          "action": "A DISCIPLE passes nearby, speaking urgently to another.",
+          "dialogue": [
+            {
+              "character": "PHILIP",
+              "line": "The day is fading, and they have been here long. There is no village near enough for such a crowd.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "ANDREW",
+              "line": "The Teacher knows.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "PHILIP",
+              "line": "But where shall we buy bread for all these people?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-10"
+        },
+        {
+          "action": "Miri watches the disciples walk toward the rise where Jesus stands.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "They are worried.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Adults worry when there are not enough baskets.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "My mother says the Lord can fill what we cannot.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "With five loaves?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s7-11"
+        },
+        {
+          "action": "Yonah does not answer. He looks again at the little girl crying softly.",
+          "dialogue": [],
+          "id": "s7-12"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "heading": "EXT. EDGE OF CROWD — LATER",
+      "shots": [
+        {
+          "action": "The sun has shifted. The crowd has grown. People settle on the grass in groups. Some shade their eyes. Children lean against parents.\nMiri, Nim, and Yonah sit on a small rise.\nYonah unwraps the lunch. Five small barley loaves. Two small fish. Simple. Ordinary. Definitely not enough.\nNim stares with reverence.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I have seen palaces less beautiful.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-1"
+        },
+        {
+          "action": "Miri’s stomach growls.\nNim’s stomach growls louder.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Mine is echoing in sympathy.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-2"
+        },
+        {
+          "action": "Yonah breaks off a tiny crumb and offers it to Miri.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Do you want a little?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-3"
+        },
+        {
+          "action": "Miri hesitates. The crumb is tiny. She remembers Tav’s hopeful face.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "No. You keep it.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-4"
+        },
+        {
+          "action": "Nim looks betrayed.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "We are declining crumbs now?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-5"
+        },
+        {
+          "action": "Miri ignores him.\nBelow, the disciples gather around Jesus. We see only the lower edge of Jesus’s robe, His hand resting gently on a staff, the faces of the disciples looking toward Him.\nANDREW notices Yonah’s bundle from a distance. He approaches.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "Peace to you, young one.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-6"
+        },
+        {
+          "action": "Yonah quickly wraps the lunch.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Peace.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "ANDREW",
+              "line": "You have brought food?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-7"
+        },
+        {
+          "action": "Yonah looks to Miri.\nMiri gives a tiny shake of her head: don’t.\nYonah looks down at the bundle.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Only a little.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "ANDREW",
+              "line": "What do you have?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "Five barley loaves and two fish.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-8"
+        },
+        {
+          "action": "Andrew smiles kindly, but his brow remains troubled.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "Five loaves. Two fish.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-9"
+        },
+        {
+          "action": "He looks across the sea of people.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "But what are they among so many?",
+              "parenthetical": "(SOFTLY)",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-10"
+        },
+        {
+          "action": "Miri quietly nods, as though the matter is settled.\nYonah’s face falls.\nAndrew is about to return to the disciples when Yonah stands.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Wait.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-11"
+        },
+        {
+          "action": "Miri grabs his sleeve.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Yonah.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-12"
+        },
+        {
+          "action": "Yonah looks at her.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "If you give it away, you may not get any back.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-13"
+        },
+        {
+          "action": "Yonah looks afraid now. He is a child. His lunch is real. His hunger is real.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "I know.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Then why give it?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-14"
+        },
+        {
+          "action": "Yonah looks toward Jesus. We see the silhouette of Jesus kneeling to place a hand on a sick man’s shoulder. The man’s family weeps with relief.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Because if I keep it, it stays small.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-15"
+        },
+        {
+          "action": "Miri has no answer.\nNim’s ears lower. Even he is quiet.\nYonah steps toward Andrew, holding out the bundle with both hands.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "You may take it to Him.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-16"
+        },
+        {
+          "action": "Andrew receives the lunch with great care. He does not make Yonah feel foolish.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "Come with me.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s8-17"
+        },
+        {
+          "action": "Yonah follows. Miri and Nim trail behind.",
+          "dialogue": [],
+          "id": "s8-18"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "heading": "EXT. NEAR JESUS — CONTINUOUS",
+      "shots": [
+        {
+          "action": "The crowd noise softens.\nMiri slows as they near Jesus. The framing becomes reverent and restrained.\nWe see Jesus’s hands receive the small lunch from Andrew. His robe. The disciples’ faces. Yonah looking up, nervous and hopeful. Miri watching, guarded.",
+          "dialogue": [
+            {
+              "character": "JESUS",
+              "line": "Have the people sit down.",
+              "parenthetical": "(GENTLE, WARM)",
+              "voice_over": false
+            }
+          ],
+          "id": "s9-1"
+        },
+        {
+          "action": "A ripple moves through the disciples.",
+          "dialogue": [
+            {
+              "character": "PHILIP",
+              "line": "All of them?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s9-2"
+        },
+        {
+          "action": "Jesus’s hand rests briefly on the basket holding the bread.",
+          "dialogue": [
+            {
+              "character": "JESUS",
+              "line": "All of them.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s9-3"
+        },
+        {
+          "action": "The disciples hurry to organize the crowd.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "In groups! Sit upon the grass. Make room for one another.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s9-4"
+        },
+        {
+          "action": "The command spreads outward.\nMiri watches people sitting in widening circles.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "He did not say there was enough.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "No.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "He told them to sit as if there was.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s9-5"
+        },
+        {
+          "action": "Yonah nods slowly.\n\nNIM whispers, deeply unsettled.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Sitting before seeing food is a bold policy.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s9-6"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "heading": "EXT. HILLSIDE — MOMENTS LATER",
+      "shots": [
+        {
+          "action": "The hillside transforms into a living pattern: thousands seated in clusters on green grass. Children settle against parents. Dust glows in sunbeams. The lake sparkles below.\nMiri helps a grandmother find a place to sit. Nim darts out of the way of many sandals.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "So many feet. None of them looking for foxes.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-1"
+        },
+        {
+          "action": "Miri looks toward the small girl from earlier, still hungry, now seated near her mother.\nMiri touches the empty space at her own side where, in the home world, the honey cakes would be.\nThen — a hush.\nJesus lifts the loaves. We see His hands. He gives thanks.\nNo spectacle yet. Just stillness.\nWind moves through the grass.\nThe first loaf breaks.\nThen another.\nHands pass bread into a basket.\nA disciple looks down, startled. There is more bread than should be there.\nHe hands a piece to another. The basket remains full.\nFish are shared. Another basket fills. Then another.\nThe miracle begins quietly, then blooms.\nVISUAL SET PIECE — THE MULTIPLICATION\nBaskets pass from hand to hand. Bread breaks and remains. Fish are portioned and more appears beneath the cloth. Children’s eyes widen. Parents laugh in disbelief.\nDisciples who were worried moments ago now move faster and faster, overflowing with joy.\nMiri stands at the center of the movement as baskets sweep past like currents in a river.\nA basket is placed in her hands.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "Can you carry this to the children there?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-2"
+        },
+        {
+          "action": "Miri looks into the basket: warm barley loaves, enough for many.\nShe looks to Yonah.\nHe is laughing now, overwhelmed.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Go!",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-3"
+        },
+        {
+          "action": "Miri takes the basket. Nim trots beside her, trying very hard not to stare into it.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I am thinking generous thoughts.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "You are staring at the bread.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Generously.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-4"
+        },
+        {
+          "action": "Miri kneels beside the small girl and her mother. She offers the basket.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "There is enough.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-5"
+        },
+        {
+          "action": "The small girl takes a piece in both hands.",
+          "dialogue": [
+            {
+              "character": "SMALL GIRL",
+              "line": "For me?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-6"
+        },
+        {
+          "action": "Miri smiles, softer now.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "For you.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-7"
+        },
+        {
+          "action": "The girl’s mother receives food with tears in her eyes.",
+          "dialogue": [
+            {
+              "character": "MOTHER IN CROWD",
+              "line": "Blessed be the Lord.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-8"
+        },
+        {
+          "action": "Miri moves on, passing bread to children, elders, fathers, mothers. Every time she thinks the basket should be empty, more remains.\nThe hillside fills with eating, laughter, relief. Hunger turns to wonder.\nNim watches a crumb fall near his paw. He looks at Miri. He looks at the crumb.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Wait.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-9"
+        },
+        {
+          "action": "Nim trembles with discipline.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I am a statue of patience.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-10"
+        },
+        {
+          "action": "A child giggles and offers Nim a tiny piece.",
+          "dialogue": [
+            {
+              "character": "CHILD",
+              "line": "Here, little fox.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-11"
+        },
+        {
+          "action": "Nim gently takes it. His eyes close in bliss.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I forgive all suspense.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s10-12"
+        },
+        {
+          "action": "Miri laughs, but her gaze drifts back to Jesus’s hands as He continues to give.\nThe miracle does not feel like a trick. It feels like kindness becoming visible.\nACT THREE",
+          "dialogue": [],
+          "id": "s10-13"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "heading": "EXT. HILLSIDE — LATE AFTERNOON",
+      "shots": [
+        {
+          "action": "The crowd has eaten. Families sit together, satisfied. The light is golden. Children lie on the grass, sleepy and content.\nDisciples move through the crowd with empty baskets.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "Gather the pieces left over, that nothing may be lost.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s11-1"
+        },
+        {
+          "action": "Miri hears this and looks up.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Nothing lost.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s11-2"
+        },
+        {
+          "action": "Yonah approaches, carrying a half-filled basket of leftover pieces. His face still shines with wonder.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Miri, help me?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s11-3"
+        },
+        {
+          "action": "Miri nods.",
+          "dialogue": [],
+          "id": "s11-4"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "heading": "EXT. HILLSIDE — CONTINUOUS",
+      "shots": [
+        {
+          "action": "Miri, Yonah, and Nim gather leftover pieces of bread. Nim picks one up in his mouth, then freezes when Miri looks at him.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I was gathering internally.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Basket.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-1"
+        },
+        {
+          "action": "Nim drops the piece into the basket with exaggerated dignity.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Of course.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-2"
+        },
+        {
+          "action": "They move through the grass. Miri notices there are twelve baskets now, each filling with leftovers.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Yonah.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "Yes?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "You gave five loaves and two fish.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "Yes.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "And now there are more baskets left than the lunch you started with.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-3"
+        },
+        {
+          "action": "Yonah looks at the baskets, amazed all over again.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "I thought I was giving Him my lunch.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "You were.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "But He gave it to everyone.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-4"
+        },
+        {
+          "action": "Miri holds a leftover piece gently in her hand.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Were you afraid?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-5"
+        },
+        {
+          "action": "Yonah smiles, embarrassed.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Very.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "I told you not to give it.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "YONAH",
+              "line": "I heard.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "I thought giving would only make less.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-6"
+        },
+        {
+          "action": "Yonah thinks.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Maybe in our hands. Not in His.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-7"
+        },
+        {
+          "action": "Miri absorbs this.\nNearby, the small girl from earlier runs to her mother with a piece of bread saved in her hand.",
+          "dialogue": [
+            {
+              "character": "SMALL GIRL",
+              "line": "For later.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-8"
+        },
+        {
+          "action": "Her mother laughs and kisses her forehead.\nMiri smiles, then looks down at the piece she is holding. She places it in the basket instead of keeping it.\nNim watches this with exaggerated heartbreak.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "There goes a noble crumb.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Nothing lost.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Oh. Right. It is being organized.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-9"
+        },
+        {
+          "action": "Andrew receives their basket.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "Thank you, children.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-10"
+        },
+        {
+          "action": "He looks at Yonah.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "Your small lunch has filled many hands.",
+              "parenthetical": "(GENTLE)",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-11"
+        },
+        {
+          "action": "Yonah blushes and looks toward Jesus.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "I only gave it.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "ANDREW",
+              "line": "Yes.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-12"
+        },
+        {
+          "action": "Andrew’s smile deepens.",
+          "dialogue": [
+            {
+              "character": "ANDREW",
+              "line": "Sometimes that is the part given to us.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s12-13"
+        },
+        {
+          "action": "Miri watches the baskets being gathered. Twelve full baskets. More than enough.\nThe hillside glows.",
+          "dialogue": [],
+          "id": "s12-14"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "heading": "EXT. HILLSIDE RIDGE — SUNSET",
+      "shots": [
+        {
+          "action": "Miri stands apart for a moment, looking over the crowd. Nim sits beside her, quiet after eating one approved crumb.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Nim?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Yes?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "I think I should have given Tav the cake.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s13-1"
+        },
+        {
+          "action": "Nim swallows.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I was hoping you would not connect those scrolls.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "I was afraid there would not be enough for me.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "There were only three.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "But Tav was hungry too.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Or cake-hopeful. A serious condition.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s13-2"
+        },
+        {
+          "action": "Miri gives him a look.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Yes. Hungry too.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Yonah’s lunch looked too small. But he opened his hands.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s13-3"
+        },
+        {
+          "action": "She looks back toward Jesus. We see only His silhouette now, surrounded by people at peace.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "And God made it more than enough.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s13-4"
+        },
+        {
+          "action": "Nim’s ears lower softly.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Do you think… generosity hurts less after the first bite?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Maybe after the first gift.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s13-5"
+        },
+        {
+          "action": "A warm gust of wind lifts around them. The hillside becomes parchment at the edges. Grass strokes turn into ink lines. The crowd softens into painted figures. The sunset becomes golden scroll light. Saba’s voice returns.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "And when all had eaten, they gathered what remained, so that nothing given in love would be forgotten.",
+              "parenthetical": "",
+              "voice_over": true
+            }
+          ],
+          "id": "s13-6"
+        },
+        {
+          "action": "Miri looks for Yonah. He waves from the edge of the fading hillside.",
+          "dialogue": [
+            {
+              "character": "YONAH",
+              "line": "Peace, Miri!",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Peace, Yonah!",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s13-7"
+        },
+        {
+          "action": "Nim waves with his tail.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Remember me kindly, lunch boy.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s13-8"
+        },
+        {
+          "action": "The world rolls gently back into parchment.\n \nACT FOUR",
+          "dialogue": [],
+          "id": "s13-9"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "heading": "INT. SCROLL ROOM — LATE AFTERNOON",
+      "shots": [
+        {
+          "action": "Miri and Nim are back on the floor of the Scroll Room.\nThe small scroll rests open between them. Its ink settles into the drawing of five loaves and two fish.\nSaba sits exactly where he was, as if only a breath has passed. His eyes twinkle, but he says nothing for a moment.\nMiri looks down at the cloth bundle in her basket.\nShe opens it.\nThree honey-date cakes.\nNim leans close.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "All present. A miracle of inventory.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-1"
+        },
+        {
+          "action": "Miri lifts one cake.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Saba?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "Yes, little one?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Did the boy know what would happen?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "I do not think so.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Then how did he give it?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-2"
+        },
+        {
+          "action": "Saba takes the question seriously.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "Perhaps he knew only the next small thing: his hands were full, and others were hungry.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-3"
+        },
+        {
+          "action": "Miri considers this.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "I wanted to keep all three.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "I noticed your basket was guarded like a city gate.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-4"
+        },
+        {
+          "action": "Nim looks offended.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Security was appropriate.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-5"
+        },
+        {
+          "action": "Saba notices Nim sitting upright, chest puffed.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "And guarded by a fierce creature of suspiciously sticky whiskers.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-6"
+        },
+        {
+          "action": "Nim quickly licks honey from his whisker.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "No evidence remains.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-7"
+        },
+        {
+          "action": "Miri smiles, then grows thoughtful.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Giving does not make me smaller.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-8"
+        },
+        {
+          "action": "Saba’s expression softens.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "No.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "And small things can still bless someone.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "When offered with love, even a little can become more than we imagined.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-9"
+        },
+        {
+          "action": "Miri closes the cloth around the cakes and stands.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "I need to find Tav.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "Then go before Nim begins a second inspection.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-10"
+        },
+        {
+          "action": "Nim is already half inside the basket.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I am checking for structural weakness.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-11"
+        },
+        {
+          "action": "Miri scoops him up.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Come on.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s14-12"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "heading": "EXT. VILLAGE LANE — SUNSET",
+      "shots": [
+        {
+          "action": "The village is warmer now, settling into evening. Smoke rises from cooking fires. Animals are guided into pens. Children are called home.\nTav still sits by the low wall. His toy cart is now partly repaired but the wheel wobbles badly.\nMiri approaches.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Tav?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-1"
+        },
+        {
+          "action": "He looks up.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "Did Saba fix his sleeves?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Not yet. He got distracted by a very small lunch.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-2"
+        },
+        {
+          "action": "Tav blinks, confused.\nMiri sits beside him and opens the cloth.\nShe takes out one honey-date cake.\nThen, after a beat, she takes out a second and breaks it in half.\nNim’s eyes widen.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "A generous escalation.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-3"
+        },
+        {
+          "action": "Miri gives Tav one whole cake and half of another.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "For me?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-4"
+        },
+        {
+          "action": "Miri nods.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "For you.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-5"
+        },
+        {
+          "action": "Tav beams.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "Thank you!",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-6"
+        },
+        {
+          "action": "He takes a bite, delighted.\nMiri looks at the remaining cake and half. She breaks the half into two small pieces, gives one to Nim, and keeps one.\nNIM stares at the tiny piece.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Small, but emotionally significant.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-7"
+        },
+        {
+          "action": "Miri laughs and eats her piece.\nTav holds up his broken toy cart.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "Can you help with the wheel?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-8"
+        },
+        {
+          "action": "Miri looks at the toy. Then at the fading sunlight.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "I can try.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-9"
+        },
+        {
+          "action": "Nim chews slowly, then noses a small peg toward Miri.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "I am also giving. Please note the sacrifice.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-10"
+        },
+        {
+          "action": "Miri uses the peg to fix the wheel more securely.\nThe cart rolls a short distance, straight this time.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "It works!",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-11"
+        },
+        {
+          "action": "He laughs and pushes it again. Miri laughs too.\nFrom down the lane, Saba watches from his doorway, sleeves still unpatched, smiling.\nIma steps beside him.",
+          "dialogue": [
+            {
+              "character": "IMA",
+              "line": "Did she ask you what you thought?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "She asked a better question.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "IMA",
+              "line": "What was that?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "What happens when a small hand opens?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s15-12"
+        },
+        {
+          "action": "They watch Miri, Tav, and Nim share the last crumbs as sunset settles over the village.",
+          "dialogue": [],
+          "id": "s15-13"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "heading": "EXT. SABA’S COURTYARD — EVENING",
+      "shots": [
+        {
+          "action": "Miri returns with Nim beside her. Saba sits again beneath the fig tree, sewing a patch onto his sleeve.\nMiri sits beside him, quieter now.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Saba?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "Mm?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Will the story still be there tomorrow?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "The scroll, yes.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "No. The hillside. Yonah. The baskets.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s16-1"
+        },
+        {
+          "action": "Saba ties off a stitch.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "A true story has a way of staying where it is needed.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "In the scroll room?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "In the heart.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s16-2"
+        },
+        {
+          "action": "Miri lets this settle.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "I did not change the story.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "SABA",
+              "line": "No.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "But it changed me a little.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s16-3"
+        },
+        {
+          "action": "Saba smiles.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "That is how the best stories begin their work.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s16-4"
+        },
+        {
+          "action": "Nim climbs into the linen basket and circles twice before curling up.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "For future generosity, I recommend we begin with six cakes.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s16-5"
+        },
+        {
+          "action": "Miri gives him a look.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Five?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s16-6"
+        },
+        {
+          "action": "Saba, watching only Nim’s hopeful posture, reaches into a small pouch and pulls out a plain crumb of flatbread. He tosses it gently to Nim.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "For the fierce guardian of linen.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s16-7"
+        },
+        {
+          "action": "Nim catches it, stunned.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "At last, my service is recognized.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s16-8"
+        },
+        {
+          "action": "Miri laughs. Saba laughs too, though he does not know why.\nThe camera rises above the courtyard: Miri, Saba, Nim, warm lamplight, the open door to the Scroll Room beyond.\nInside the room, the little scroll glows softly on its shelf.\nFADE OUT.",
+          "dialogue": [],
+          "id": "s16-9"
+        }
+      ]
+    }
+  ]
+}

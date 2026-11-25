@@ -10,10 +10,10 @@ from typing import Any, Dict, List, Optional
 log = logging.getLogger("agent")
 
 
-def save_json(path: Path, data: Any) -> None:
+def save_json(path: Path, data: Any, backup: bool = True) -> None:
     """Write JSON, keeping a timestamped backup of any existing file in <dir>/backups/."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    if path.exists():
+    if backup and path.exists():
         backups = path.parent / "backups"
         backups.mkdir(exist_ok=True)
         stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -57,3 +57,21 @@ def load_saved(path: Path, pdf_path: str) -> Optional[Dict[str, Any]]:
         log.info("%s is from another skit (%s); calling the LLM instead", path.name, source)
         return None
     return data
+
+
+class ProgressFile:
+    """A JSON file rewritten after every LLM call, so finished work survives a crash.
+
+    The first write of a run backs up the previous run's file; later writes
+    in the same run overwrite it without a backup.
+    """
+
+    def __init__(self, path: Path, pdf_path: str, key: str):
+        self.path, self.key = path, key
+        self.data: Dict[str, Any] = {"source": pdf_path, key: {}}
+        self._first_write = True
+
+    def add(self, item_id: str, result: Dict[str, Any]) -> None:
+        self.data[self.key][item_id] = result
+        save_json(self.path, self.data, backup=self._first_write)
+        self._first_write = False

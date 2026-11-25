@@ -2,7 +2,9 @@
 each planned clip -> its Seedance 2.0 prompt -> data/prompt.json.
 
 Code checks that the prompt keeps the dialogue, the @Image tags, the style
-line and the voices, and asks again with the problems listed.
+line and the voices, and asks again with the problems listed. After every
+clip's LLM call, its prompt is saved to data/clip_prompts.json; prompt.json is
+written once all clips are done.
 """
 
 import logging
@@ -10,7 +12,7 @@ import re
 from typing import Any, Dict, List
 
 from agent import config
-from agent.helpers.json_files import write_prompt_json
+from agent.helpers.json_files import ProgressFile, write_prompt_json
 from agent.helpers.verbatim import check_verbatim, normalize
 from agent.llm import OpenAILLM
 from agent.nodes.retry import Reply, ask_until_valid
@@ -29,6 +31,7 @@ def make_direct_prompts(llm: OpenAILLM):
         clips = state["clips"]
         characters = state.get("characters", {})
         warnings: List[str] = []
+        progress = ProgressFile(config.CLIP_PROMPTS_JSON, state["pdf_path"], key="clips")
 
         for index, clip in enumerate(clips, start=1):
             log.info("Director: %s (%d/%d)", clip["id"], index, len(clips))
@@ -41,6 +44,10 @@ def make_direct_prompts(llm: OpenAILLM):
             warnings += [f"director {clip['id']}: {p}" for p in problems]
 
             clip["prompt"] = (reply.get("prompt") or "").strip()
+            progress.add(
+                clip["id"],
+                {"scene": clip["scene"], "problems": problems, "prompt": clip["prompt"]},
+            )
 
         write_prompt_json(
             config.PROMPT_JSON, state["pdf_path"], clips, skills=list(config.DIRECTOR_SKILLS)

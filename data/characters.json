@@ -1,0 +1,290 @@
+{
+  "characters": [
+    {
+      "name": "NIM",
+      "master_profile": "Character acting as NIM. Small fox-like creature with oversized ears, light springy body, quick paws and a chest-forward posture that makes him look braver than his size; his whole physique is built for sudden starts, scent-led curiosity and comic self-importance. Runs on a single engine: appetite trying to disguise itself as strategy. Vocal profile: bright, dry, slightly nasal tenor with crisp little pauses, fast when calculating, slower and ceremonious when pretending dignity; under pressure the voice thins into a whisper or becomes grandly formal. Key physical habits and tics: nose twitches rapidly whenever food is near; one paw lifts and freezes when caught doing something forbidden; he pats or guards his belly when making moral arguments about hunger; when hiding guilt he sits too upright and over-controls his tail, but the ears betray him by dipping or swiveling. Eye life: wet bright eyes, fast micro-saccades between food, Miri and escape routes, blink-bursts when denied, long blissful lids when tasting. Walking style: a buoyant \"crumb-hunter trot,\" light toe-first steps, ears bouncing, tail balancing every turn. However, when Miri makes a truly generous choice, his comic puff collapses: ears lower, body stills, gaze softens and he follows her lead before joking again. His face genuinely softens for Miri.",
+      "caps_rules": [
+        "1. NOSE FINDS FOOD BEFORE THE EYES DO.",
+        "2. EARS ANSWER FIRST: PERK FOR OPPORTUNITY, DROP FOR CONSCIENCE, SWIVEL FOR RISK.",
+        "3. WHEN CAUGHT, ONE PAW FREEZES IN MID-ACTION.",
+        "4. HUNGER ARGUMENTS COME WITH BELLY-PATS OR PROTECTIVE PAWS.",
+        "5. GUILT MAKES HIM TOO STILL AND TOO UPRIGHT.",
+        "6. TAIL IS THE TRUTH: IT TWITCHES EVEN WHEN HIS FACE PRETENDS CONTROL.",
+        "7. EYES FLICK BETWEEN FOOD, MIRI AND THE NEAREST EXIT.",
+        "8. GENEROSITY FROM MIRI QUIETS HIM BEFORE HE MAKES A JOKE."
+      ],
+      "forbidden_readings": [
+        "Do not play him as a random hyperactive mascot with constant bouncing.",
+        "Do not make him greedy without affection or conscience.",
+        "Do not give him human hand gestures that ignore his animal body.",
+        "Do not make every line a gag; some moments must land as listening.",
+        "Do not make him stare frozen at food without sniffing, ears and paws reacting."
+      ],
+      "voice": "\"A small quick-witted fox-like creature with a bright ageless tenor. Crisp, dry, fast delivery with theatrical little pauses; comic confidence that thins into a careful whisper when appetite, guilt or wonder catches him.\""
+    },
+    {
+      "name": "MIRI",
+      "master_profile": "Character acting as MIRI. About 8 years old, small and wiry, with quick hands, alert shoulders and a habit of holding valued things tight against her ribs; her posture leans forward as if every lane, basket and story might contain a problem she must solve. Runs on a single engine: she wants the world to be fair and countable because scarcity frightens her. Vocal profile: clear high child voice, practical and direct, quick with denials, slower when thinking; under pressure she clips words short, then softens into breathy questions when a new idea unsettles her. Key physical habits and tics: shields bags or baskets when asked to share; counts on her fingers or presses thumb to fingertips when measuring loss; glances back after walking away from someone disappointed; when concealing guilt she busies her hands with cloth folds, but her shoulders pull inward. Eye life: bright searching eyes with lively micro-saccades, fast blinks during moral conflict, gaze dropping to objects before lifting to faces, catchlights warming when understanding arrives. Walking style: a purposeful \"small errand march,\" short quick steps, basket tucked close, head turning before her body commits. However, when another child’s need becomes impossible to ignore, her guarded chest opens, her steps slow, and her hands loosen before she speaks. Her face genuinely softens for Nim.",
+      "caps_rules": [
+        "1. SHE PROTECTS VALUED FOOD AGAINST HER RIBS.",
+        "2. MORAL MATH GOES TO THE FINGERS FIRST.",
+        "3. GUILT MAKES HER LOOK BACK AFTER SHE HAS WALKED AWAY.",
+        "4. WHEN SHE LIES BY OMITTING, HER HANDS OVER-FOLD CLOTH.",
+        "5. UNDERSTANDING ARRIVES AS A SLOWER BREATH AND OPENING PALMS.",
+        "6. EYES CHECK THE OBJECT, THEN THE PERSON, THEN THE OBJECT AGAIN.",
+        "7. SHE DOES NOT BECOME GENEROUS ALL AT ONCE; THE HAND OPENS BY BEATS.",
+        "8. WITH NIM SHE CAN SCOLD AND SMILE IN THE SAME BREATH."
+      ],
+      "forbidden_readings": [
+        "Do not play her as a selfish brat; her fear of not enough must be visible.",
+        "Do not make her instantly transformed after one lesson.",
+        "Do not make her preachy or adult-sounding.",
+        "Do not overdo guilt with melodramatic tears.",
+        "Do not let her hands hang empty when food, cloth or a basket is present."
+      ],
+      "voice": "\"An 8-year-old village girl with a clear, bright child voice. Quick, practical delivery with small bursts of impatience; when challenged, the pace slows and the words become careful, as if she is testing each thought before trusting it.\""
+    },
+    {
+      "name": "IMA",
+      "master_profile": "Character acting as IMA. Early 30s woman, sturdy from daily carrying, kneeling, washing and lifting, with strong forearms, grounded hips and a posture that can soften without losing authority; she moves like someone who has already done half a day’s work before morning is over. Runs on a single engine: she is teaching her child steadiness without taking the lesson out of the child’s hands. Vocal profile: warm low mezzo, unhurried village cadence, firm endings softened by breath; under strain her voice becomes quieter, not sharper, and she leaves space for the child to answer. Key physical habits and tics: adjusts or smooths household items while thinking; rests one hand briefly on her thigh before kneeling to a child’s level; when refusing to force a lesson, she inhales through the nose and lets the silence stand; when hiding concern she keeps her mouth relaxed but watches the child’s hands. Eye life: attentive maternal gaze, soft but active micro-saccades between face, hands and carried objects, slow blinks when choosing patience, catchlights warm and steady. Walking style: a practical \"courtyard glide,\" weight through the whole foot, economical steps, hands already finding the next task. However, when Miri speaks from fear rather than stubbornness, Ima’s working pace stops, her shoulders lower, and her face opens into listening before she instructs. Her face genuinely softens for Miri.",
+      "caps_rules": [
+        "1. SHE KNEELS TO A CHILD INSTEAD OF LOOMING.",
+        "2. WORKING HANDS CONTINUE UNTIL A TRUE QUESTION STOPS THEM.",
+        "3. AUTHORITY IS QUIET AND GROUNDED, NEVER SHOUTED.",
+        "4. SHE WATCHES MIRI'S HANDS AS MUCH AS HER FACE.",
+        "5. CONCERN SHOWS AS A PAUSE BEFORE ADVICE.",
+        "6. PATIENCE IS A SLOW BLINK AND A LOWERED SHOULDER.",
+        "7. SHE DOES NOT FORCE THE OBJECT INTO MIRI'S HAND; SHE OFFERS THE NEXT STEP.",
+        "8. HER BODY STAYS BUSY WITH CARE, NOT FUSS."
+      ],
+      "forbidden_readings": [
+        "Do not play her as scolding, syrupy or saintly.",
+        "Do not make her magically know the lesson; she is parenting in real time.",
+        "Do not point or wag fingers to illustrate morals.",
+        "Do not make her passive; warmth and firmness must coexist.",
+        "Do not let her abandon physical tasks while speaking unless the stop is meaningful."
+      ],
+      "voice": "\"A woman in her early 30s with a warm low mezzo and village cadence. Calm, practical, gently firm delivery with unhurried pauses; under pressure she grows quieter and more deliberate rather than sharper.\""
+    },
+    {
+      "name": "TAV",
+      "master_profile": "Character acting as TAV. About 6 years old, small, dusty, round-shouldered from crouching over toys, with quick hopeful lifts of the head and hands that hover near whatever he is trying to fix; his body carries the seriousness of a child whose small possessions matter greatly. Runs on a single engine: he wants to be included without having to beg too openly. Vocal profile: soft high child voice with open vowels, tentative starts, then sudden bright speed when encouraged; disappointment makes the voice drop into short answers that try not to accuse. Key physical habits and tics: rubs dust from his cheek or nose when embarrassed; turns a broken toy part over and over when waiting for an answer; when hoping for food, his shoulders rise and his chin tucks as if bracing for no; when hiding hurt he nods too quickly and returns to his task. Eye life: wide, direct glances that dart away after asking, rapid blinks when refused, gaze often falling to the toy because it is safer than a face, catchlights brightening instantly at kindness. Walking style: a \"wobbly-cart shuffle,\" short uneven steps, toes angled around objects, hands full or reaching. However, when someone gives freely to him, the guarded tuck vanishes: spine lengthens, eyes lift, and his smile arrives before words can keep up. His face genuinely softens for his toy cart.",
+      "caps_rules": [
+        "1. HOPE LIFTS HIS HEAD BEFORE HE SPEAKS.",
+        "2. WHEN REFUSED, HE NODS TOO FAST AND LOOKS DOWN.",
+        "3. HANDS KEEP WORKING THE BROKEN TOY DURING AWKWARD SILENCES.",
+        "4. EMBARRASSMENT GOES TO A CHEEK-RUB OR NOSE-RUB.",
+        "5. HE DOES NOT DEMAND; HE ASKS AND BRACES.",
+        "6. KINDNESS STRAIGHTENS HIS SPINE IMMEDIATELY.",
+        "7. EYES DART AWAY AFTER A VULNERABLE QUESTION.",
+        "8. JOY IS SMALL FIRST: A HELD BREATH, THEN THE BEAM."
+      ],
+      "forbidden_readings": [
+        "Do not play him as a manipulative beggar.",
+        "Do not make disappointment theatrical or sulky.",
+        "Do not make him stand idle; the broken cart is his business.",
+        "Do not age him up with adult sarcasm.",
+        "Do not make joy explode before he has checked that the gift is really for him."
+      ],
+      "voice": "\"A 6-year-old village boy with a soft high child voice. Tentative, open, slightly breathy delivery; brightens quickly when included, and drops into short careful answers when disappointed.\""
+    },
+    {
+      "name": "SABA",
+      "master_profile": "Character acting as SABA. Late 60s or early 70s man, lean and weathered, joints stiff but hands nimble, spine slightly bent from years of sitting over scrolls, sandals and children; he carries age as a rhythm, not a weakness. Runs on a single engine: he wants children to discover wisdom themselves, so he turns answers into invitations. Vocal profile: warm textured baritone with a storyteller’s rise and fall, slow enough for children to enter the pictures, playful dryness on jokes; when truth matters, the voice drops lower and simpler. Key physical habits and tics: fingers hover over scrolls or tools as if greeting old companions; he taps the ground beside him to invite rather than command; when testing a child’s thought, he pauses with a half-smile and lowered chin; when hiding emotion he busies one hand with repair work while the eyes grow wet. Eye life: lively hooded eyes, constant small scans of listeners’ faces, slow knowing blinks, gaze settling on a child a beat before he speaks, catchlights mischievous but kind. Walking style: a creaking \"fig-tree amble,\" careful foot placement, slight sway, one hand ready to steady himself or gesture. However, when a child asks a true question, the entertainer drops away: his hand stills, spine gathers, and he listens as if the child has become the teacher. His face genuinely softens for Miri.",
+      "caps_rules": [
+        "1. HE INVITES WITH A PAT OR OPEN PALM, NOT A POINT.",
+        "2. STORY RHYTHM LIVES IN HANDS, EYEBROWS AND PAUSES.",
+        "3. OLD JOINTS MOVE SLOWLY; FINGERS STAY PRECISE.",
+        "4. A TRUE QUESTION STOPS HIS REPAIR WORK.",
+        "5. HE WATCHES WHETHER CHILDREN UNDERSTAND BEFORE CONTINUING.",
+        "6. JOKES ARE PLAYED DRY, NOT WINKED AT THE AUDIENCE.",
+        "7. HIS EYES ARE MISCHIEVOUS UNTIL WISDOM LANDS, THEN STILL.",
+        "8. HE NEVER PUSHES A MORAL; HE LEAVES ROOM FOR THE CHILD TO STEP INTO IT."
+      ],
+      "forbidden_readings": [
+        "Do not play him as a generic wizard or magical old man.",
+        "Do not make him feeble, doddering or forgetful for comedy.",
+        "Do not over-act storytelling with huge theatrical gestures.",
+        "Do not explain morals directly when a question can lead.",
+        "Do not make his kindness vague; it must be specific listening."
+      ],
+      "voice": "\"A man in his early 70s with a warm, textured baritone and gentle village cadence. Measured storyteller delivery with playful dry turns; when truth matters, he becomes quieter, lower and very simple.\""
+    },
+    {
+      "name": "GIRL",
+      "master_profile": "Character acting as GIRL. About 9 or 10 years old, long-limbed for her age, restless, quick to spring up from sitting, with a social body that checks where the other children are before choosing a direction; she carries the momentum of the group. Runs on a single engine: she wants play to keep moving and wants others to follow her into it. Vocal profile: bright high child voice, calling rather than explaining, words tossed over the shoulder; when excited the pitch rises and the final syllables stretch, but she can drop into a conspiratorial hush when recruiting friends. Key physical habits and tics: points with her whole torso before her arm catches up; rocks on the balls of her feet when waiting for agreement; claps once or flutters fingers when trying to start a chase; when ignored she laughs it off and scans for a more willing follower. Eye life: fast group-scanning micro-saccades, quick blinks in sunlight or excitement, gaze rarely held on one person long, catchlights lively and social. Walking style: a skipping \"hoop-chaser dash,\" light heel-lifted steps, sudden pivots, arms loose for balance. However, when an adult story unexpectedly catches her, the forward pull pauses: feet stop first, head tilts, and her eyes settle before the urge to run returns. Her face genuinely softens for younger children who join the game.",
+      "caps_rules": [
+        "1. SHE CHECKS THE GROUP BEFORE SHE MOVES.",
+        "2. EXCITEMENT LIFTS HER ONTO THE BALLS OF HER FEET.",
+        "3. SHE CALLS WHILE ALREADY TURNING AWAY.",
+        "4. INVITATION IS WHOLE-BODY, NOT JUST A HAND WAVE.",
+        "5. IF IGNORED, SHE RECOVERS BY FINDING ANOTHER FOLLOWER.",
+        "6. EYES SCAN CHILD TO CHILD, NEVER LOCKED.",
+        "7. STILLNESS MEANS A STORY HAS CAUGHT HER.",
+        "8. SHE LEADS PLAY WITHOUT BOSSING IT."
+      ],
+      "forbidden_readings": [
+        "Do not make her a mean ringleader.",
+        "Do not play her as a miniature adult.",
+        "Do not keep her frozen while calling others.",
+        "Do not make every movement manic; she is socially alert, not chaotic.",
+        "Do not over-emphasize sass or attitude."
+      ],
+      "voice": "\"A 9-year-old girl with a bright, ringing child voice. Quick calling delivery, often thrown over the shoulder; excitement lifts the pitch, while secret plans drop into a playful hush.\""
+    },
+    {
+      "name": "CHILD",
+      "master_profile": "Character acting as CHILD. About 7 or 8 years old, compact and quick, with knees and elbows always ready for sudden turns through a crowd; the body is built around play, apology and immediate re-entry into motion. Runs on a single engine: the child wants to belong to whatever is happening right now. Vocal profile: light high child voice, breathy from running, words arriving in quick bursts; when corrected or surprised the voice becomes small and sincere, then rebounds fast once accepted. Key physical habits and tics: raises both hands briefly when bumping someone as a reflexive apology; shifts weight foot-to-foot while deciding whether to stay; offers objects with arms extended too far, as if testing safety; when shy, the chin drops but the eyes keep peeking upward. Eye life: darting lively micro-saccades between adults, other children and treats, blink-bursts after near-collisions, bright catchlights that warm immediately at shared fun. Walking style: a \"crowd-skip weave,\" small quick steps, sideways squeezes, sudden stops with toes gripping the ground. However, when the child sees hunger or sadness close by, play-speed drains out of the body: shoulders settle, hands become careful, and the voice softens before offering help. The face genuinely softens for small animals.",
+      "caps_rules": [
+        "1. AFTER A BUMP, HANDS POP UP BEFORE THE APOLOGY.",
+        "2. RUNNING BREATH MUST SHOW IN THE LINE.",
+        "3. SHY KINDNESS EXTENDS THE ARM TOO FAR.",
+        "4. EYES PEEK UP EVEN WHEN THE CHIN DROPS.",
+        "5. PLAY RETURNS QUICKLY AFTER ACCEPTANCE.",
+        "6. FEET KEEP READY TO REJOIN THE GROUP.",
+        "7. OFFERING FOOD MAKES THE BODY CAREFUL AND SLOWER.",
+        "8. NEVER REACT IN PERFECT SYNC WITH OTHER CHILDREN."
+      ],
+      "forbidden_readings": [
+        "Do not make the child a blank background extra.",
+        "Do not make apologies adult and formal.",
+        "Do not keep the child still unless something has truly caught attention.",
+        "Do not make kindness sentimental; make it practical and shy.",
+        "Do not give identical reactions to the whole child crowd."
+      ],
+      "voice": "\"A 7-year-old child with a light, breathy high voice. Quick burst delivery shaped by running and play; becomes small and sincere for apologies or shy offers, then rebounds fast.\""
+    },
+    {
+      "name": "SMALL GIRL",
+      "master_profile": "Character acting as SMALL GIRL. About 4 or 5 years old, very small, soft-bodied, with heavy limbs when hungry and a tendency to lean into the nearest trusted adult; her posture alternates between collapsed need and sudden bright focus. Runs on a single engine: she needs comfort and certainty before she can be brave. Vocal profile: tiny high voice, open and unguarded, words stretched by hunger or fatigue; when reassured, the sound becomes rounder and quicker, with little upward lifts at the ends. Key physical habits and tics: presses both hands to her stomach when hungry; rubs one eye with the back of her hand when overwhelmed; clutches food in both hands even if it is small; when hiding a saved piece for later, she cups it carefully against her chest. Eye life: large wet eyes with slow tired blinks before food, gaze moving between mother’s face and the offered bread, sudden bright catchlights when she realizes something is for her. Walking style: a \"tired lamb toddle,\" short careful steps, knees soft, one shoulder leading toward her mother. However, when food is placed in her own hands, the droop lifts from the spine, fingers spread around the gift, and her whole face opens before she speaks. Her face genuinely softens for her mother.",
+      "caps_rules": [
+        "1. HUNGER GOES TO BOTH HANDS ON THE STOMACH.",
+        "2. SHE LEANS INTO HER MOTHER BEFORE LOOKING AT STRANGERS.",
+        "3. FOOD IS HELD WITH TWO HANDS, NEVER CASUALLY.",
+        "4. TIRED BLINKS SLOW BEFORE RELIEF.",
+        "5. THE QUESTION 'FOR ME?' STARTS IN THE EYES BEFORE THE VOICE.",
+        "6. A SAVED PIECE IS CUPPED AGAINST THE CHEST.",
+        "7. JOY LIFTS THE SPINE BEFORE THE FEET MOVE.",
+        "8. DO NOT MAKE HER CRY FOREVER AFTER COMFORT ARRIVES."
+      ],
+      "forbidden_readings": [
+        "Do not make her precociously witty or adult.",
+        "Do not make hunger cute without weight in the body.",
+        "Do not overdo crying with theatrical sobs.",
+        "Do not let her grab food greedily; she receives it carefully.",
+        "Do not detach her from her mother’s physical presence."
+      ],
+      "voice": "\"A 5-year-old small girl with a tiny, open high voice. Slow, simple, fatigue-shaped delivery when hungry; after comfort, the words become brighter, rounder and full of wondering upward lifts.\""
+    },
+    {
+      "name": "YONAH",
+      "master_profile": "Character acting as YONAH. About 9 years old, slim and careful, with narrow shoulders that draw inward around anything entrusted to him; he moves through crowds by making himself smaller without disappearing. Runs on a single engine: he wants to do the faithful thing while still being a hungry child with something real to lose. Vocal profile: clear young boy voice, gentle and slightly breathy, measured when explaining, uneven when deciding; under pressure he swallows before answering and the first word often comes softly. Key physical habits and tics: tightens fingers around his bundle when adults or hungry children notice it; glances to Miri for permission when uncertain; shifts weight back before stepping forward to give; when embarrassed by praise, he smiles down and toes at the ground. Eye life: bright attentive eyes with small anxious micro-saccades between the crowd, his food and Jesus’s direction, blink-bursts when challenged, a steadier gaze when he chooses to offer. Walking style: a cautious \"bundle-guard weave,\" close steps, elbows tucked, shoulders angled through gaps. However, when he decides the lunch should leave his hands, the guarded elbows open, breath steadies, and he holds the bundle out with both hands despite fear still showing in his eyes. His face genuinely softens for hungry younger children.",
+      "caps_rules": [
+        "1. HE GUARDS THE LUNCH WITH ELBOWS TUCKED.",
+        "2. UNCERTAINTY SENDS HIS EYES TO MIRI, THEN BACK TO THE BUNDLE.",
+        "3. FEAR SHOWS AS A SWALLOW BEFORE SPEAKING.",
+        "4. GIVING IS TWO-HANDED AND CAREFUL.",
+        "5. HE STEPS BACK BEFORE HE STEPS FORWARD.",
+        "6. PRAISE MAKES HIM LOOK DOWN AND TOE THE GROUND.",
+        "7. HIS EYES STEADY ONLY AFTER HE CHOOSES.",
+        "8. WONDER ARRIVES AS LAUGHTER THAT SURPRISES HIM."
+      ],
+      "forbidden_readings": [
+        "Do not play him as fearless or already saintly.",
+        "Do not make the lunch symbolic only; it must feel like his real food.",
+        "Do not make him passive; the choice is his.",
+        "Do not make him smug after the miracle.",
+        "Do not erase the fear once he has chosen to give."
+      ],
+      "voice": "\"A 9-year-old boy with a clear, gentle, slightly breathy voice. Measured and careful when explaining; under pressure he swallows, starts softly, and gains steadiness only after choosing.\""
+    },
+    {
+      "name": "PHILIP",
+      "master_profile": "Character acting as PHILIP. Mid-30s man, lean from travel, practical shoulders slightly lifted by responsibility, hands often half-raised as if measuring distances, numbers and needs in the air; his body carries the fatigue of someone trying to solve a problem before it harms people. Runs on a single engine: he wants to protect the crowd from failure by naming what is impossible. Vocal profile: grounded tenor with a worried edge, quick when reporting logistics, clipped around questions; under pressure the voice tightens and rises slightly before he reins it back out of respect. Key physical habits and tics: scans the horizon and crowd size before speaking; counts silently on fingers or taps thumb to palm when calculating; leans toward other disciples with urgency but checks himself near Jesus; when hiding doubt, he presses lips together and lowers his eyes. Eye life: active problem-solving gaze, rapid micro-saccades across faces, baskets, distance and Jesus’s hands, blink-bursts when an instruction exceeds his plan, catchlights sharp with concern. Walking style: a \"steward's hurry,\" long efficient steps, torso angled toward the next need, hands ready to direct. However, when Jesus answers with calm certainty, Philip’s forward urgency breaks: feet plant, shoulders drop a fraction, and his eyes search the command before obedience takes over. His face genuinely softens for hungry families.",
+      "caps_rules": [
+        "1. HE SCANS SCALE BEFORE SPEAKING.",
+        "2. CALCULATION GOES TO FINGERS OR THUMB AGAINST PALM.",
+        "3. WORRY SPEEDS HIM UP UNTIL JESUS SPEAKS.",
+        "4. NEAR JESUS, HE CHECKS HIS URGENCY PHYSICALLY.",
+        "5. IMPOSSIBLE INSTRUCTIONS MAKE HIM BLINK BEFORE OBEYING.",
+        "6. HIS QUESTIONS ARE LOGISTICAL, NOT DEFIANT.",
+        "7. HE DIRECTS WITH PRACTICAL HANDS, NOT DRAMA.",
+        "8. RELIEF SHOWS FIRST IN THE SHOULDERS."
+      ],
+      "forbidden_readings": [
+        "Do not play him as faithless or foolish.",
+        "Do not make him panicky; he is responsible under strain.",
+        "Do not make his questions sarcastic.",
+        "Do not freeze him in reverence when logistics require motion.",
+        "Do not make worry louder than respect."
+      ],
+      "voice": "\"A man in his mid-30s with a grounded tenor and practical Galilean cadence. Quick, clipped, logistics-minded delivery with a worried edge; under pressure the pitch rises briefly, then reins itself back into respect.\""
+    },
+    {
+      "name": "ANDREW",
+      "master_profile": "Character acting as ANDREW. Late 30s man, broad-handed and travel-worn, with a fisherman’s grounded stance, shoulders open but slightly bowed from carrying nets, baskets and other people’s needs; he moves like someone used to hard work and weather. Runs on a single engine: he brings small possibilities forward even when he cannot see how they will be enough. Vocal profile: warm low tenor, plainspoken and steady, with pauses that make room for shy people; under pressure his voice grows softer and more careful rather than faster. Key physical habits and tics: crouches or lowers his head when speaking to children; receives offerings with both hands as if weight and dignity matter; glances from a small gift to the large need without hiding the mismatch; when troubled, he rubs his thumb along his fingers like feeling a net cord. Eye life: steady kind gaze with slow micro-saccades between speaker, hands and Jesus, gentle blinks to reassure children, catchlights brightening when courage appears. Walking style: a \"shoreman's carry,\" planted heel-to-toe steps, knees soft, torso stable, hands free to lift or guide. However, when a child offers what seems too little, his practical doubt shows for one breath in the brow, then his face clears into honor for the giver. His face genuinely softens for Yonah.",
+      "caps_rules": [
+        "1. HE LOWERS HIMSELF TO CHILD HEIGHT.",
+        "2. OFFERINGS ARE RECEIVED WITH BOTH HANDS.",
+        "3. DOUBT IS ONE BREATH IN THE BROW, NOT DISMISSAL.",
+        "4. HIS EYES MOVE FROM GIFT TO NEED TO JESUS.",
+        "5. HE GUIDES CROWDS WITH OPEN PALMS.",
+        "6. TROUBLE RUBS THUMB AGAINST FINGERS.",
+        "7. KINDNESS SLOWS HIS BLINKS AND VOICE.",
+        "8. HE NEVER MAKES A CHILD FEEL FOOLISH."
+      ],
+      "forbidden_readings": [
+        "Do not play him as a bland smiling disciple.",
+        "Do not erase his practical concern.",
+        "Do not make him patronizing toward Yonah.",
+        "Do not over-reverence every gesture; he is working.",
+        "Do not make him rush a child’s offering."
+      ],
+      "voice": "\"A man in his late 30s with a warm low tenor and plain Galilean cadence. Steady, workmanlike delivery with kind pauses; under pressure he becomes softer, more careful and more grounded.\""
+    },
+    {
+      "name": "JESUS",
+      "master_profile": "Character acting as JESUS. Early 30s man, lean from walking, composed without stiffness, with a grounded vertical posture and hands that move economically, never performing authority; stillness around Him is active attention, not distance. Runs on a single engine: He meets the immediate need in front of Him while holding the whole crowd in view. Vocal profile: warm calm baritone, simple phrasing, unhurried pace, no strain to be heard; under pressure the voice remains low and steady, making others slow down to listen. Key physical habits and tics: before giving an instruction, His hand settles briefly on the object or person at the center of need; He pauses long enough for others to be seen; blessings are spoken with lifted hands that remain relaxed, fingers loose; when others panic, He does less, and the space around Him quiets. Eye life: when visible, steady living gaze with slow attentive micro-saccades from individual faces to the wider group, rare calm blinks, catchlights gentle and present, eyes arriving before the head turns. Walking style: a \"quiet shepherd's pace,\" even heel-to-toe steps, unhurried, weight balanced, arms free but contained. However, when a vulnerable person approaches, the public stillness becomes intimate: shoulders incline, hands lower, and attention narrows completely to that one person. His face genuinely softens for children.",
+      "caps_rules": [
+        "1. AUTHORITY IS STILL, LOW AND UNFORCED.",
+        "2. HANDS MOVE SIMPLY AND ECONOMICALLY.",
+        "3. BEFORE INSTRUCTION, A HAND SETTLES ON THE NEED.",
+        "4. HE NEVER RUSHES TO PROVE THE MIRACLE.",
+        "5. OTHERS REACT AROUND HIM; HE DOES NOT PERFORM SPECTACLE.",
+        "6. EYES LEAD GENTLY BEFORE THE HEAD TURNS.",
+        "7. WITH THE VULNERABLE, HIS WHOLE ATTENTION NARROWS.",
+        "8. BLESSING HANDS STAY RELAXED, NOT STATUESQUE."
+      ],
+      "forbidden_readings": [
+        "Do not play Him as theatrical, glowing, remote or self-displaying.",
+        "Do not make His voice booming or supernatural.",
+        "Do not add grand magician gestures before the bread multiplies.",
+        "Do not make stillness dead or frozen.",
+        "Do not turn kindness into sentimental posing."
+      ],
+      "voice": "\"A man in his early 30s with a warm calm baritone and plain Galilean cadence. Unhurried, simple, low delivery with no strain; under pressure He remains steady and quiet, making others slow down to listen.\""
+    },
+    {
+      "name": "MOTHER IN CROWD",
+      "master_profile": "Character acting as MOTHER IN CROWD. Late 20s or early 30s woman, tired from travel and childcare, with one hip habitually angled to support a child and hands that divide between comforting, shielding and receiving; her posture is protective even when seated. Runs on a single engine: she wants to keep her child calm while not showing how little she has to offer. Vocal profile: soft alto, worn at the edges, practical murmur for the child, fuller and trembling when gratitude breaks through; under pressure she hushes and comforts before speaking for herself. Key physical habits and tics: strokes her child’s hair or shoulder when the child complains; checks empty hands or folds before admitting lack; receives food with both palms cupped, then immediately lowers it toward the child; when hiding worry she smiles with closed lips but her throat tightens. Eye life: tired watchful eyes, small micro-saccades between child, crowd movement and approaching hands, slow blinks from fatigue, rapid wet blinks when relief arrives, catchlights brightening through tears. Walking style: a \"mother's side-step,\" short protective steps, body angled as a shield, one hand always ready to catch. However, when bread reaches her child, the guarded body loosens: shoulders drop, breath shakes out, and gratitude rises before she can fully compose her face. Her face genuinely softens for the small girl.",
+      "caps_rules": [
+        "1. ONE HAND STAYS NEAR THE CHILD.",
+        "2. WORRY CHECKS EMPTY HANDS OR FOLDS.",
+        "3. FOOD RECEIVED GOES TOWARD THE CHILD FIRST.",
+        "4. RELIEF DROPS THE SHOULDERS BEFORE WORDS.",
+        "5. GRATITUDE BRINGS WET RAPID BLINKS.",
+        "6. SHE SHIELDS WITH HER BODY IN CROWDS.",
+        "7. COMFORTING TOUCH CONTINUES DURING HER OWN HUNGER.",
+        "8. HER PRAISE COMES FROM A SHAKEN BREATH, NOT A STAGE DECLARATION."
+      ],
+      "forbidden_readings": [
+        "Do not play her as decorative background piety.",
+        "Do not make her helpless or passive; she is actively caring.",
+        "Do not overdo tears before relief has a trigger.",
+        "Do not let her eat before feeding the child.",
+        "Do not make the blessing loud and theatrical."
+      ],
+      "voice": "\"A woman in her early 30s with a soft tired alto and rural cadence. Gentle practical murmurs for her child; when gratitude breaks through, the voice grows fuller but trembles on the breath.\""
+    }
+  ]
+}

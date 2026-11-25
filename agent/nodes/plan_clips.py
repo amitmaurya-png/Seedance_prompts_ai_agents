@@ -2,13 +2,15 @@
 
 The LLM groups each scene's shots into clips (at most 4 shots, 4-15 s). Fixed
 fields (id, style, base constraints, continuity hand-off, API params) are added
-in code by `finish_clip`.
+in code by `finish_clip`. After every scene's LLM call, the reply and the
+finished clips are saved to data/clip_plans.json.
 """
 
 import logging
 from typing import Any, Dict, List, Optional, Tuple
 
 from agent import config
+from agent.helpers.json_files import ProgressFile
 from agent.helpers.seedance_request import read_url_file
 from agent.helpers.verbatim import check_verbatim, shot_pieces
 from agent.llm import OpenAILLM
@@ -27,6 +29,7 @@ def make_plan_clips(llm: OpenAILLM):
         image_names = sorted(read_url_file(config.CURL_REFERENCES_DIR / "image_urls"))
         clips: List[Clip] = []
         warnings: List[str] = []
+        progress = ProgressFile(config.CLIP_PLANS_JSON, state["pdf_path"], key="scenes")
 
         for scene in state["breakdown"]["scenes"]:
             log.info("Clips: scene %d %s", scene["number"], scene["heading"])
@@ -37,9 +40,20 @@ def make_plan_clips(llm: OpenAILLM):
             )
             warnings += [f"clips scene {scene['number']}: {p}" for p in problems]
 
+            first_new = len(clips)
             for index_in_scene, raw in enumerate(reply.get("clips", [])):
                 previous_id = clips[-1]["id"] if clips else None
                 clips.append(finish_clip(raw, len(clips) + 1, scene, index_in_scene, previous_id))
+
+            progress.add(
+                str(scene["number"]),
+                {
+                    "heading": scene["heading"],
+                    "problems": problems,
+                    "reply": reply,  # the LLM's clips, as returned
+                    "clips": clips[first_new:],  # the same clips after finish_clip
+                },
+            )
 
         return {"clips": clips, "warnings": warnings}
 

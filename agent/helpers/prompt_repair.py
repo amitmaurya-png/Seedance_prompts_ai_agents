@@ -1,13 +1,12 @@
 """Fix and check a director prompt in code.
 
-    repair_prompt    fixes what needs no judgement: the style block, unused
-                     @Image references, voice prompts, stray @Audio/@Video tags
-    prompt_problems  what is left for the LLM to fix: dialogue that isn't word
-                     for word, and @Image tags that aren't the clip's references
+repair_prompt    fixes what needs no judgement: the style block, unused
+                 @Image references, voice prompts, stray @Audio/@Video tags
+prompt_problems  what is left for the LLM to fix: dialogue that isn't word
+                 for word, and @Image tags that aren't the clip's references
 """
 
 import re
-from typing import List
 
 from agent import config
 from agent.helpers.clips import clip_lines, clip_speakers
@@ -19,7 +18,7 @@ IMAGE_TAG = re.compile(r"@Image (\d+)")
 AUDIO_OR_VIDEO_TAG = re.compile(r"\s*\(?@(?:Video|Audio) \d+\)?")
 
 
-def repair_prompt(prompt: str, clip: Clip, profiles: List[Profile]) -> str:
+def repair_prompt(prompt: str, clip: Clip, profiles: list[Profile]) -> str:
     prompt = AUDIO_OR_VIDEO_TAG.sub("", prompt)
 
     if normalize(config.STYLE_LINE) not in normalize(prompt):
@@ -28,7 +27,9 @@ def repair_prompt(prompt: str, clip: Clip, profiles: List[Profile]) -> str:
     used = set(IMAGE_TAG.findall(prompt))
     for ref in clip["references"]:
         if str(ref["n"]) not in used:
-            prompt = _add_to_section(prompt, "ACTIVE REFERENCES", f"@Image {ref['n']}: {ref['role']}")
+            prompt = _add_to_section(
+                prompt, "ACTIVE REFERENCES", f"@Image {ref['n']}: {ref['role']}"
+            )
 
     for voice in speaker_voices(clip, profiles):
         if normalize(voice.strip('"')) not in normalize(prompt):
@@ -36,7 +37,7 @@ def repair_prompt(prompt: str, clip: Clip, profiles: List[Profile]) -> str:
     return prompt
 
 
-def prompt_problems(prompt: str, clip: Clip) -> List[str]:
+def prompt_problems(prompt: str, clip: Clip) -> list[str]:
     if not prompt.strip():
         return ["no prompt was returned for this clip"]
 
@@ -48,7 +49,7 @@ def prompt_problems(prompt: str, clip: Clip) -> List[str]:
     return problems
 
 
-def speaker_voices(clip: Clip, profiles: List[Profile]) -> List[str]:
+def speaker_voices(clip: Clip, profiles: list[Profile]) -> list[str]:
     """The locked voice prompts of the characters who speak in the clip."""
     speakers = set(clip_speakers(clip))
     return [

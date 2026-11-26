@@ -7,7 +7,6 @@ already has a profile for every speaker.
 """
 
 import logging
-from typing import Any, Dict, List, Optional
 
 from agent import config
 from agent.helpers.breakdown_text import script_text, speakers
@@ -16,15 +15,15 @@ from agent.helpers.json_files import save_json
 from agent.llm import OpenAILLM
 from agent.prompts import profile_request
 from agent.retry import Reply, ask_until_valid
-from agent.state import PipelineState, Profile
+from agent.state import Node, PipelineState, Profile, StateUpdate
 
 log = logging.getLogger("agent")
 
 REQUIRED_FIELDS = ("master_profile", "caps_rules", "voice")
 
 
-def make_profile_characters(llm: OpenAILLM):
-    def profile_characters(state: PipelineState) -> Dict[str, Any]:
+def make_profile_characters(llm: OpenAILLM) -> Node:
+    def profile_characters(state: PipelineState) -> StateUpdate:
         scenes = state["breakdown"]["scenes"]
         names = speakers(scenes)
 
@@ -49,7 +48,7 @@ def make_profile_characters(llm: OpenAILLM):
     return profile_characters
 
 
-def _saved_profiles(state: PipelineState, names: List[str]) -> Optional[Dict[str, Profile]]:
+def _saved_profiles(state: PipelineState, names: list[str]) -> dict[str, Profile] | None:
     """The saved profiles, if there is one for every speaker."""
     saved = load_saved(config.CHARACTERS_JSON, state["pdf_path"])
     if not saved:
@@ -62,15 +61,17 @@ def _saved_profiles(state: PipelineState, names: List[str]) -> Optional[Dict[str
     return characters
 
 
-def _by_name(profiles: List[Profile]) -> Dict[str, Profile]:
+def _by_name(profiles: list[Profile]) -> dict[str, Profile]:
     """{"MIRI": {...}}: profiles keyed by upper-case name."""
     return {p["name"].strip().upper(): p for p in profiles if p.get("name")}
 
 
-def _profile_problems(reply: Reply, names: List[str]) -> List[str]:
+def _profile_problems(reply: Reply, names: list[str]) -> list[str]:
     """Speakers without a profile, and profiles missing a required field."""
     profiles = _by_name(reply.get("characters", []))
     problems = [f"no profile for {name}" for name in names if name not in profiles]
     for name, profile in profiles.items():
-        problems += [f"{name} has no {field}" for field in REQUIRED_FIELDS if not profile.get(field)]
+        problems += [
+            f"{name} has no {field}" for field in REQUIRED_FIELDS if not profile.get(field)
+        ]
     return problems

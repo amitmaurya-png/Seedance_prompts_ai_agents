@@ -1,0 +1,28 @@
+# Formatting and lint settings. Run from the project root:
+#
+#     ruff format .          # format every file
+#     ruff check --fix .     # sort imports, modernize syntax, catch mistakes
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["skills"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes: unused names, undefined names
+    "I",   # import sorting
+    "UP",  # modern syntax: list[str], X | None
+    "B",   # likely bugs
+    "SIM", # simpler equivalents
+    "C4",  # cleaner comprehensions
+]
+
+[tool.ruff.lint.per-file-ignores]
+# LLM instructions are long prose lines inside strings; wrapping them would change the prompts.
+"agent/prompts.py" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["agent"]

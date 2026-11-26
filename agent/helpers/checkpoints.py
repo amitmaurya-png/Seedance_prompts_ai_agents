@@ -17,14 +17,14 @@ import hashlib
 import json
 import logging
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any
 
 from agent.helpers.json_files import save_json
 
 log = logging.getLogger("agent")
 
 
-def load_saved(path: Path, pdf_path: str) -> Optional[Dict[str, Any]]:
+def load_saved(path: Path, pdf_path: str) -> dict[str, Any] | None:
     """The file's contents if it exists and was made from this skit, else None."""
     if not path.is_file():
         return None
@@ -57,18 +57,18 @@ class ProgressFile:
     def __init__(self, path: Path, pdf_path: str, key: str):
         self.path, self.key = path, key
         previous = load_saved(path, pdf_path) or {}
-        self._previous: Dict[str, Any] = previous.get(key) or {}
-        self.data: Dict[str, Any] = {"source": pdf_path, key: {}}
+        self._previous: dict[str, Any] = previous.get(key) or {}
+        self.data: dict[str, Any] = {"source": pdf_path, key: {}}
         self._first_write = True
 
-    def saved(self, item_id: str) -> Optional[Dict[str, Any]]:
+    def saved(self, item_id: str) -> dict[str, Any] | None:
         entry = self._previous.get(item_id)
         return entry if isinstance(entry, dict) else None
 
-    def keep(self, item_id: str, entry: Dict[str, Any]) -> None:
+    def keep(self, item_id: str, entry: dict[str, Any]) -> None:
         self.data[self.key][item_id] = entry
 
-    def add(self, item_id: str, entry: Dict[str, Any]) -> None:
+    def add(self, item_id: str, entry: dict[str, Any]) -> None:
         self.data[self.key][item_id] = entry
         save_json(self.path, self.data, backup=self._first_write)
         self._first_write = False

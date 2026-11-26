@@ -2,16 +2,16 @@
 
 import logging
 from pathlib import Path
-from typing import Any, Dict
 
 from agent import config
 from agent.helpers.skit_pdf import read_pdf_text, split_scenes
-from agent.state import PipelineState
+from agent.state import PipelineState, StateUpdate
 
 log = logging.getLogger("agent")
 
 
-def load_skit(state: PipelineState) -> Dict[str, Any]:
+def load_skit(state: PipelineState) -> StateUpdate:
+    """Split the skit PDF into scenes at its INT./EXT. headings."""
     pdf_path = state["pdf_path"]
     scenes = split_scenes(read_pdf_text(Path(pdf_path)))
     if not scenes:

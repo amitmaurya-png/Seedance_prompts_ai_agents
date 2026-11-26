@@ -10,7 +10,7 @@ The LLM is OpenAI (`gpt-5.5` by default). Each LLM step follows the instructions
 python3.12 -m venv .venv && source .venv/bin/activate
 pip install -U -r requirements.txt
 echo "OPENAI_API_KEY=sk-..." > .env       # optional: OPENAI_MODEL=...
-python main.py                           # uses data/TSL.pdf
+python main.py                           # uses SKIT_PDF from agent/config.py
 python main.py path/to/skit.pdf
 ```
 
@@ -53,6 +53,7 @@ To redo a step, delete its file. Earlier versions of every output are kept in `d
 
 ```
 main.py                  entry point: runs the graph, prints a summary
+pyproject.toml           formatter and linter settings (ruff)
 agent/
   config.py              paths, skills per node, run settings, project style and constraints
   graph.py               wires the nodes in order
@@ -66,6 +67,16 @@ agent/
   helpers/               plain code used by the nodes (no LLM calls)
 skills/                  the skill files the LLM steps follow
 data/                    the input PDF and every output above
+```
+
+## Formatting
+
+The code is formatted and linted with [ruff](https://docs.astral.sh/ruff/); settings are in [pyproject.toml](pyproject.toml).
+
+```bash
+pip install -r requirements-dev.txt
+ruff format .          # format every file
+ruff check --fix .     # sort imports, modernize syntax, catch mistakes
 ```
 
 ## Settings worth knowing ([agent/config.py](agent/config.py))

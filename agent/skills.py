@@ -14,9 +14,9 @@ SKILL.md format:
     Markdown instructions the agent should follow.
 """
 
+from collections.abc import Iterable
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
 
 SKILL_FILENAME = "SKILL.md"
 REFERENCES_DIRNAME = "references"
@@ -29,14 +29,14 @@ class Skill:
     description: str
     instructions: str
     # (file name, text) for each references/*.md file.
-    references: Tuple[Tuple[str, str], ...] = ()
+    references: tuple[tuple[str, str], ...] = ()
 
 
 def load_skills(
     skills_dir: Path,
-    names: Optional[Iterable[str]] = None,
+    names: Iterable[str] | None = None,
     include_references: bool = False,
-) -> List[Skill]:
+) -> list[Skill]:
     """Load skills from skills_dir.
 
     names=None loads every skills/<name>/SKILL.md (sorted by folder name);
@@ -50,9 +50,7 @@ def load_skills(
     return [load_skill(p, include_references) for p in paths]
 
 
-def load_skill_by_name(
-    skills_dir: Path, name: str, include_references: bool = False
-) -> Skill:
+def load_skill_by_name(skills_dir: Path, name: str, include_references: bool = False) -> Skill:
     """Load skills/<name>/SKILL.md. Raises FileNotFoundError if it doesn't exist."""
     path = skills_dir / name / SKILL_FILENAME
     if not path.is_file():
@@ -75,7 +73,7 @@ def load_skill(path: Path, include_references: bool = False) -> Skill:
     )
 
 
-def render_skills(skills: List[Skill]) -> str:
+def render_skills(skills: list[Skill]) -> str:
     """Format skills (and their references) as a section of the system prompt."""
     if not skills:
         return ""
@@ -89,7 +87,7 @@ def _render_skill(skill: Skill) -> str:
     return "\n\n".join(parts)
 
 
-def _load_references(skill_dir: Path) -> Tuple[Tuple[str, str], ...]:
+def _load_references(skill_dir: Path) -> tuple[tuple[str, str], ...]:
     ref_dir = skill_dir / REFERENCES_DIRNAME
     if not ref_dir.is_dir():
         return ()
@@ -98,13 +96,13 @@ def _load_references(skill_dir: Path) -> Tuple[Tuple[str, str], ...]:
     )
 
 
-def _split_frontmatter(text: str) -> Tuple[Dict[str, str], str]:
+def _split_frontmatter(text: str) -> tuple[dict[str, str], str]:
     """Split '---' key: value '---' frontmatter from the markdown body."""
     lines = text.strip().splitlines()
     if not lines or lines[0].strip() != FRONTMATTER_DELIMITER:
         return {}, text.strip()
 
-    metadata: Dict[str, str] = {}
+    metadata: dict[str, str] = {}
     folding_key = None  # key whose value is a `>` or `|` block on the lines below
     for index, line in enumerate(lines[1:], start=1):
         if line.strip() == FRONTMATTER_DELIMITER:

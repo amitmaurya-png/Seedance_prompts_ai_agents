@@ -12,7 +12,7 @@ The clips then send it as one of their @Image references.
 
 import logging
 import re
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 from agent import config
 from agent.helpers.breakdown_text import locations, script_text, speakers
@@ -23,18 +23,18 @@ from agent.helpers.verbatim import normalize
 from agent.llm import OpenAILLM
 from agent.prompts import asset_request
 from agent.retry import Reply, ask_until_valid
-from agent.state import PipelineState
+from agent.state import Node, PipelineState, StateUpdate
 
 log = logging.getLogger("agent")
 
-Asset = Dict[str, Any]  # {"name", "kind", "model", "platform_settings", "prompt", "notes"}
+Asset = dict[str, Any]  # {"name", "kind", "model", "platform_settings", "prompt", "notes"}
 
 # Aspect ratios and resolutions are platform settings; they don't belong in the prompt text.
 PLATFORM_TEXT = re.compile(r"--ar\b|\b\d{1,2}:\d{1,2}\b|\b[1-8]k\b", re.IGNORECASE)
 
 
-def make_asset_prompts(llm: OpenAILLM):
-    def asset_prompts(state: PipelineState) -> Dict[str, Any]:
+def make_asset_prompts(llm: OpenAILLM) -> Node:
+    def asset_prompts(state: PipelineState) -> StateUpdate:
         scenes = state["breakdown"]["scenes"]
         characters = list(dict.fromkeys(speakers(scenes) + list(state.get("characters", {}))))
 
@@ -44,7 +44,7 @@ def make_asset_prompts(llm: OpenAILLM):
             return {"asset_prompts": saved}
 
         places = locations(scenes)
-        image_names = sorted(read_url_file(config.CURL_REFERENCES_DIR / "image_urls"))
+        image_names = sorted(read_url_file(config.IMAGE_URLS))
         log.info("Assets: %d characters, %d locations", len(characters), len(places))
         reply, problems = ask_until_valid(
             llm,
@@ -59,7 +59,7 @@ def make_asset_prompts(llm: OpenAILLM):
     return asset_prompts
 
 
-def _saved_assets(state: PipelineState, characters: List[str]) -> Optional[List[Asset]]:
+def _saved_assets(state: PipelineState, characters: list[str]) -> list[Asset] | None:
     """The saved asset prompts, if there is a character sheet for every character."""
     saved = load_saved(config.ASSET_PROMPTS_JSON, state["pdf_path"])
     if not saved or not saved.get("assets"):
@@ -71,14 +71,14 @@ def _saved_assets(state: PipelineState, characters: List[str]) -> Optional[List[
     return saved["assets"]
 
 
-def _sheet_names(assets: List[Asset]) -> set:
+def _sheet_names(assets: list[Asset]) -> set:
     """Upper-case names of the character sheets among the assets."""
     return {a.get("name", "").strip().upper() for a in assets if a.get("kind") == "character"}
 
 
-def _asset_problems(reply: Reply, characters: List[str]) -> List[str]:
+def _asset_problems(reply: Reply, characters: list[str]) -> list[str]:
     """Missing sheets or plates, and prompts without the style block or with platform settings."""
-    assets: List[Asset] = reply.get("assets", [])
+    assets: list[Asset] = reply.get("assets", [])
     sheets = _sheet_names(assets)
     problems = [f"no character sheet for {name}" for name in characters if name not in sheets]
     if not any(a.get("kind") == "location" for a in assets):

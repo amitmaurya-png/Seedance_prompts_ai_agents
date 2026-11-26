@@ -2,7 +2,6 @@
 
 import re
 from pathlib import Path
-from typing import List
 
 from pypdf import PdfReader
 
@@ -23,7 +22,7 @@ def read_pdf_text(path: Path) -> str:
     return CONTD.sub("", text)
 
 
-def split_scenes(text: str) -> List[Scene]:
+def split_scenes(text: str) -> list[Scene]:
     """Split the skit at INT./EXT. headings. Text before the first heading is dropped.
 
     Returns [{"number": 1, "heading": "EXT. ...", "text": "..."}].

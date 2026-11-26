@@ -1,8 +1,10 @@
-"""Entry point: skit PDF -> breakdown, acting profiles, asset prompts -> prompt.json -> curl_commands.json.
+"""Entry point: turn a skit PDF into Seedance 2.0 prompts and curl commands.
+
+skit PDF -> breakdown -> acting profiles -> asset prompts -> prompt.json -> curl_commands.json
 
     source .venv/bin/activate
     pip install -U -r requirements.txt
-    python main.py                 # uses data/TSL.pdf
+    python main.py                 # uses SKIT_PDF from agent/config.py
     python main.py path/to/skit.pdf
 
 Reads OPENAI_API_KEY (and optionally OPENAI_MODEL) from .env.
@@ -37,7 +39,9 @@ def main() -> None:
     ready = sum(1 for c in commands.values() if not c["missing"])
     print(f"\n{len(clips)} clips, {sum(c['duration_seconds'] for c in clips)} s total")
     print(f"acting profiles:    {CHARACTERS_JSON} ({len(result['characters'])} characters)")
-    print(f"asset prompts:      {ASSET_PROMPTS_JSON} ({len(result['asset_prompts'])} images to make)")
+    print(
+        f"asset prompts:      {ASSET_PROMPTS_JSON} ({len(result['asset_prompts'])} images to make)"
+    )
     print(f"prompt.json:        {PROMPT_JSON}")
     print(f"curl commands:      {CURL_JSON} ({ready}/{len(commands)} ready to send)")
 

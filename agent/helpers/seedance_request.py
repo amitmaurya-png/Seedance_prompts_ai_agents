@@ -12,7 +12,7 @@ Follows skills/seedance-curl/SKILL.md:
 import json
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 from agent.config import SeedanceSettings
 from agent.helpers.clips import clip_speakers
@@ -26,14 +26,32 @@ LABEL_SUFFIXES = (
     "continuity reference",
     "reference",
 )
-STOPWORDS = {"the", "a", "an", "of", "in", "and", "with", "within", "around", "reference",
-             "character", "scene", "group", "image", "shown", "alone", "sitting", "who"}
+STOPWORDS = {
+    "the",
+    "a",
+    "an",
+    "of",
+    "in",
+    "and",
+    "with",
+    "within",
+    "around",
+    "reference",
+    "character",
+    "scene",
+    "group",
+    "image",
+    "shown",
+    "alone",
+    "sitting",
+    "who",
+}
 
 
 # --- URL files ---------------------------------------------------------------
 
 
-def read_url_file(path: Path) -> Dict[str, str]:
+def read_url_file(path: Path) -> dict[str, str]:
     """`NAME : url` per line -> {NAME: url}. Blank and # lines are skipped."""
     if not path.is_file():
         return {}
@@ -52,7 +70,7 @@ def _key(text: str) -> str:
     return " ".join(re.sub(r"[^a-z0-9 ]", " ", text).split())
 
 
-def match_url(label: str, urls: Dict[str, str]) -> Optional[str]:
+def match_url(label: str, urls: dict[str, str]) -> str | None:
     """Full label, then the label without its 'reference' suffix, then a unique word."""
     by_key = {_key(name): url for name, url in urls.items()}
     full = _key(label)
@@ -76,14 +94,14 @@ def match_url(label: str, urls: Dict[str, str]) -> Optional[str]:
 
 
 def build_request(
-    clip: Dict[str, Any],
-    image_urls: Dict[str, str],
-    audio_urls: Dict[str, str],
-    last_frames: Dict[str, str],
+    clip: dict[str, Any],
+    image_urls: dict[str, str],
+    audio_urls: dict[str, str],
+    last_frames: dict[str, str],
     settings: SeedanceSettings,
-) -> Dict[str, Any]:
-    missing: List[str] = []
-    content: List[Dict[str, Any]] = []
+) -> dict[str, Any]:
+    missing: list[str] = []
+    content: list[dict[str, Any]] = []
 
     for ref in sorted(clip["references"], key=lambda r: r["n"]):
         label = ref["role"]
@@ -92,9 +110,7 @@ def build_request(
         if not url:
             missing.append(label)
             url = f"<missing: {label}>"
-        content.append(
-            {"type": "image_url", "image_url": {"url": url}, "role": "reference_image"}
-        )
+        content.append({"type": "image_url", "image_url": {"url": url}, "role": "reference_image"})
 
     voices = []
     for speaker in clip_speakers(clip)[: settings.max_voices]:
@@ -126,7 +142,7 @@ def build_request(
     }
 
 
-def to_curl(body: Dict[str, Any], endpoint: str) -> str:
+def to_curl(body: dict[str, Any], endpoint: str) -> str:
     data = json.dumps(body, ensure_ascii=False, indent=2).replace("'", "'\\''")
     return (
         f"curl --location --request POST '{endpoint}' \\\n"
@@ -136,7 +152,7 @@ def to_curl(body: Dict[str, Any], endpoint: str) -> str:
     )
 
 
-def _add_voice_line(prompt: str, voices: List[str]) -> str:
+def _add_voice_line(prompt: str, voices: list[str]) -> str:
     """Add '- Voice references: @Audio 1 is Saba's voice, ...' under '- Voices:'."""
     if not voices:
         return prompt

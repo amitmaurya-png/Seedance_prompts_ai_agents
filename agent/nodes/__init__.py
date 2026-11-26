@@ -1,13 +1,15 @@
 """The pipeline's nodes, one file each, in run order.
 
-    load_skit           code   skit PDF -> scenes
-    extract_breakdown   LLM    scenes -> data/breakdown.json          (no skill)
-    profile_characters  LLM    breakdown -> data/characters.json      (acting-system, stylized-3d-film-director)
-    asset_prompts       LLM    breakdown -> data/asset_prompts.json   (lira-image-prompts, stylized-3d-film-director)
-    plan_clips          LLM    breakdown -> clips                     (stylized-3d-film-director)
-    direct_prompts      LLM    clips -> prompts, data/prompt.json     (cinedance-director, acting-system,
-                                                                       stylized-3d-film-director)
-    build_curl          code   clips -> curl/curl_commands.json       (seedance-curl rules)
+    node                kind  input -> output
+    load_skit           code  skit PDF -> scenes
+    extract_breakdown   LLM   scenes -> data/breakdown.json
+    profile_characters  LLM   breakdown -> data/characters.json
+    asset_prompts       LLM   breakdown -> data/asset_prompts.json
+    plan_clips          LLM   breakdown -> clips
+    direct_prompts      LLM   clips -> prompts, data/prompt.json
+    build_curl          code  clips -> curl/curl_commands.json (follows seedance-curl)
+
+The skills each LLM node loads are listed in agent/config.py.
 
 LLM nodes are built by a make_<name>(llm) factory so each gets its own skills.
 """

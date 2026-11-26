@@ -5,7 +5,7 @@ it automatically) and a request builder for the user message.
 """
 
 import json
-from typing import Any, Dict, List
+from typing import Any
 
 # The skills are written for a person working with a user. Here each node runs
 # unattended, so these parts are switched off.
@@ -16,10 +16,12 @@ UNATTENDED = (
 )
 
 
-def fix_request(problems: List[str]) -> str:
+def fix_request(problems: list[str]) -> str:
     """Follow-up message when a reply fails its checks."""
     listed = "\n- ".join(problems)
-    return f"These problems were found:\n- {listed}\nFix them and reply with the full corrected JSON."
+    return (
+        f"These problems were found:\n- {listed}\nFix them and reply with the full corrected JSON."
+    )
 
 
 # --- extract_breakdown -------------------------------------------------------
@@ -31,8 +33,8 @@ EXTRACT_SYSTEM = (
 )
 
 
-def extract_request(scene: Dict[str, Any]) -> str:
-    return f"""Scene {scene['number']}: {scene['heading']}
+def extract_request(scene: dict[str, Any]) -> str:
+    return f"""Scene {scene["number"]}: {scene["heading"]}
 
 Split the scene text below into shots. A shot is one action paragraph (or consecutive action paragraphs) followed by the dialogue spoken until the next action. Copy text exactly: rejoin lines broken by page wraps, but don't change, add, drop, or reorder any words. Character cue lines (e.g. "NIM") become `character`; parentheticals like "(whispering)" go in `parenthetical`; "(V.O.)" sets `voice_over` to true. If the scene opens with dialogue, the first shot's action is "".
 
@@ -41,7 +43,7 @@ Reply with JSON:
 
 Scene text:
 \"\"\"
-{scene['text']}
+{scene["text"]}
 \"\"\""""
 
 
@@ -57,7 +59,7 @@ PROFILE_SYSTEM = (
 )
 
 
-def profile_request(script: str, speakers: List[str]) -> str:
+def profile_request(script: str, speakers: list[str]) -> str:
     return f"""Write an acting profile for each of these speaking characters: {", ".join(speakers)}.
 Add any other character who appears on screen in more than one scene.
 
@@ -93,9 +95,9 @@ ASSET_SYSTEM = (
 
 def asset_request(
     script: str,
-    characters: List[str],
-    places: List[str],
-    image_names: List[str],
+    characters: list[str],
+    places: list[str],
+    image_names: list[str],
     style_line: str,
 ) -> str:
     return f"""Write one image prompt per reference asset for this film.
@@ -133,9 +135,9 @@ PLAN_SYSTEM = (
 )
 
 
-def plan_request(scene: Dict[str, Any], image_names: List[str]) -> str:
+def plan_request(scene: dict[str, Any], image_names: list[str]) -> str:
     shots = json.dumps(scene["shots"], ensure_ascii=False, indent=1)
-    return f"""Scene {scene['number']}: {scene['heading']}
+    return f"""Scene {scene["number"]}: {scene["heading"]}
 
 Group this scene's breakdown shots into Seedance 2.0 clips, in order.
 
@@ -155,7 +157,7 @@ Rules:
 
 Reply with JSON:
 {{"clips": [{{
-  "source": ["s{scene['number']}-1"],
+  "source": ["s{scene["number"]}-1"],
   "duration_seconds": 10,
   "references": [{{"n": 1, "role": "Miri character reference"}}],
   "scene_image": 2,
@@ -181,7 +183,7 @@ DIRECTOR_SYSTEM = (
 
 
 def director_request(
-    clips: List[Dict[str, Any]], profiles: List[Dict[str, Any]], style_line: str
+    clips: list[dict[str, Any]], profiles: list[dict[str, Any]], style_line: str
 ) -> str:
     """One request for several clips of the same scene."""
     sections = "\n\n".join(_clip_section(clip) for clip in clips)
@@ -208,16 +210,19 @@ The clips, as planned from the script (actions and dialogue are verbatim):
 {sections}
 
 Reply with JSON, one prompt per clip id:
-{{"prompts": {{"{clips[0]['id']}": "SCENE CONTEXT\\n..."}}}}"""
+{{"prompts": {{"{clips[0]["id"]}": "SCENE CONTEXT\\n..."}}}}"""
 
 
-def _clip_section(clip: Dict[str, Any]) -> str:
+def _clip_section(clip: dict[str, Any]) -> str:
     references = "\n".join(f"  - @Image {r['n']}: {r['role']}" for r in clip["references"])
-    dialogue = "\n".join(
-        f"  - {line.get('character')}: {line['line']}"
-        for shot in clip["shot_details"]
-        for line in shot.get("dialogue", [])
-    ) or "  - none (no one speaks in this clip)"
+    dialogue = (
+        "\n".join(
+            f"  - {line.get('character')}: {line['line']}"
+            for shot in clip["shot_details"]
+            for line in shot.get("dialogue", [])
+        )
+        or "  - none (no one speaks in this clip)"
+    )
     brief = {
         "scene": clip["scene_setting"],
         "duration_seconds": clip["duration_seconds"],
@@ -225,7 +230,7 @@ def _clip_section(clip: Dict[str, Any]) -> str:
         "audio": clip.get("audio", {}),
         "constraints": clip["constraints"],
     }
-    return f"""=== {clip['id']} ({clip['duration_seconds']} s, {len(clip['shot_details'])} shot(s))
+    return f"""=== {clip["id"]} ({clip["duration_seconds"]} s, {len(clip["shot_details"])} shot(s))
 Reference images:
 {references}
 Spoken lines, in order:
@@ -234,7 +239,7 @@ Plan:
 {json.dumps(brief, ensure_ascii=False, indent=1)}"""
 
 
-def director_fix_request(problems: Dict[str, List[str]]) -> str:
+def director_fix_request(problems: dict[str, list[str]]) -> str:
     """Ask again only for the clips whose prompts failed a check."""
     listed = "\n".join(
         f"{clip_id}:\n" + "\n".join(f"- {p}" for p in found) for clip_id, found in problems.items()

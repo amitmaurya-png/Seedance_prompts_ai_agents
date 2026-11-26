@@ -9,7 +9,8 @@ still passes the checks, so only new or failed scenes cost an LLM call.
 """
 
 import logging
-from typing import Any, Dict, List, Optional
+from functools import partial
+from typing import Any
 
 from agent import config
 from agent.helpers.checkpoints import ProgressFile, fingerprint
@@ -19,17 +20,17 @@ from agent.helpers.verbatim import check_verbatim, shot_pieces
 from agent.llm import OpenAILLM
 from agent.prompts import plan_request
 from agent.retry import Reply, ask_until_valid
-from agent.state import Clip, PipelineState, Scene
+from agent.state import Clip, Node, PipelineState, Scene, StateUpdate
 
 log = logging.getLogger("agent")
 
 
-def make_plan_clips(llm: OpenAILLM):
-    def plan_clips(state: PipelineState) -> Dict[str, Any]:
-        image_names = sorted(read_url_file(config.CURL_REFERENCES_DIR / "image_urls"))
+def make_plan_clips(llm: OpenAILLM) -> Node:
+    def plan_clips(state: PipelineState) -> StateUpdate:
+        image_names = sorted(read_url_file(config.IMAGE_URLS))
         progress = ProgressFile(config.CLIP_PLANS_JSON, state["pdf_path"], key="scenes")
-        clips: List[Clip] = []
-        warnings: List[str] = []
+        clips: list[Clip] = []
+        warnings: list[str] = []
         reused = 0
 
         for scene in state["breakdown"]["scenes"]:
@@ -40,21 +41,25 @@ def make_plan_clips(llm: OpenAILLM):
             plan = _saved_plan(progress.saved(scene_id), scene, shots_hash)
             was_saved = plan is not None
             if was_saved:
-                problems: List[str] = []
+                problems: list[str] = []
                 reused += 1
             else:
                 log.info("Clips: scene %d %s", scene["number"], scene["heading"])
                 plan, problems = ask_until_valid(
                     llm,
                     plan_request(scene, image_names),
-                    find_problems=lambda reply: _plan_problems(reply, scene),
+                    find_problems=partial(_plan_problems, scene=scene),
                     repair=repair_durations,
                 )
                 warnings += [f"clips scene {scene['number']}: {p}" for p in problems]
 
             # 2. Full clips, numbered across the whole skit.
-            scene_clips = _finish_scene(plan, scene, first_number=len(clips) + 1,
-                                        previous_id=clips[-1]["id"] if clips else None)
+            scene_clips = _finish_scene(
+                plan,
+                scene,
+                first_number=len(clips) + 1,
+                previous_id=clips[-1]["id"] if clips else None,
+            )
             clips += scene_clips
 
             # 3. Checkpoint: write new plans now; a reused one is already in the file.
@@ -77,11 +82,15 @@ def make_plan_clips(llm: OpenAILLM):
     return plan_clips
 
 
-def _finish_scene(plan: Reply, scene: Scene, first_number: int, previous_id: Optional[str]) -> List[Clip]:
+def _finish_scene(
+    plan: Reply, scene: Scene, first_number: int, previous_id: str | None
+) -> list[Clip]:
     """The scene's planned clips as full clips; each later clip hands off from the one before."""
-    clips: List[Clip] = []
+    clips: list[Clip] = []
     for index_in_scene, raw in enumerate(plan.get("clips", [])):
-        clips.append(finish_clip(raw, first_number + index_in_scene, scene, index_in_scene, previous_id))
+        clips.append(
+            finish_clip(raw, first_number + index_in_scene, scene, index_in_scene, previous_id)
+        )
         previous_id = clips[-1]["id"]
     return clips
 
@@ -89,7 +98,7 @@ def _finish_scene(plan: Reply, scene: Scene, first_number: int, previous_id: Opt
 # --- Reuse -------------------------------------------------------------------
 
 
-def _saved_plan(entry: Optional[Dict[str, Any]], scene: Scene, shots_hash: str) -> Optional[Reply]:
+def _saved_plan(entry: dict[str, Any] | None, scene: Scene, shots_hash: str) -> Reply | None:
     """The saved plan for this scene, if the scene is unchanged and the plan still passes.
 
     Entries saved before `shots_hash` existed are checked against the breakdown
@@ -106,14 +115,16 @@ def _saved_plan(entry: Optional[Dict[str, Any]], scene: Scene, shots_hash: str) 
 # --- Checks ------------------------------------------------------------------
 
 
-def _plan_problems(reply: Reply, scene: Scene) -> List[str]:
+def _plan_problems(reply: Reply, scene: Scene) -> list[str]:
     """Breakdown text missing from the clips, text changed or added, and size limits."""
     clips = reply.get("clips", [])
     clip_pieces = [p for clip in clips for p in shot_pieces(clip.get("shot_details", []))]
     breakdown_pieces = shot_pieces(scene["shots"])
 
     problems = [f"missing, {p}" for p in check_verbatim(breakdown_pieces, " ".join(clip_pieces))]
-    problems += [f"changed or added, {p}" for p in check_verbatim(clip_pieces, " ".join(breakdown_pieces))]
+    problems += [
+        f"changed or added, {p}" for p in check_verbatim(clip_pieces, " ".join(breakdown_pieces))
+    ]
 
     for clip in clips:
         name = f"clip {clip.get('source')}"

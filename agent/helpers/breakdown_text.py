@@ -1,7 +1,6 @@
 """Read the breakdown back as script text, speakers and locations."""
 
 import re
-from typing import List
 
 from agent.state import Scene
 
@@ -10,9 +9,9 @@ TIME_OF_DAY = re.compile(r"\s+[-–—]\s+[A-Z][A-Z .']*$")
 INT_EXT = re.compile(r"^(?:INT\./EXT\.|INT\.|EXT\.)\s*")
 
 
-def speakers(scenes: List[Scene]) -> List[str]:
+def speakers(scenes: list[Scene]) -> list[str]:
     """Speaking characters (upper case), in order of their first line."""
-    names: List[str] = []
+    names: list[str] = []
     for scene in scenes:
         for shot in scene["shots"]:
             for line in shot.get("dialogue", []):
@@ -22,9 +21,12 @@ def speakers(scenes: List[Scene]) -> List[str]:
     return names
 
 
-def locations(scenes: List[Scene]) -> List[str]:
-    """Distinct places from the scene headings: 'EXT. SABA'S COURTYARD — DAY' -> "SABA'S COURTYARD"."""
-    places: List[str] = []
+def locations(scenes: list[Scene]) -> list[str]:
+    """Distinct places from the scene headings, in order of first appearance.
+
+    "EXT. SABA'S COURTYARD — DAY" -> "SABA'S COURTYARD"
+    """
+    places: list[str] = []
     for scene in scenes:
         place = TIME_OF_DAY.sub("", INT_EXT.sub("", scene["heading"].strip()))
         if place and place not in places:
@@ -32,7 +34,7 @@ def locations(scenes: List[Scene]) -> List[str]:
     return places
 
 
-def script_text(scenes: List[Scene]) -> str:
+def script_text(scenes: list[Scene]) -> str:
     """The breakdown as plain script text: heading, actions and lines."""
     parts = []
     for scene in scenes:

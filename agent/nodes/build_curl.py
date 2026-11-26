@@ -1,21 +1,20 @@
 """Node 7 (code, follows skill: seedance-curl): clips -> curl/curl_commands.json."""
 
 import logging
-from typing import Any, Dict
 
 from agent import config
 from agent.helpers.json_files import save_json
 from agent.helpers.seedance_request import build_request, read_url_file
-from agent.state import PipelineState
+from agent.state import PipelineState, StateUpdate
 
 log = logging.getLogger("agent")
 
 
-def build_curl(state: PipelineState) -> Dict[str, Any]:
-    refs = config.CURL_REFERENCES_DIR
-    image_urls = read_url_file(refs / "image_urls")
-    audio_urls = read_url_file(refs / "audio_urls")
-    last_frames = read_url_file(refs / "last_frames")
+def build_curl(state: PipelineState) -> StateUpdate:
+    """One Seedance API request and curl command per clip."""
+    image_urls = read_url_file(config.IMAGE_URLS)
+    audio_urls = read_url_file(config.AUDIO_URLS)
+    last_frames = read_url_file(config.LAST_FRAMES)
 
     commands = {
         clip["id"]: build_request(clip, image_urls, audio_urls, last_frames, config.SEEDANCE)

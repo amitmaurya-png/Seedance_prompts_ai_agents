@@ -1,7 +1,8 @@
 """Check that actions and dialogue are copied word for word, in order."""
 
 import re
-from typing import Any, Dict, Iterable, List
+from collections.abc import Iterable
+from typing import Any
 
 ASSET_TAG = re.compile(r"\s*\(@(?:Image|Video|Audio) \d+\)")
 QUOTES = str.maketrans({"’": "'", "‘": "'", "“": '"', "”": '"'})
@@ -13,7 +14,7 @@ def normalize(text: str) -> str:
     return " ".join(text.split())
 
 
-def shot_pieces(shots: Iterable[Dict[str, Any]]) -> List[str]:
+def shot_pieces(shots: Iterable[dict[str, Any]]) -> list[str]:
     """Each shot's action followed by its dialogue lines, in order."""
     pieces = []
     for shot in shots:
@@ -22,7 +23,7 @@ def shot_pieces(shots: Iterable[Dict[str, Any]]) -> List[str]:
     return pieces
 
 
-def check_verbatim(pieces: Iterable[str], source: str) -> List[str]:
+def check_verbatim(pieces: Iterable[str], source: str) -> list[str]:
     """Pieces that don't appear in source word for word and in order.
 
     Each piece must be found after the previous one.
@@ -43,7 +44,7 @@ def check_verbatim(pieces: Iterable[str], source: str) -> List[str]:
     return problems
 
 
-def find_dropped_text(pieces: Iterable[str], source: str) -> List[str]:
+def find_dropped_text(pieces: Iterable[str], source: str) -> list[str]:
     """Stretches of story text in source that no piece covers.
 
     Character cues (all caps), parentheticals and transitions are ignored.

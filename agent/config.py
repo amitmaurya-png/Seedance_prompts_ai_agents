@@ -11,7 +11,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = PROJECT_ROOT / "skills"
 DATA_DIR = PROJECT_ROOT / "data"
 
-SKIT_PDF = DATA_DIR / "TSL.pdf"
+SKIT_PDF = DATA_DIR / "TSL_teaser.pdf"
 BREAKDOWN_JSON = DATA_DIR / "breakdown.json"
 CHARACTERS_JSON = DATA_DIR / "characters.json"
 ASSET_PROMPTS_JSON = DATA_DIR / "asset_prompts.json"

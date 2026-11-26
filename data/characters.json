@@ -1,0 +1,139 @@
+{
+  "source": "/Users/amitmaurya/Documents/Seedance_prompts_ai_agents/data/TSL_teaser.pdf",
+  "characters": [
+    {
+      "name": "NIM",
+      "master_profile": "Character acting as NIM. Small quick-bodied animal companion with oversized ears, springy legs, a pointed listening face and a belly-led posture, built like a creature who survives by noticing crumbs, footsteps and changes in human tone before anyone else does. Runs on one engine: he turns appetite into theatre so he can say dangerous truths without seeming to say them. Vocal profile: bright, nimble, slightly nasal young voice with a comic ceremonial weight, quick on questions, suddenly grave on judgments, cracking into a tiny squeak when temptation wins. Key physical habits and tics: his nose twitches in rapid bursts whenever food is hidden or someone lies about food; he pats his belly when pretending to make a legal argument; when Miri freezes, he freezes half a beat later in loyal imitation; he hides concern by making official-sounding jokes, with a wide-eyed judge mask that cracks when another child is genuinely left out. Eye life: wet, lively eyes with darting micro-saccades between hands, cloth bundles, mouths and exits; blink-bursts under temptation; eyes lead every ear-turn. Walking style: a bouncy \"crumb-hunter trot,\" light forefoot steps, tail and ears counterbalancing each hop, head dipping to scent-trails. However, when Miri risks becoming unkind, his ears sink, his body lowers, and the joke lands softer than intended. His face truly softens for Miri.",
+      "caps_rules": [
+        "1. NOSE FIRST: FOOD, LIES AND NEW IDEAS START AS NOSE TWITCHES BEFORE WORDS.",
+        "2. EARS REACT A HALF-BEAT BEFORE THE HEAD TURNS.",
+        "3. WHEN MIRI FREEZES, NIM FREEZES JUST AFTER HER, COPYING HER SHAPE IN MINIATURE.",
+        "4. COMEDY IS PLAYED SERIOUSLY: HE DELIVERS ABSURD LINES LIKE COURTROOM EVIDENCE.",
+        "5. TEMPTATION RAISES HIS BLINK RATE AND PULLS HIS GAZE TO THE HIDDEN FOOD.",
+        "6. CARE IS DISGUISED AS COMMENTARY; HE DOES NOT COO, BEG OR MORALIZE.",
+        "7. BELLY PATS ONLY HAPPEN WHEN HE IS MAKING A GRAND FOOD-RELATED PRONOUNCEMENT.",
+        "8. IF A CHILD IS HURT OR LEFT OUT, HIS EARS LOWER AND HIS BODY STOPS BOUNCING."
+      ],
+      "forbidden_readings": [
+        "Do not play Nim as a generic manic sidekick who is always bouncing at the same speed.",
+        "Do not make him wink at the audience or comment like he knows he is in a comedy.",
+        "Do not turn food hunger into slobbering cartoon greed.",
+        "Do not make his eyes lock frozen on the cakes; they keep scanning hands, faces and exits.",
+        "Do not make him braver than Miri; his courage is verbal, his body stays small and reactive."
+      ],
+      "voice": "\"A small youthful animal companion with a bright, nimble, slightly nasal voice. Fast precise delivery with mock-serious ceremony; playful and hungry on the surface, softening and thinning when he accidentally tells the truth.\""
+    },
+    {
+      "name": "MIRI",
+      "master_profile": "Character acting as MIRI. A 9-year-old village girl, wiry and quick from errands, with narrow shoulders that lift when she protects something and a forward-tilted run that looks faster than her legs are long; her hands are small but decisive, always finding the safest place to hold a precious object. Runs on one engine: she measures safety by what remains in her possession while learning that other people are real even when she looks away. Vocal profile: clear high child voice with a plain village rhythm, fast and sharp when bargaining, smaller and more breathy when a question exposes her, often beginning answers before she has fully decided them. Key physical habits and tics: she clamps cloth or basket to her sternum whenever sharing is requested; her thumb counts invisible portions against her fingertips when calculating loss; she hides a sting of conscience by looking at the object she is carrying instead of the person asking; her practical little-adult mask cracks when another child quietly accepts being refused. Eye life: bright, restless micro-saccades between food, adult hands, faces and escape paths, with blink-bursts during choices and eyes arriving before her head. Walking style: a quick \"sparrow-errand scurry,\" light steps, elbows close, chest guarding the load. However, when someone asks if there is enough, her stride shortens, breath catches, and both hands close before she can answer. Her face truly softens for Nim.",
+      "caps_rules": [
+        "1. PRECIOUS OBJECTS GO TO THE CHEST FIRST, THEN THE WORDS COME.",
+        "2. SHE COUNTS LOSS WITH HER THUMB AGAINST HER FINGERTIPS BEFORE ANSWERING.",
+        "3. HER EYES CHECK THE CAKES, THE ADULT, THE EXIT, THEN THE CAKES AGAIN.",
+        "4. WHEN CAUGHT IN A MORAL CHOICE, HER STEPS GET SHORTER AND HER ELBOWS PIN IN.",
+        "5. SHE LOOKS AWAY FROM THE PERSON SHE HAS DISAPPOINTED, THEN GLANCES BACK LATE.",
+        "6. DEFIANCE IS SMALL AND PRACTICAL, NOT SASSY; CHIN SETS, VOICE QUICKENS.",
+        "7. GUILT DOES NOT BECOME TEARS; IT BECOMES BUSY HANDS AND A FASTER WALK.",
+        "8. WITH IMA, SHE ARGUES UPWARD BUT KEEPS CHECKING HER MOTHER'S HANDS FOR THE FINAL DECISION.",
+        "9. WITH NIM, SHE LETS IRRITATION SHOW FIRST AND AFFECTION ARRIVE AFTER A BLINK."
+      ],
+      "forbidden_readings": [
+        "Do not play Miri as a bratty selfish child with exaggerated pouting.",
+        "Do not make her instantly generous; the struggle must stay visible in the hands and breath.",
+        "Do not make her cry on refusal or guilt; she pushes forward and carries the cost physically.",
+        "Do not make her stare blankly while others speak; she reacts before their lines end.",
+        "Do not turn her into a miniature adult moral lecturer."
+      ],
+      "voice": "\"A 9-year-old village girl with a clear high child voice and plain rural cadence. Quick, practical delivery that speeds up when defending herself; under pressure the voice gets smaller, breathier, and less certain without becoming tearful.\""
+    },
+    {
+      "name": "IMA",
+      "master_profile": "Character acting as IMA. A woman in her mid-30s, strong from household labor, compact and grounded, with capable forearms, an easy squat or kneel, and a spine that stays tall even when her hands are busy; she carries work close to the body and wastes no motion. Runs on one engine: she is teaching openness without taking away her child's dignity. Vocal profile: warm low alto with a steady village cadence, unhurried and clean, soft at the edges but firm on the final word; under strain the volume drops and the consonants become more exact. Key physical habits and tics: she smooths or squares folded fabric when choosing patience; one hand rests lightly on a basket rim before giving an instruction; when Miri bargains, Ima takes a slow nasal inhale instead of interrupting; she hides disappointment by keeping her mouth relaxed and letting only the hands pause. Her facial mask is calm usefulness, and it cracks only when a child's fear of not having enough shows itself. Eye life: steady attentive eyes with small scans between Miri's face, hands and protected bundle; slow reassuring blinks, live catchlights, eyes lowering before she kneels. Walking style: a measured \"hearth-to-door stride,\" whole-foot steps, quiet hips, arms carrying weight efficiently. However, when Miri says there may not be enough, Ima's shoulders soften, the instruction stops, and she studies before answering. Her face truly softens for Miri.",
+      "caps_rules": [
+        "1. HANDS STAY USEFUL; EVEN STILLNESS LOOKS LIKE WORK PAUSED, NOT EMPTY POSING.",
+        "2. SHE KNEELS TO LOWER STATUS, NOT TO PLEAD.",
+        "3. CORRECTION COMES AFTER A SLOW INHALE AND A SETTLED GAZE.",
+        "4. HER VOICE GETS QUIETER AND CLEARER WHEN THE LESSON MATTERS.",
+        "5. SHE WATCHES MIRI'S HANDS AS MUCH AS MIRI'S FACE.",
+        "6. DISAPPOINTMENT LIVES IN A PAUSED HAND, NOT A FROWN.",
+        "7. SHE DOES NOT GRAB THE CAKES OR FORCE THE GIFT; SHE LEAVES ROOM FOR CHOICE.",
+        "8. WHEN SCARCITY IS NAMED, SHE STOPS TEACHING AND STARTS LISTENING."
+      ],
+      "forbidden_readings": [
+        "Do not play Ima as a scolding moralizing mother.",
+        "Do not make her sugary or endlessly indulgent; warmth and firmness coexist.",
+        "Do not make her tower over Miri during the lesson if she is trying to invite choice.",
+        "Do not show anger through wagging fingers or exaggerated eyebrow acting.",
+        "Do not make her solve the scene by forcing generosity."
+      ],
+      "voice": "\"A woman in her mid-30s with a warm low alto and steady rural cadence. Unhurried, practical and gently firm; under pressure she becomes quieter, more precise, and harder to interrupt.\""
+    },
+    {
+      "name": "TAV",
+      "master_profile": "Character acting as TAV. A small boy of about 6, slight and dusty from ground-level play, often folded into a squat or seated on his heels, with knees angled out, shoulders rounded over whatever he is fixing, and hands that keep returning to broken pieces as if touch can hold the world together. Runs on one engine: he asks plainly because he has not yet learned to disguise wanting. Vocal profile: light reedy child voice, open and upward on requests, words slightly rushed when hope is fresh, dropping into a short flat \"oh\" when the answer closes. Key physical habits and tics: he rubs his cheek with the back of his wrist when working up courage; he taps a loose wheel or small object against the ground while waiting; when refused, he nods too quickly and returns both hands to the repair so the other person does not have to watch his face. His mask is busy concentration, and it cracks when kindness seems near but does not arrive. Eye life: wide direct eyes with trusting micro-saccades from Miri's face to the hidden bundle to his broken toy; slow blinks as he processes a refusal; eyes drop before the chin follows. Walking style: a \"half-skip, half-stumble toddle,\" uneven light steps, toes turned slightly out, arms opening for balance. However, when his request is dodged, his chest caves toward the toy, his voice shrinks, and the tapping stops. His face truly softens for the broken cart.",
+      "caps_rules": [
+        "1. WANTING IS DIRECT: HE LOOKS AT THE PERSON FIRST, THEN THE HIDDEN FOOD.",
+        "2. COURAGE SHOWS AS A CHEEK RUB OR A SMALL OBJECT TAP BEFORE THE ASK.",
+        "3. WHEN REFUSED, HE NODS TOO FAST AND PUTS BOTH HANDS BACK ON THE TOY.",
+        "4. HIS DISAPPOINTMENT GETS QUIET, NOT TANTRUM-LIKE.",
+        "5. HE PROCESSES BAD NEWS WITH A SLOW BLINK AND A DROPPED GAZE.",
+        "6. GROUND-LEVEL PLAY SHAPES HIM: SQUAT, KNEEL, SIT ON HEELS, LEAN OVER THE REPAIR.",
+        "7. HOPE LIFTS HIS CHEST AND SPEEDS HIS WORDS.",
+        "8. IF KINDNESS APPROACHES, HIS HANDS STOP WORKING BEFORE HIS FACE OPENS."
+      ],
+      "forbidden_readings": [
+        "Do not play Tav as a manipulative beggar or a polished cute mascot.",
+        "Do not make refusal cause a loud tantrum; he absorbs it and returns to the cart.",
+        "Do not make him stare only at the cakes; he checks Miri for permission and safety.",
+        "Do not make his broken toy business random; it is his shield after rejection.",
+        "Do not over-articulate his speech like an adult."
+      ],
+      "voice": "\"A 6-year-old village boy with a light, reedy child voice. Open, direct and slightly rushed when hopeful; when refused, the voice drops into short, flat, quiet answers.\""
+    },
+    {
+      "name": "SABA",
+      "master_profile": "Character acting as SABA. An elderly village man in his late 70s, lean and weathered, with a long torso folded comfortably into age, nimble fingers that still trust small tools, and shoulders that rise with performance then settle into deep stillness when listening; one side moves a little slower, as if old joints negotiate each gesture. Runs on one engine: he gives lessons by making children feel clever enough to discover them. Vocal profile: warm dry baritone with a grainy elder rasp, slow story cadence, playful pauses before punchlines, and a quieter, almost private register when the tale turns toward truth. Key physical habits and tics: he keeps repairing or tying while talking until an important thought arrives, then the working hand stops; he taps two fingers to mark a story rhythm; he leans back when children laugh and leans forward when one child hides shame; his amused elder mask cracks when scarcity or loneliness appears in a child's body. Eye life: bright hooded eyes with slow blinks, constant soft scans across children's faces and hands, gaze landing on the child who needs the story before his head turns. Walking style: a deliberate \"fig-tree shuffle,\" short careful steps, weight settling fully before the next foot, one hand ready to balance. However, when a child is ashamed, the grand gestures vanish, his chin lowers to their height, and the voice loses all ornament. His face truly softens for hesitant children.",
+      "caps_rules": [
+        "1. STORY HAND AND WORK HAND COEXIST; THE WORK HAND STOPS ONLY WHEN THE LESSON LANDS.",
+        "2. HE NEVER RUSHES A PUNCHLINE; CHILDREN LEAN IN TO HIS PAUSE.",
+        "3. GRAND GESTURES ARE FOR CAMELS AND SPARROWS, SMALL STILLNESS IS FOR HURT CHILDREN.",
+        "4. HIS EYES SCAN THE GROUP IN A STAGGERED RHYTHM, NOT A FIXED STARE.",
+        "5. WHEN ONE CHILD NEEDS THE STORY, HIS GAZE FINDS THEM BEFORE HIS HEAD TURNS.",
+        "6. AGE SHOWS IN CAREFUL WEIGHT TRANSFER, NOT FRAIL SHAKING.",
+        "7. HE LOWERS HIS STATUS AROUND SHAME: CHIN DOWN, VOICE PLAIN, HANDS QUIET.",
+        "8. LAUGHTER OPENS HIS CHEST; TRUTH SETTLES HIM BACK INTO STILLNESS.",
+        "9. HE TEACHES SIDEWAYS THROUGH IMAGES, NEVER BY LECTURING DIRECTLY."
+      ],
+      "forbidden_readings": [
+        "Do not play Saba as a generic mystical wise elder with floating gestures.",
+        "Do not make him feeble or trembling unless the action demands it; his age is economical control.",
+        "Do not overplay the moral lesson with pointing, nodding and solemn music-face.",
+        "Do not make every child react together to his stories; their reactions travel in a wave.",
+        "Do not make him constantly smile; listening is often still and plain."
+      ],
+      "voice": "\"A late-70s village elder with a warm, dry, grainy baritone. Slow story cadence with playful pauses and precise turns of phrase; when truth matters, he drops into a quieter, plainer register.\""
+    },
+    {
+      "name": "village children",
+      "master_profile": "Character acting as village children. A mixed group of children roughly 5 to 11, small bodies at different growth stages, some all elbows and knees, some rounder and lower to the ground, moving in loose clusters that constantly split and rejoin around work, play and storytelling; their posture changes with the nearest adult, taller around one another and smaller when corrected. Runs on one engine: the group follows attention like a flock, each child trying to belong without missing the next interesting thing. Vocal profile: overlapping high child voices with varied pitches and breath lengths, quick whispers, half-finished questions, little gasps and late giggles, never perfectly synchronized. Key physical habits and tics: one child leans first and the others follow in a ripple; hands copy whatever object or gesture seems important; when a story turns serious, fidgeting dies out unevenly, youngest last; they hide uncertainty by looking at one another before looking at the adult. Eye life: lively micro-saccades hopping between speaker, prop, friend and food, blink rates rising when waiting for a reveal, catchlights bright and active. Walking style: a loose \"goat-path scatter,\" uneven small steps, sudden stops, shoulder bumps, quick recoveries. However, when an adult's quiet voice signals real importance, the group compresses inward, mouths close one by one, and the boldest child stops moving last.",
+      "caps_rules": [
+        "1. GROUP REACTIONS TRAVEL IN WAVES, NEVER ALL AT ONCE.",
+        "2. ONE CHILD LEANS FIRST; OTHERS COPY HALF A BEAT LATER OR NOT AT ALL.",
+        "3. WHISPERS AND GIGGLES OVERLAP, BUT KEY STORY WORDS LEAVE THEM QUIET.",
+        "4. SMALL HANDS COPY IMPORTANT GESTURES WITHOUT PERFECT MATCHING.",
+        "5. ATTENTION JUMPS BETWEEN SPEAKER, FRIEND, OBJECT AND FOOD.",
+        "6. THE YOUNGEST CHILD KEEPS FIDGETING LONGEST AFTER THE GROUP GETS QUIET.",
+        "7. WHEN AN ADULT GETS QUIET, THE GROUP COMPRESSES INWARD.",
+        "8. NO CHILD HOLDS A FROZEN STARE; EYES KEEP CHECKING OTHER CHILDREN FOR HOW TO REACT."
+      ],
+      "forbidden_readings": [
+        "Do not make the children a synchronized choir of identical reactions.",
+        "Do not make them all cute, clean, obedient background decoration.",
+        "Do not make them stare at Saba without blinking or fidgeting.",
+        "Do not make every child understand the story at the same time.",
+        "Do not let background business overpower the main speaker."
+      ],
+      "voice": "\"A mixed group of village children aged 5 to 11, with overlapping high voices and uneven breath. Quick whispers, stray giggles and small gasps ripple through the group, turning quiet one by one when an adult voice becomes serious.\""
+    }
+  ]
+}

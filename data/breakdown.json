@@ -1,0 +1,369 @@
+{
+  "source": "/Users/amitmaurya/Documents/Seedance_prompts_ai_agents/data/TSL_teaser.pdf",
+  "scenes": [
+    {
+      "number": 1,
+      "heading": "EXT. MIRI’S VILLAGE — MORNING",
+      "shots": [
+        {
+          "action": "Warm sunlight spills over a small ancient village. Clay homes. Woven baskets. Goats nosing through straw. A baker pulls flatbread from a clay oven. Children dart between adults carrying water jars and bundles of reeds.\nMIRI runs through the lane with NIM at her heels. Nim bounds lightly, oversized ears bouncing, nose twitching.\nMiri clutches a small cloth bundle close to her chest.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Is it bread?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "No.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Is it meat?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "No.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "Is it bread pretending not to be bread?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-1"
+        },
+        {
+          "action": "MIRI stops beside a low wall and peeks inside the bundle. Three small HONEY-DATE CAKES gleam in the cloth.\nNim gasps as though beholding treasure.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "It is better than bread.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Ima made them for after chores.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "How many chores?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "One.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "And how many cakes?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Three.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "A perfect arrangement. Let no one disturb it.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-2"
+        },
+        {
+          "action": "Miri smiles and folds the cloth shut just as IMA appears from the doorway with a basket of folded linen.",
+          "dialogue": [
+            {
+              "character": "IMA",
+              "line": "Miri, take these to Saba Elior, please. His old sleeves are more patch than sleeve.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Again?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "IMA",
+              "line": "Again. And if you pass Tav on the way, give him one of the honey cakes.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-3"
+        },
+        {
+          "action": "Miri freezes.\nNim freezes too. He slowly turns toward Miri, eyes wide.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "Perhaps there are two Tavs. We should confirm before making decisions.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "Ima, Tav had a cake yesterday.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "IMA",
+              "line": "And you have three today.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-4"
+        },
+        {
+          "action": "MIRI looks down at the cloth bundle.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "But if I give one away, I will only have two.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "IMA",
+              "line": "That is usually how giving works.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "But I was going to save one for later.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-5"
+        },
+        {
+          "action": "IMA kneels, warm but firm.",
+          "dialogue": [
+            {
+              "character": "IMA",
+              "line": "Small hands can still be open hands.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "But what if there is not enough?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-6"
+        },
+        {
+          "action": "Ima studies her. She does not force it.",
+          "dialogue": [
+            {
+              "character": "IMA",
+              "line": "Then ask Saba what he thinks. He always has a story tucked somewhere.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-7"
+        },
+        {
+          "action": "Miri exhales, not satisfied.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Stories do not fill empty stomachs.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-8"
+        },
+        {
+          "action": "Nim pats his own belly with grave agreement.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "At last, wisdom.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s1-9"
+        },
+        {
+          "action": "Ima hands Miri the linen basket. Miri tucks the honey cakes deeper inside the cloth.",
+          "dialogue": [],
+          "id": "s1-10"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "heading": "EXT. VILLAGE LANE — MOMENTS LATER",
+      "shots": [
+        {
+          "action": "Miri walks with the linen basket. Nim trots beside her, eyes glued to the hidden cakes.\nTAV, a small boy with dust on his cheeks, sits beside a broken toy cart. One wooden wheel has popped off.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "Miri! Did your mother make cakes?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-1"
+        },
+        {
+          "action": "Miri instinctively shields the basket.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Maybe.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "TAV",
+              "line": "I can smell them.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "A gifted child. Dangerous.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-2"
+        },
+        {
+          "action": "Tav looks hopeful.",
+          "dialogue": [
+            {
+              "character": "TAV",
+              "line": "Could I have one?",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-3"
+        },
+        {
+          "action": "Miri hesitates. Her hand goes to the cloth. She imagines the three cakes becoming two. Two becoming one. One becoming none.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "I… have to take these to Saba.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "TAV",
+              "line": "The cakes?",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "The linen.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "TAV",
+              "line": "Oh.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-4"
+        },
+        {
+          "action": "Miri looks down, feeling a pinch of guilt, but she pushes past it.",
+          "dialogue": [
+            {
+              "character": "MIRI",
+              "line": "Maybe later.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-5"
+        },
+        {
+          "action": "Tav nods, disappointed, and returns to his broken cart.\nMiri hurries away. Nim follows.",
+          "dialogue": [
+            {
+              "character": "NIM",
+              "line": "A difficult moment. Very brave of us to continue carrying the cakes.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "MIRI",
+              "line": "I heard that.",
+              "parenthetical": "",
+              "voice_over": false
+            },
+            {
+              "character": "NIM",
+              "line": "I intended you to. I am supporting the mission.",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s2-6"
+        },
+        {
+          "action": "Miri glances back at Tav. His little cart wobbles, wheel still off.\nShe keeps walking.\nMAIN TITLES\nA warm, painted title card unfurls like parchment.\nLITTLE WITNESSES “THE SMALLEST LUNCH”\nACT ONE",
+          "dialogue": [],
+          "id": "s2-7"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "heading": "EXT. SABA ELIOR’S COURTYARD — LATE MORNING",
+      "shots": [
+        {
+          "action": "SABA ELIOR sits beneath a fig tree, surrounded by several village children. He is repairing a sandal with one hand and gesturing grandly with the other.",
+          "dialogue": [
+            {
+              "character": "SABA",
+              "line": "And so the little sparrow said to the great camel, “If your knees bend, perhaps your pride may also.”",
+              "parenthetical": "",
+              "voice_over": false
+            }
+          ],
+          "id": "s3-1"
+        }
+      ]
+    }
+  ]
+}

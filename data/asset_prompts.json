@@ -1,0 +1,117 @@
+{
+  "source": "/Users/amitmaurya/Documents/Seedance_prompts_ai_agents/data/TSL_teaser.pdf",
+  "assets": [
+    {
+      "name": "NIM",
+      "kind": "character",
+      "model": "Higgsfield Soul 2.0",
+      "platform_settings": "aspect 16:9, quality 2k, Soul ID new character if available",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Three-panel character sheet on a flat light-grey background with even soft light: left panel shows Nim full body from the front cut at the chin with the head cropped away; centre panel shows Nim full body from behind with head attached; right panel shows one large dead-on face from crown to collarbones. Nim is a small puppy-sized village creature, tan and cream fur, oversized bouncing ears, bright round eyes, twitching dark nose, nimble paws, soft belly, lively comic posture. Simple woven neck cord with one tiny clay bead, dusty paws from village lanes, expressive eyebrows, curious open face.",
+      "notes": "Watch that Nim stays one consistent creature across all panels, with oversized ears and nose as the identity anchors. Toggle Soul ID or character consistency if the face or species drifts."
+    },
+    {
+      "name": "MIRI",
+      "kind": "character",
+      "model": "Higgsfield Soul 2.0",
+      "platform_settings": "aspect 16:9, quality 2k, Soul ID new character if available",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Three-panel character sheet on a flat light-grey background with even soft light: left panel shows Miri full body from the front cut at the chin with the head cropped away; centre panel shows Miri full body from behind with head attached; right panel shows one large dead-on face from crown to collarbones. Miri is a village girl about eight years old, small build, warm brown skin, round cheeks, dark curious eyes, thick dark wavy hair tied back with a simple cloth strip. She wears a sun-faded ochre tunic, short cream under-sleeves, woven waist sash, simple sandals, and carries the feeling of a child trying to guard a secret. Add a small folded cloth bundle tucked against her chest as her signature prop.",
+      "notes": "Watch that only the right panel has the full face. Keep her cloth bundle readable but secondary; if the bundle dominates, regenerate with simpler prop scale."
+    },
+    {
+      "name": "IMA",
+      "kind": "character",
+      "model": "Higgsfield Soul 2.0",
+      "platform_settings": "aspect 16:9, quality 2k, Soul ID new character if available",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Three-panel character sheet on a flat light-grey background with even soft light: left panel shows Ima full body from the front cut at the chin with the head cropped away; centre panel shows Ima full body from behind with head attached; right panel shows one large dead-on face from crown to collarbones. Ima is Miri's mother, early thirties, sturdy gentle build, warm brown skin, kind firm eyes, soft oval face, dark hair wrapped in a practical cream headscarf. She wears a muted teal work dress under a sand-colored apron, rolled sleeves, simple sandals, and a woven belt. Her hands look capable from baking and laundry, with flour-softened fingertips. Include a folded linen basket as her signature prop.",
+      "notes": "Watch that Ima reads warm but firm, not stern. Keep the apron, headscarf, and linen basket consistent for recognition."
+    },
+    {
+      "name": "TAV",
+      "kind": "character",
+      "model": "Higgsfield Soul 2.0",
+      "platform_settings": "aspect 16:9, quality 2k, Soul ID new character if available",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Three-panel character sheet on a flat light-grey background with even soft light: left panel shows Tav full body from the front cut at the chin with the head cropped away; centre panel shows Tav full body from behind with head attached; right panel shows one large dead-on face from crown to collarbones. Tav is a small village boy about six years old, slight build, dusty knees, dust smudges on both cheeks, hopeful wide eyes, tousled dark hair, soft round face. He wears a simple faded blue tunic, rope belt, patched short trousers, and worn sandals. Add a small broken wooden toy cart wheel held near one hand as his signature prop.",
+      "notes": "Watch the dust-on-cheeks mark and hopeful expression. If the toy cart becomes too large, keep only the loose wooden wheel as the prop."
+    },
+    {
+      "name": "SABA",
+      "kind": "character",
+      "model": "Higgsfield Soul 2.0",
+      "platform_settings": "aspect 16:9, quality 2k, Soul ID new character if available",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Three-panel character sheet on a flat light-grey background with even soft light: left panel shows Saba Elior full body from the front cut at the chin with the head cropped away; centre panel shows Saba Elior full body from behind with head attached; right panel shows one large dead-on face from crown to collarbones. Saba Elior is an elderly village storyteller, thin but lively, weathered warm-brown skin, deep smile lines, bushy white eyebrows, short white beard, bright mischievous eyes. He wears a patched cream robe, faded rust shawl, simple sandals, and a small leather tool pouch at his belt. One sleeve is heavily patched, more patch than sleeve. Include a half-repaired sandal and awl as his signature props.",
+      "notes": "Watch that he feels animated and wise with comic energy. Keep the patched sleeve very clear because it is story-specific."
+    },
+    {
+      "name": "VILLAGE CHILDREN",
+      "kind": "character",
+      "model": "Higgsfield Soul 2.0",
+      "platform_settings": "aspect 16:9, quality 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Three-panel group character sheet on a flat light-grey background with even soft light: left panel shows four village children full body from the front cut at the chin with heads cropped away; centre panel shows the same four children full body from behind with heads attached; right panel shows a large dead-on face row from crown to collarbones for the same four children. The children are ages five to ten, varied heights and builds, warm brown skin tones, dark curly or wavy hair, dusty sandals, simple linen tunics in muted clay, cream, olive, and faded blue. They feel curious, playful, and attentive, the kind of children who gather close for Saba's stories.",
+      "notes": "Watch the count: exactly four children across the sheet. If the model merges them, split into separate child assets or reduce to three children."
+    },
+    {
+      "name": "MIRI’S VILLAGE",
+      "kind": "location",
+      "model": "Higgsfield Soul Cinema",
+      "platform_settings": "aspect 21:9, quality 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Empty ancient village morning plate, composed with rule of thirds. Dark foreground frame made by the shaded edges of clay walls and hanging reed mats; clear midground of warm clay homes, woven baskets, straw piles, a clay oven, water jars, and a low wall; misty distance with soft rooftops, hills, and pale golden sunlight spilling between buildings. A few goats nose through straw in the midground. Materials are rounded sunbaked clay, woven reed, rough linen, dusty stone, and warm earth. Palette of 60% honeyed clay ochre, 30% soft sand and linen cream, 10% muted teal and fig-leaf green.",
+      "notes": "Keep the plate empty of people while preserving lived-in village detail. Watch depth: foreground shadow, readable midground, misty background."
+    },
+    {
+      "name": "VILLAGE LANE",
+      "kind": "location",
+      "model": "Higgsfield Soul Cinema",
+      "platform_settings": "aspect 21:9, quality 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Empty village lane plate, composed with rule of thirds. Dark foreground frame from the shaded side of a clay doorway and a hanging woven basket; clear midground shows a narrow dusty lane, low wall, scattered reeds, water jars, and the small broken wooden toy cart resting beside the wall with one wheel off; misty distance curves toward sunlit clay homes and soft hills. Late morning light grazes the lane from one side, making gentle long shadows. Materials are powdery dust, rounded clay plaster, worn wood, rope, straw, and linen. Palette of 60% warm dusty ochre, 30% cream plaster and straw, 10% faded blue accents from a small cloth scrap on the toy cart.",
+      "notes": "Keep Tav absent; the broken toy cart must be visible as a story marker. Watch that the lane has a strong readable path into depth."
+    },
+    {
+      "name": "SABA's COURTYARD",
+      "kind": "location",
+      "model": "Higgsfield Soul Cinema",
+      "platform_settings": "aspect 21:9, quality 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Empty courtyard plate for Saba Elior, composed with rule of thirds. Dark foreground frame from fig leaves and the shadowed edge of an arched clay doorway; clear midground has a broad fig tree, low stone sitting bench, woven mat, small stool, repair tools, a half-repaired sandal, folded linen space, and sun patches on packed earth; misty distance shows courtyard wall, rooftops, and pale hills beyond. Late morning light filters through fig leaves in soft dappled shapes. Materials are sunbaked clay, old stone, fig bark, leather, linen, wood, and dusty earth. Palette of 60% warm clay and fig-bark brown, 30% soft linen cream, 10% deep fig green.",
+      "notes": "Keep the courtyard empty of people but ready for Saba and children. Watch the fig tree shadow pattern and clear central storytelling space."
+    },
+    {
+      "name": "HONEY-DATE CAKES",
+      "kind": "prop",
+      "model": "Nano Banana Pro (NBP)",
+      "platform_settings": "aspect 1:1, resolution 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Stylized 3D prop asset on a flat light-grey surface, composed with rule of thirds: three small honey-date cakes resting on an open square of simple cream cloth. The cakes are round, palm-sized, golden brown, slightly glossy with honey, dotted with tiny date pieces, handmade and imperfect, treasure-like to a hungry child. The cloth has soft woven texture, lightly wrinkled corners, a few crumbs, and warm reflected light. Materials are sticky honey glaze, baked date crumb, and thick homespun linen.",
+      "notes": "Watch that there are exactly three cakes. If the glaze reads too wet or messy, reduce shine while keeping the honey gleam."
+    },
+    {
+      "name": "CLOTH BUNDLE",
+      "kind": "prop",
+      "model": "Nano Banana Pro (NBP)",
+      "platform_settings": "aspect 1:1, resolution 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Stylized 3D prop asset on a flat light-grey surface, composed with rule of thirds: a small cream cloth bundle tied loosely around hidden round cakes, child-sized and easy to clutch against the chest. The bundle has soft rounded bulges, tied corners, visible woven linen texture, a few honey crumbs at one fold, and a warm handmade feel. Materials are thick homespun cloth, soft wrinkles, small knots, and subtle golden warmth peeking through the fold.",
+      "notes": "This is the closed carrying state for the cakes. Watch that the contents feel hidden but the bundle remains small enough for Miri to hold."
+    },
+    {
+      "name": "LINEN BASKET",
+      "kind": "prop",
+      "model": "Nano Banana Pro (NBP)",
+      "platform_settings": "aspect 1:1, resolution 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Stylized 3D prop asset on a flat light-grey surface, composed with rule of thirds: a shallow woven basket filled with neatly folded cream linen for Saba Elior. The basket is child-carryable, oval, made of warm reed strips with a simple handle, slightly uneven handmade weave. The folded linen is soft, thick, clean, with patched edges and gentle fabric creases. Materials are woven reed, homespun linen, tiny loose fibers, and soft sunlit shadows.",
+      "notes": "Watch scale: it must be manageable for Miri. Keep the basket plain and handmade, with no decorative symbols."
+    },
+    {
+      "name": "BROKEN TOY CART",
+      "kind": "prop",
+      "model": "Nano Banana Pro (NBP)",
+      "platform_settings": "aspect 1:1, resolution 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Stylized 3D prop asset on a flat light-grey surface, composed with rule of thirds: a small handmade wooden toy cart with one wheel popped off and lying beside it. The cart is child-sized, rough but loved, made from simple wood slats, rope axle, clay-dusted edges, and uneven round wheels. One side tilts gently because the wheel is missing. Materials are worn wood, frayed rope, dusty grooves, and soft rounded toy-like shapes.",
+      "notes": "Watch that one wheel is clearly detached. Keep it charming and repairable, not smashed beyond use."
+    },
+    {
+      "name": "SABA'S REPAIR SANDAL",
+      "kind": "prop",
+      "model": "Nano Banana Pro (NBP)",
+      "platform_settings": "aspect 1:1, resolution 2k",
+      "prompt": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy. Stylized 3D prop asset on a flat light-grey surface, composed with rule of thirds: an old leather sandal being repaired, with a small awl, cord, and patch beside it. The sandal is worn smooth at the sole, patched at the strap, handmade and humble, sized for an elderly man. The repair tools are simple, rounded, and safe-looking, with warm wooden handles and leather cord. Materials are aged leather, rubbed edges, linen thread, smooth wood, and soft dust.",
+      "notes": "Use this as Saba's hand-action prop. Watch that the awl and cord read as repair tools, not weapons."
+    }
+  ]
+}

@@ -1,0 +1,2370 @@
+{
+  "source": "/Users/amitmaurya/Documents/Seedance_prompts_ai_agents/data/TSL_teaser.pdf",
+  "scenes": {
+    "1": {
+      "heading": "EXT. MIRI’S VILLAGE — MORNING",
+      "shots_hash": "8bad951f6e4c0814",
+      "problems": [],
+      "reply": {
+        "clips": [
+          {
+            "source": [
+              "s1-1"
+            ],
+            "duration_seconds": 15,
+            "references": [
+              {
+                "n": 1,
+                "role": "Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "Nim character reference"
+              },
+              {
+                "n": 3,
+                "role": "Children group reference"
+              },
+              {
+                "n": 4,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 4,
+            "shot_details": [
+              {
+                "title": "Village morning opens",
+                "seconds": 5,
+                "continuity": "",
+                "action": "Warm sunlight spills over a small ancient village. Clay homes. Woven baskets. Goats nosing through straw. A baker pulls flatbread from a clay oven. Children dart between adults carrying water jars and bundles of reeds.",
+                "dialogue": []
+              },
+              {
+                "title": "Miri and Nim run the lane",
+                "seconds": 4,
+                "continuity": "",
+                "action": "MIRI runs through the lane with NIM at her heels. Nim bounds lightly, oversized ears bouncing, nose twitching.",
+                "dialogue": []
+              },
+              {
+                "title": "The hidden bundle",
+                "seconds": 6,
+                "continuity": "",
+                "action": "Miri clutches a small cloth bundle close to her chest.",
+                "dialogue": [
+                  {
+                    "character": "NIM",
+                    "line": "Is it bread?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "No.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "NIM",
+                    "line": "Is it meat?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "No.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "NIM",
+                    "line": "Is it bread pretending not to be bread?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "warm morning village ambience; distant goats, children, foot traffic, clay oven crackle; no music",
+              "sfx": [
+                "quick child footsteps on packed earth",
+                "light animal bounds behind Miri",
+                "cloth bundle rustle"
+              ]
+            },
+            "constraints": []
+          },
+          {
+            "source": [
+              "s1-2"
+            ],
+            "duration_seconds": 14,
+            "references": [
+              {
+                "n": 1,
+                "role": "Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "Nim character reference"
+              },
+              {
+                "n": 3,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 3,
+            "shot_details": [
+              {
+                "title": "Miri reveals the cakes",
+                "seconds": 5,
+                "continuity": "Miri still clutches the small cloth bundle; Nim remains at her heels.",
+                "action": "MIRI stops beside a low wall and peeks inside the bundle. Three small HONEY-DATE CAKES gleam in the cloth.",
+                "dialogue": []
+              },
+              {
+                "title": "Nim beholds treasure",
+                "seconds": 4,
+                "continuity": "",
+                "action": "Nim gasps as though beholding treasure.",
+                "dialogue": [
+                  {
+                    "character": "NIM",
+                    "line": "It is better than bread.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "Ima made them for after chores.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "The perfect arrangement",
+                "seconds": 5,
+                "continuity": "The cloth bundle remains open with three small HONEY-DATE CAKES inside.",
+                "action": "",
+                "dialogue": [
+                  {
+                    "character": "NIM",
+                    "line": "How many chores?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "One.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "NIM",
+                    "line": "And how many cakes?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "Three.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "NIM",
+                    "line": "A perfect arrangement. Let no one disturb it.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "morning village ambience nearby; soft goats and distant children; no music",
+              "sfx": [
+                "small feet stopping beside low wall",
+                "cloth unfolding",
+                "soft sticky glint of cakes implied by close handling",
+                "Nim gasp"
+              ]
+            },
+            "constraints": [
+              "When the bundle is open, exactly three small HONEY-DATE CAKES are visible."
+            ]
+          },
+          {
+            "source": [
+              "s1-3"
+            ],
+            "duration_seconds": 8,
+            "references": [
+              {
+                "n": 1,
+                "role": "Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "Ima character reference"
+              },
+              {
+                "n": 3,
+                "role": "Nim character reference"
+              },
+              {
+                "n": 4,
+                "role": "Linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "Ima appears with linen",
+                "seconds": 4,
+                "continuity": "Miri still has the cloth bundle with the honey-date cakes; Nim remains beside her.",
+                "action": "Miri smiles and folds the cloth shut just as IMA appears from the doorway with a basket of folded linen.",
+                "dialogue": []
+              },
+              {
+                "title": "The errand begins",
+                "seconds": 4,
+                "continuity": "Ima holds the basket of folded linen; Miri holds the closed cloth bundle.",
+                "action": "",
+                "dialogue": [
+                  {
+                    "character": "IMA",
+                    "line": "Miri, take these to Saba Elior, please. His old sleeves are more patch than sleeve.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "Again?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "quiet morning village courtyard ambience; no music",
+              "sfx": [
+                "cloth folding shut",
+                "woven basket creak",
+                "linen shifting softly"
+              ]
+            },
+            "constraints": [
+              "The basket contains folded linen, not food."
+            ]
+          },
+          {
+            "source": [
+              "s1-3",
+              "s1-4"
+            ],
+            "duration_seconds": 10,
+            "references": [
+              {
+                "n": 1,
+                "role": "Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "Ima character reference"
+              },
+              {
+                "n": 3,
+                "role": "Nim character reference"
+              },
+              {
+                "n": 4,
+                "role": "Linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "Ima adds Tav",
+                "seconds": 5,
+                "continuity": "Ima holds the basket of folded linen; Miri holds the closed cloth bundle; Nim remains beside Miri.",
+                "action": "",
+                "dialogue": [
+                  {
+                    "character": "IMA",
+                    "line": "Again. And if you pass Tav on the way, give him one of the honey cakes.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "Miri and Nim freeze",
+                "seconds": 5,
+                "continuity": "The closed cloth bundle stays against Miri; the linen basket remains with Ima.",
+                "action": "Miri freezes.\nNim freezes too. He slowly turns toward Miri, eyes wide.",
+                "dialogue": [
+                  {
+                    "character": "NIM",
+                    "line": "Perhaps there are two Tavs. We should confirm before making decisions.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "morning courtyard ambience with distant village life; no music",
+              "sfx": [
+                "small silence beat in the courtyard",
+                "Nim's light turn on packed earth",
+                "linen basket creak"
+              ]
+            },
+            "constraints": []
+          },
+          {
+            "source": [
+              "s1-4",
+              "s1-5"
+            ],
+            "duration_seconds": 11,
+            "references": [
+              {
+                "n": 1,
+                "role": "Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "Ima character reference"
+              },
+              {
+                "n": 3,
+                "role": "Nim character reference"
+              },
+              {
+                "n": 4,
+                "role": "Linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "Yesterday and today",
+                "seconds": 4,
+                "continuity": "Miri and Nim remain frozen; Ima remains by the doorway with the linen basket.",
+                "action": "",
+                "dialogue": [
+                  {
+                    "character": "MIRI",
+                    "line": "Ima, Tav had a cake yesterday.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "IMA",
+                    "line": "And you have three today.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "Miri counts the loss",
+                "seconds": 7,
+                "continuity": "Miri still holds the closed cloth bundle containing three honey-date cakes.",
+                "action": "MIRI looks down at the cloth bundle.",
+                "dialogue": [
+                  {
+                    "character": "MIRI",
+                    "line": "But if I give one away, I will only have two.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "IMA",
+                    "line": "That is usually how giving works.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "soft morning courtyard ambience; distant animals and villagers; no music",
+              "sfx": [
+                "cloth bundle held tight",
+                "small breath from Miri",
+                "basket wicker creak"
+              ]
+            },
+            "constraints": [
+              "The honey-date cakes remain inside the closed cloth bundle; no cake is removed."
+            ]
+          },
+          {
+            "source": [
+              "s1-5",
+              "s1-6"
+            ],
+            "duration_seconds": 10,
+            "references": [
+              {
+                "n": 1,
+                "role": "Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "Ima character reference"
+              },
+              {
+                "n": 3,
+                "role": "Nim character reference"
+              },
+              {
+                "n": 4,
+                "role": "Linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "Saving one for later",
+                "seconds": 4,
+                "continuity": "Miri looks down at the cloth bundle; Ima stays near her with the linen basket.",
+                "action": "",
+                "dialogue": [
+                  {
+                    "character": "MIRI",
+                    "line": "But I was going to save one for later.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "Open hands",
+                "seconds": 6,
+                "continuity": "Miri still holds the closed cloth bundle; the linen basket remains present.",
+                "action": "IMA kneels, warm but firm.",
+                "dialogue": [
+                  {
+                    "character": "IMA",
+                    "line": "Small hands can still be open hands.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "But what if there is not enough?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "gentle morning courtyard ambience; no music",
+              "sfx": [
+                "Ima kneeling on packed earth",
+                "soft fabric movement",
+                "Miri clutching cloth"
+              ]
+            },
+            "constraints": [
+              "Ima kneels without taking the cloth bundle from Miri."
+            ]
+          },
+          {
+            "source": [
+              "s1-7",
+              "s1-8",
+              "s1-9"
+            ],
+            "duration_seconds": 12,
+            "references": [
+              {
+                "n": 1,
+                "role": "Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "Ima character reference"
+              },
+              {
+                "n": 3,
+                "role": "Nim character reference"
+              },
+              {
+                "n": 4,
+                "role": "Linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "Ima offers Saba's story",
+                "seconds": 5,
+                "continuity": "Ima is kneeling near Miri; Miri holds the closed cloth bundle; Nim stays beside Miri.",
+                "action": "Ima studies her. She does not force it.",
+                "dialogue": [
+                  {
+                    "character": "IMA",
+                    "line": "Then ask Saba what he thinks. He always has a story tucked somewhere.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "Miri's answer",
+                "seconds": 4,
+                "continuity": "Miri keeps the cloth bundle close.",
+                "action": "Miri exhales, not satisfied.",
+                "dialogue": [
+                  {
+                    "character": "MIRI",
+                    "line": "Stories do not fill empty stomachs.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "Nim agrees",
+                "seconds": 3,
+                "continuity": "Nim remains beside Miri.",
+                "action": "Nim pats his own belly with grave agreement.",
+                "dialogue": [
+                  {
+                    "character": "NIM",
+                    "line": "At last, wisdom.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "quiet morning courtyard ambience with distant village life; no music",
+              "sfx": [
+                "Miri exhale",
+                "Nim belly pats",
+                "soft linen basket creak"
+              ]
+            },
+            "constraints": []
+          },
+          {
+            "source": [
+              "s1-10"
+            ],
+            "duration_seconds": 5,
+            "references": [
+              {
+                "n": 1,
+                "role": "Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "Ima character reference"
+              },
+              {
+                "n": 3,
+                "role": "Nim character reference"
+              },
+              {
+                "n": 4,
+                "role": "Linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "The basket is handed over",
+                "seconds": 5,
+                "continuity": "Miri holds the closed cloth bundle; Ima is beside her; Nim remains nearby.",
+                "action": "Ima hands Miri the linen basket. Miri tucks the honey cakes deeper inside the cloth.",
+                "dialogue": []
+              }
+            ],
+            "audio": {
+              "ambience": "morning courtyard ambience; distant goats, villagers, and children; no music",
+              "sfx": [
+                "woven basket changing hands",
+                "folded linen shifting",
+                "cloth bundle tucked closed"
+              ]
+            },
+            "constraints": [
+              "The honey-date cakes remain hidden inside the cloth after Miri tucks them deeper."
+            ]
+          }
+        ]
+      },
+      "clips": [
+        {
+          "id": "clip-01",
+          "scene": "EXT. MIRI’S VILLAGE — MORNING",
+          "scene_number": 1,
+          "source": [
+            "s1-1"
+          ],
+          "duration_seconds": 15,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 15,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "Nim character reference"
+            },
+            {
+              "n": 3,
+              "role": "Children group reference"
+            },
+            {
+              "n": 4,
+              "role": "Saba's courtyard scene reference"
+            }
+          ],
+          "scene_setting": "EXT. MIRI’S VILLAGE — MORNING (@Image 4)",
+          "shot_details": [
+            {
+              "title": "Village morning opens",
+              "seconds": 5,
+              "continuity": "",
+              "action": "Warm sunlight spills over a small ancient village. Clay homes. Woven baskets. Goats nosing through straw. A baker pulls flatbread from a clay oven. Children dart between adults carrying water jars and bundles of reeds.",
+              "dialogue": []
+            },
+            {
+              "title": "Miri and Nim run the lane",
+              "seconds": 4,
+              "continuity": "",
+              "action": "MIRI runs through the lane with NIM at her heels. Nim bounds lightly, oversized ears bouncing, nose twitching.",
+              "dialogue": []
+            },
+            {
+              "title": "The hidden bundle",
+              "seconds": 6,
+              "continuity": "",
+              "action": "Miri clutches a small cloth bundle close to her chest.",
+              "dialogue": [
+                {
+                  "character": "NIM",
+                  "line": "Is it bread?",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "No.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "NIM",
+                  "line": "Is it meat?",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "No.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "NIM",
+                  "line": "Is it bread pretending not to be bread?",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "warm morning village ambience; distant goats, children, foot traffic, clay oven crackle; no music",
+            "sfx": [
+              "quick child footsteps on packed earth",
+              "light animal bounds behind Miri",
+              "cloth bundle rustle"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark"
+          ],
+          "continuity": {
+            "mode": "new_scene",
+            "previous_clip": null
+          }
+        },
+        {
+          "id": "clip-02",
+          "scene": "EXT. MIRI’S VILLAGE — MORNING",
+          "scene_number": 1,
+          "source": [
+            "s1-2"
+          ],
+          "duration_seconds": 14,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 14,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "Nim character reference"
+            },
+            {
+              "n": 3,
+              "role": "Saba's courtyard scene reference"
+            },
+            {
+              "n": 4,
+              "role": "last frame of clip-01 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. MIRI’S VILLAGE — MORNING (@Image 3)",
+          "shot_details": [
+            {
+              "title": "Miri reveals the cakes",
+              "seconds": 5,
+              "continuity": "Continue the same moment from @Image 4: keep the lighting, positions, props, and character appearance exactly as in that frame; Miri still clutches the small cloth bundle; Nim remains at her heels.",
+              "action": "MIRI stops beside a low wall and peeks inside the bundle. Three small HONEY-DATE CAKES gleam in the cloth.",
+              "dialogue": []
+            },
+            {
+              "title": "Nim beholds treasure",
+              "seconds": 4,
+              "continuity": "",
+              "action": "Nim gasps as though beholding treasure.",
+              "dialogue": [
+                {
+                  "character": "NIM",
+                  "line": "It is better than bread.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "Ima made them for after chores.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "The perfect arrangement",
+              "seconds": 5,
+              "continuity": "The cloth bundle remains open with three small HONEY-DATE CAKES inside.",
+              "action": "",
+              "dialogue": [
+                {
+                  "character": "NIM",
+                  "line": "How many chores?",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "One.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "NIM",
+                  "line": "And how many cakes?",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "Three.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "NIM",
+                  "line": "A perfect arrangement. Let no one disturb it.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "morning village ambience nearby; soft goats and distant children; no music",
+            "sfx": [
+              "small feet stopping beside low wall",
+              "cloth unfolding",
+              "soft sticky glint of cakes implied by close handling",
+              "Nim gasp"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 4",
+            "When the bundle is open, exactly three small HONEY-DATE CAKES are visible."
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-01",
+            "handoff_image": 4
+          }
+        },
+        {
+          "id": "clip-03",
+          "scene": "EXT. MIRI’S VILLAGE — MORNING",
+          "scene_number": 1,
+          "source": [
+            "s1-3"
+          ],
+          "duration_seconds": 8,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 8,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "Ima character reference"
+            },
+            {
+              "n": 3,
+              "role": "Nim character reference"
+            },
+            {
+              "n": 4,
+              "role": "Linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "Saba's courtyard scene reference"
+            },
+            {
+              "n": 6,
+              "role": "last frame of clip-02 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. MIRI’S VILLAGE — MORNING (@Image 5)",
+          "shot_details": [
+            {
+              "title": "Ima appears with linen",
+              "seconds": 4,
+              "continuity": "Continue the same moment from @Image 6: keep the lighting, positions, props, and character appearance exactly as in that frame; Miri still has the cloth bundle with the honey-date cakes; Nim remains beside her.",
+              "action": "Miri smiles and folds the cloth shut just as IMA appears from the doorway with a basket of folded linen.",
+              "dialogue": []
+            },
+            {
+              "title": "The errand begins",
+              "seconds": 4,
+              "continuity": "Ima holds the basket of folded linen; Miri holds the closed cloth bundle.",
+              "action": "",
+              "dialogue": [
+                {
+                  "character": "IMA",
+                  "line": "Miri, take these to Saba Elior, please. His old sleeves are more patch than sleeve.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "Again?",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "quiet morning village courtyard ambience; no music",
+            "sfx": [
+              "cloth folding shut",
+              "woven basket creak",
+              "linen shifting softly"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 6",
+            "The basket contains folded linen, not food."
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-02",
+            "handoff_image": 6
+          }
+        },
+        {
+          "id": "clip-04",
+          "scene": "EXT. MIRI’S VILLAGE — MORNING",
+          "scene_number": 1,
+          "source": [
+            "s1-3",
+            "s1-4"
+          ],
+          "duration_seconds": 10,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 10,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "Ima character reference"
+            },
+            {
+              "n": 3,
+              "role": "Nim character reference"
+            },
+            {
+              "n": 4,
+              "role": "Linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "Saba's courtyard scene reference"
+            },
+            {
+              "n": 6,
+              "role": "last frame of clip-03 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. MIRI’S VILLAGE — MORNING (@Image 5)",
+          "shot_details": [
+            {
+              "title": "Ima adds Tav",
+              "seconds": 5,
+              "continuity": "Continue the same moment from @Image 6: keep the lighting, positions, props, and character appearance exactly as in that frame; Ima holds the basket of folded linen; Miri holds the closed cloth bundle; Nim remains beside Miri.",
+              "action": "",
+              "dialogue": [
+                {
+                  "character": "IMA",
+                  "line": "Again. And if you pass Tav on the way, give him one of the honey cakes.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "Miri and Nim freeze",
+              "seconds": 5,
+              "continuity": "The closed cloth bundle stays against Miri; the linen basket remains with Ima.",
+              "action": "Miri freezes.\nNim freezes too. He slowly turns toward Miri, eyes wide.",
+              "dialogue": [
+                {
+                  "character": "NIM",
+                  "line": "Perhaps there are two Tavs. We should confirm before making decisions.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "morning courtyard ambience with distant village life; no music",
+            "sfx": [
+              "small silence beat in the courtyard",
+              "Nim's light turn on packed earth",
+              "linen basket creak"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 6"
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-03",
+            "handoff_image": 6
+          }
+        },
+        {
+          "id": "clip-05",
+          "scene": "EXT. MIRI’S VILLAGE — MORNING",
+          "scene_number": 1,
+          "source": [
+            "s1-4",
+            "s1-5"
+          ],
+          "duration_seconds": 11,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 11,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "Ima character reference"
+            },
+            {
+              "n": 3,
+              "role": "Nim character reference"
+            },
+            {
+              "n": 4,
+              "role": "Linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "Saba's courtyard scene reference"
+            },
+            {
+              "n": 6,
+              "role": "last frame of clip-04 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. MIRI’S VILLAGE — MORNING (@Image 5)",
+          "shot_details": [
+            {
+              "title": "Yesterday and today",
+              "seconds": 4,
+              "continuity": "Continue the same moment from @Image 6: keep the lighting, positions, props, and character appearance exactly as in that frame; Miri and Nim remain frozen; Ima remains by the doorway with the linen basket.",
+              "action": "",
+              "dialogue": [
+                {
+                  "character": "MIRI",
+                  "line": "Ima, Tav had a cake yesterday.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "IMA",
+                  "line": "And you have three today.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "Miri counts the loss",
+              "seconds": 7,
+              "continuity": "Miri still holds the closed cloth bundle containing three honey-date cakes.",
+              "action": "MIRI looks down at the cloth bundle.",
+              "dialogue": [
+                {
+                  "character": "MIRI",
+                  "line": "But if I give one away, I will only have two.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "IMA",
+                  "line": "That is usually how giving works.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "soft morning courtyard ambience; distant animals and villagers; no music",
+            "sfx": [
+              "cloth bundle held tight",
+              "small breath from Miri",
+              "basket wicker creak"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 6",
+            "The honey-date cakes remain inside the closed cloth bundle; no cake is removed."
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-04",
+            "handoff_image": 6
+          }
+        },
+        {
+          "id": "clip-06",
+          "scene": "EXT. MIRI’S VILLAGE — MORNING",
+          "scene_number": 1,
+          "source": [
+            "s1-5",
+            "s1-6"
+          ],
+          "duration_seconds": 10,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 10,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "Ima character reference"
+            },
+            {
+              "n": 3,
+              "role": "Nim character reference"
+            },
+            {
+              "n": 4,
+              "role": "Linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "Saba's courtyard scene reference"
+            },
+            {
+              "n": 6,
+              "role": "last frame of clip-05 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. MIRI’S VILLAGE — MORNING (@Image 5)",
+          "shot_details": [
+            {
+              "title": "Saving one for later",
+              "seconds": 4,
+              "continuity": "Continue the same moment from @Image 6: keep the lighting, positions, props, and character appearance exactly as in that frame; Miri looks down at the cloth bundle; Ima stays near her with the linen basket.",
+              "action": "",
+              "dialogue": [
+                {
+                  "character": "MIRI",
+                  "line": "But I was going to save one for later.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "Open hands",
+              "seconds": 6,
+              "continuity": "Miri still holds the closed cloth bundle; the linen basket remains present.",
+              "action": "IMA kneels, warm but firm.",
+              "dialogue": [
+                {
+                  "character": "IMA",
+                  "line": "Small hands can still be open hands.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "But what if there is not enough?",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "gentle morning courtyard ambience; no music",
+            "sfx": [
+              "Ima kneeling on packed earth",
+              "soft fabric movement",
+              "Miri clutching cloth"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 6",
+            "Ima kneels without taking the cloth bundle from Miri."
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-05",
+            "handoff_image": 6
+          }
+        },
+        {
+          "id": "clip-07",
+          "scene": "EXT. MIRI’S VILLAGE — MORNING",
+          "scene_number": 1,
+          "source": [
+            "s1-7",
+            "s1-8",
+            "s1-9"
+          ],
+          "duration_seconds": 12,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 12,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "Ima character reference"
+            },
+            {
+              "n": 3,
+              "role": "Nim character reference"
+            },
+            {
+              "n": 4,
+              "role": "Linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "Saba's courtyard scene reference"
+            },
+            {
+              "n": 6,
+              "role": "last frame of clip-06 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. MIRI’S VILLAGE — MORNING (@Image 5)",
+          "shot_details": [
+            {
+              "title": "Ima offers Saba's story",
+              "seconds": 5,
+              "continuity": "Continue the same moment from @Image 6: keep the lighting, positions, props, and character appearance exactly as in that frame; Ima is kneeling near Miri; Miri holds the closed cloth bundle; Nim stays beside Miri.",
+              "action": "Ima studies her. She does not force it.",
+              "dialogue": [
+                {
+                  "character": "IMA",
+                  "line": "Then ask Saba what he thinks. He always has a story tucked somewhere.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "Miri's answer",
+              "seconds": 4,
+              "continuity": "Miri keeps the cloth bundle close.",
+              "action": "Miri exhales, not satisfied.",
+              "dialogue": [
+                {
+                  "character": "MIRI",
+                  "line": "Stories do not fill empty stomachs.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "Nim agrees",
+              "seconds": 3,
+              "continuity": "Nim remains beside Miri.",
+              "action": "Nim pats his own belly with grave agreement.",
+              "dialogue": [
+                {
+                  "character": "NIM",
+                  "line": "At last, wisdom.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "quiet morning courtyard ambience with distant village life; no music",
+            "sfx": [
+              "Miri exhale",
+              "Nim belly pats",
+              "soft linen basket creak"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 6"
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-06",
+            "handoff_image": 6
+          }
+        },
+        {
+          "id": "clip-08",
+          "scene": "EXT. MIRI’S VILLAGE — MORNING",
+          "scene_number": 1,
+          "source": [
+            "s1-10"
+          ],
+          "duration_seconds": 5,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 5,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "Ima character reference"
+            },
+            {
+              "n": 3,
+              "role": "Nim character reference"
+            },
+            {
+              "n": 4,
+              "role": "Linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "Saba's courtyard scene reference"
+            },
+            {
+              "n": 6,
+              "role": "last frame of clip-07 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. MIRI’S VILLAGE — MORNING (@Image 5)",
+          "shot_details": [
+            {
+              "title": "The basket is handed over",
+              "seconds": 5,
+              "continuity": "Continue the same moment from @Image 6: keep the lighting, positions, props, and character appearance exactly as in that frame; Miri holds the closed cloth bundle; Ima is beside her; Nim remains nearby.",
+              "action": "Ima hands Miri the linen basket. Miri tucks the honey cakes deeper inside the cloth.",
+              "dialogue": []
+            }
+          ],
+          "audio": {
+            "ambience": "morning courtyard ambience; distant goats, villagers, and children; no music",
+            "sfx": [
+              "woven basket changing hands",
+              "folded linen shifting",
+              "cloth bundle tucked closed"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 6",
+            "The honey-date cakes remain hidden inside the cloth after Miri tucks them deeper."
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-07",
+            "handoff_image": 6
+          }
+        }
+      ]
+    },
+    "2": {
+      "heading": "EXT. VILLAGE LANE — MOMENTS LATER",
+      "shots_hash": "9f3eb9c8441da215",
+      "problems": [],
+      "reply": {
+        "clips": [
+          {
+            "source": [
+              "s2-1",
+              "s2-2",
+              "s2-3"
+            ],
+            "duration_seconds": 14,
+            "references": [
+              {
+                "n": 1,
+                "role": "MIRI — Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "NIM — Nim character reference"
+              },
+              {
+                "n": 3,
+                "role": "TAV — Tav character reference (no image provided; small boy with dust on his cheeks)"
+              },
+              {
+                "n": 4,
+                "role": "LINEN BASKET — linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "SABA's COURTYARD — village exterior scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "Miri and Nim enter the lane",
+                "seconds": 4,
+                "continuity": "",
+                "action": "Miri walks with the linen basket. Nim trots beside her, eyes glued to the hidden cakes.",
+                "dialogue": []
+              },
+              {
+                "title": "Tav calls from the broken cart",
+                "seconds": 4,
+                "continuity": "Miri carries the covered linen basket; Nim remains beside her.",
+                "action": "TAV, a small boy with dust on his cheeks, sits beside a broken toy cart. One wooden wheel has popped off.",
+                "dialogue": [
+                  {
+                    "character": "TAV",
+                    "line": "Miri! Did your mother make cakes?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "Miri shields the basket",
+                "seconds": 3,
+                "continuity": "Tav is still beside the broken toy cart; Nim is still focused on the basket.",
+                "action": "Miri instinctively shields the basket.",
+                "dialogue": [
+                  {
+                    "character": "MIRI",
+                    "line": "Maybe.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "TAV",
+                    "line": "I can smell them.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "NIM",
+                    "line": "A gifted child. Dangerous.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "Tav asks",
+                "seconds": 3,
+                "continuity": "Miri still holds the shielded linen basket; Nim stays close.",
+                "action": "Tav looks hopeful.",
+                "dialogue": [
+                  {
+                    "character": "TAV",
+                    "line": "Could I have one?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "quiet village lane ambience, distant birds, soft footfalls on dust; no music",
+              "sfx": [
+                "basket cloth rustle",
+                "Nim's small trotting steps",
+                "broken cart wood creak"
+              ]
+            },
+            "constraints": [
+              "The linen basket remains covered; the cakes are hidden from view.",
+              "Only Miri, Nim and Tav are active in the scene."
+            ]
+          },
+          {
+            "source": [
+              "s2-4"
+            ],
+            "duration_seconds": 15,
+            "references": [
+              {
+                "n": 1,
+                "role": "MIRI — Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "TAV — Tav character reference (no image provided; small boy with dust on his cheeks)"
+              },
+              {
+                "n": 3,
+                "role": "LINEN BASKET — linen basket prop reference"
+              },
+              {
+                "n": 4,
+                "role": "SABA's COURTYARD — village exterior scene reference"
+              }
+            ],
+            "scene_image": 4,
+            "shot_details": [
+              {
+                "title": "Miri hesitates",
+                "seconds": 4,
+                "continuity": "Miri is holding the covered linen basket near Tav and his broken cart.",
+                "action": "Miri hesitates. Her hand goes to the cloth.",
+                "dialogue": []
+              },
+              {
+                "title": "The imagined cakes diminish",
+                "seconds": 5,
+                "continuity": "The linen basket is still covered in Miri's hands.",
+                "action": "She imagines the three cakes becoming two. Two becoming one.",
+                "dialogue": []
+              },
+              {
+                "title": "Miri chooses the errand",
+                "seconds": 6,
+                "continuity": "Tav remains beside the broken toy cart; Miri's hand is still near the cloth.",
+                "action": "One becoming none.",
+                "dialogue": [
+                  {
+                    "character": "MIRI",
+                    "line": "I… have to take these to Saba.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "TAV",
+                    "line": "The cakes?",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "The linen.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "TAV",
+                    "line": "Oh.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "quiet village lane ambience, distant birds, soft wind through cloth; no music",
+              "sfx": [
+                "faint basket cloth touch",
+                "soft imagined cake-counting beats",
+                "small wooden cart wobble"
+              ]
+            },
+            "constraints": [
+              "The imagined three cakes becoming two, one, and none is a brief thought image, separate from the real covered basket.",
+              "The real cakes stay hidden under the cloth."
+            ]
+          },
+          {
+            "source": [
+              "s2-5",
+              "s2-6"
+            ],
+            "duration_seconds": 13,
+            "references": [
+              {
+                "n": 1,
+                "role": "MIRI — Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "NIM — Nim character reference"
+              },
+              {
+                "n": 3,
+                "role": "TAV — Tav character reference (no image provided; small boy with dust on his cheeks)"
+              },
+              {
+                "n": 4,
+                "role": "LINEN BASKET — linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "SABA's COURTYARD — village exterior scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "Miri pushes past guilt",
+                "seconds": 4,
+                "continuity": "Miri is still near Tav with the covered linen basket.",
+                "action": "Miri looks down, feeling a pinch of guilt, but she pushes past it.",
+                "dialogue": [
+                  {
+                    "character": "MIRI",
+                    "line": "Maybe later.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              },
+              {
+                "title": "Tav returns as Miri leaves",
+                "seconds": 9,
+                "continuity": "Tav remains by the broken cart; Miri still carries the covered linen basket; Nim stays close to Miri.",
+                "action": "Tav nods, disappointed, and returns to his broken cart.\nMiri hurries away. Nim follows.",
+                "dialogue": [
+                  {
+                    "character": "NIM",
+                    "line": "A difficult moment. Very brave of us to continue carrying the cakes.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "MIRI",
+                    "line": "I heard that.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  },
+                  {
+                    "character": "NIM",
+                    "line": "I intended you to. I am supporting the mission.",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "quiet village lane ambience, receding footsteps in dust, distant household sounds; no music",
+              "sfx": [
+                "small wooden cart clatter",
+                "basket cloth shift",
+                "Nim's quick steps"
+              ]
+            },
+            "constraints": [
+              "Tav's cart remains visibly broken with one wheel off.",
+              "Miri keeps possession of the covered linen basket throughout the clip."
+            ]
+          },
+          {
+            "source": [
+              "s2-7"
+            ],
+            "duration_seconds": 12,
+            "references": [
+              {
+                "n": 1,
+                "role": "MIRI — Miri character reference"
+              },
+              {
+                "n": 2,
+                "role": "NIM — Nim character reference"
+              },
+              {
+                "n": 3,
+                "role": "TAV — Tav character reference (no image provided; small boy with dust on his cheeks)"
+              },
+              {
+                "n": 4,
+                "role": "LINEN BASKET — linen basket prop reference"
+              },
+              {
+                "n": 5,
+                "role": "SABA's COURTYARD — village exterior scene reference"
+              }
+            ],
+            "scene_image": 5,
+            "shot_details": [
+              {
+                "title": "Miri looks back",
+                "seconds": 4,
+                "continuity": "Miri and Nim are walking away; Tav remains behind at the broken cart.",
+                "action": "Miri glances back at Tav. His little cart wobbles, wheel still off.",
+                "dialogue": []
+              },
+              {
+                "title": "Miri keeps going",
+                "seconds": 3,
+                "continuity": "Miri still carries the covered linen basket; Nim remains with her.",
+                "action": "She keeps walking.",
+                "dialogue": []
+              },
+              {
+                "title": "Main titles",
+                "seconds": 5,
+                "continuity": "",
+                "action": "MAIN TITLES\nA warm, painted title card unfurls like parchment.\nLITTLE WITNESSES “THE SMALLEST LUNCH”\nACT ONE",
+                "dialogue": []
+              }
+            ],
+            "audio": {
+              "ambience": "village lane ambience that gives way to soft parchment movement; no music",
+              "sfx": [
+                "little cart wobble",
+                "soft footsteps receding",
+                "parchment unfurl"
+              ]
+            },
+            "constraints": [
+              "The title text reads exactly: LITTLE WITNESSES “THE SMALLEST LUNCH” ACT ONE.",
+              "The title card unfurls like parchment without adding extra words or logos."
+            ]
+          }
+        ]
+      },
+      "clips": [
+        {
+          "id": "clip-09",
+          "scene": "EXT. VILLAGE LANE — MOMENTS LATER",
+          "scene_number": 2,
+          "source": [
+            "s2-1",
+            "s2-2",
+            "s2-3"
+          ],
+          "duration_seconds": 14,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 14,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "MIRI — Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "NIM — Nim character reference"
+            },
+            {
+              "n": 3,
+              "role": "TAV — Tav character reference (no image provided; small boy with dust on his cheeks)"
+            },
+            {
+              "n": 4,
+              "role": "LINEN BASKET — linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "SABA's COURTYARD — village exterior scene reference"
+            }
+          ],
+          "scene_setting": "EXT. VILLAGE LANE — MOMENTS LATER (@Image 5)",
+          "shot_details": [
+            {
+              "title": "Miri and Nim enter the lane",
+              "seconds": 4,
+              "continuity": "",
+              "action": "Miri walks with the linen basket. Nim trots beside her, eyes glued to the hidden cakes.",
+              "dialogue": []
+            },
+            {
+              "title": "Tav calls from the broken cart",
+              "seconds": 4,
+              "continuity": "Miri carries the covered linen basket; Nim remains beside her.",
+              "action": "TAV, a small boy with dust on his cheeks, sits beside a broken toy cart. One wooden wheel has popped off.",
+              "dialogue": [
+                {
+                  "character": "TAV",
+                  "line": "Miri! Did your mother make cakes?",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "Miri shields the basket",
+              "seconds": 3,
+              "continuity": "Tav is still beside the broken toy cart; Nim is still focused on the basket.",
+              "action": "Miri instinctively shields the basket.",
+              "dialogue": [
+                {
+                  "character": "MIRI",
+                  "line": "Maybe.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "TAV",
+                  "line": "I can smell them.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "NIM",
+                  "line": "A gifted child. Dangerous.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "Tav asks",
+              "seconds": 3,
+              "continuity": "Miri still holds the shielded linen basket; Nim stays close.",
+              "action": "Tav looks hopeful.",
+              "dialogue": [
+                {
+                  "character": "TAV",
+                  "line": "Could I have one?",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "quiet village lane ambience, distant birds, soft footfalls on dust; no music",
+            "sfx": [
+              "basket cloth rustle",
+              "Nim's small trotting steps",
+              "broken cart wood creak"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "The linen basket remains covered; the cakes are hidden from view.",
+            "Only Miri, Nim and Tav are active in the scene."
+          ],
+          "continuity": {
+            "mode": "new_scene",
+            "previous_clip": "clip-08"
+          }
+        },
+        {
+          "id": "clip-10",
+          "scene": "EXT. VILLAGE LANE — MOMENTS LATER",
+          "scene_number": 2,
+          "source": [
+            "s2-4"
+          ],
+          "duration_seconds": 15,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 15,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "MIRI — Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "TAV — Tav character reference (no image provided; small boy with dust on his cheeks)"
+            },
+            {
+              "n": 3,
+              "role": "LINEN BASKET — linen basket prop reference"
+            },
+            {
+              "n": 4,
+              "role": "SABA's COURTYARD — village exterior scene reference"
+            },
+            {
+              "n": 5,
+              "role": "last frame of clip-09 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. VILLAGE LANE — MOMENTS LATER (@Image 4)",
+          "shot_details": [
+            {
+              "title": "Miri hesitates",
+              "seconds": 4,
+              "continuity": "Continue the same moment from @Image 5: keep the lighting, positions, props, and character appearance exactly as in that frame; Miri is holding the covered linen basket near Tav and his broken cart.",
+              "action": "Miri hesitates. Her hand goes to the cloth.",
+              "dialogue": []
+            },
+            {
+              "title": "The imagined cakes diminish",
+              "seconds": 5,
+              "continuity": "The linen basket is still covered in Miri's hands.",
+              "action": "She imagines the three cakes becoming two. Two becoming one.",
+              "dialogue": []
+            },
+            {
+              "title": "Miri chooses the errand",
+              "seconds": 6,
+              "continuity": "Tav remains beside the broken toy cart; Miri's hand is still near the cloth.",
+              "action": "One becoming none.",
+              "dialogue": [
+                {
+                  "character": "MIRI",
+                  "line": "I… have to take these to Saba.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "TAV",
+                  "line": "The cakes?",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "The linen.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "TAV",
+                  "line": "Oh.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "quiet village lane ambience, distant birds, soft wind through cloth; no music",
+            "sfx": [
+              "faint basket cloth touch",
+              "soft imagined cake-counting beats",
+              "small wooden cart wobble"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 5",
+            "The imagined three cakes becoming two, one, and none is a brief thought image, separate from the real covered basket.",
+            "The real cakes stay hidden under the cloth."
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-09",
+            "handoff_image": 5
+          }
+        },
+        {
+          "id": "clip-11",
+          "scene": "EXT. VILLAGE LANE — MOMENTS LATER",
+          "scene_number": 2,
+          "source": [
+            "s2-5",
+            "s2-6"
+          ],
+          "duration_seconds": 13,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 13,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "MIRI — Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "NIM — Nim character reference"
+            },
+            {
+              "n": 3,
+              "role": "TAV — Tav character reference (no image provided; small boy with dust on his cheeks)"
+            },
+            {
+              "n": 4,
+              "role": "LINEN BASKET — linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "SABA's COURTYARD — village exterior scene reference"
+            },
+            {
+              "n": 6,
+              "role": "last frame of clip-10 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. VILLAGE LANE — MOMENTS LATER (@Image 5)",
+          "shot_details": [
+            {
+              "title": "Miri pushes past guilt",
+              "seconds": 4,
+              "continuity": "Continue the same moment from @Image 6: keep the lighting, positions, props, and character appearance exactly as in that frame; Miri is still near Tav with the covered linen basket.",
+              "action": "Miri looks down, feeling a pinch of guilt, but she pushes past it.",
+              "dialogue": [
+                {
+                  "character": "MIRI",
+                  "line": "Maybe later.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            },
+            {
+              "title": "Tav returns as Miri leaves",
+              "seconds": 9,
+              "continuity": "Tav remains by the broken cart; Miri still carries the covered linen basket; Nim stays close to Miri.",
+              "action": "Tav nods, disappointed, and returns to his broken cart.\nMiri hurries away. Nim follows.",
+              "dialogue": [
+                {
+                  "character": "NIM",
+                  "line": "A difficult moment. Very brave of us to continue carrying the cakes.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "MIRI",
+                  "line": "I heard that.",
+                  "parenthetical": "",
+                  "voice_over": false
+                },
+                {
+                  "character": "NIM",
+                  "line": "I intended you to. I am supporting the mission.",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "quiet village lane ambience, receding footsteps in dust, distant household sounds; no music",
+            "sfx": [
+              "small wooden cart clatter",
+              "basket cloth shift",
+              "Nim's quick steps"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 6",
+            "Tav's cart remains visibly broken with one wheel off.",
+            "Miri keeps possession of the covered linen basket throughout the clip."
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-10",
+            "handoff_image": 6
+          }
+        },
+        {
+          "id": "clip-12",
+          "scene": "EXT. VILLAGE LANE — MOMENTS LATER",
+          "scene_number": 2,
+          "source": [
+            "s2-7"
+          ],
+          "duration_seconds": 12,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 12,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "MIRI — Miri character reference"
+            },
+            {
+              "n": 2,
+              "role": "NIM — Nim character reference"
+            },
+            {
+              "n": 3,
+              "role": "TAV — Tav character reference (no image provided; small boy with dust on his cheeks)"
+            },
+            {
+              "n": 4,
+              "role": "LINEN BASKET — linen basket prop reference"
+            },
+            {
+              "n": 5,
+              "role": "SABA's COURTYARD — village exterior scene reference"
+            },
+            {
+              "n": 6,
+              "role": "last frame of clip-11 (continuity reference)"
+            }
+          ],
+          "scene_setting": "EXT. VILLAGE LANE — MOMENTS LATER (@Image 5)",
+          "shot_details": [
+            {
+              "title": "Miri looks back",
+              "seconds": 4,
+              "continuity": "Continue the same moment from @Image 6: keep the lighting, positions, props, and character appearance exactly as in that frame; Miri and Nim are walking away; Tav remains behind at the broken cart.",
+              "action": "Miri glances back at Tav. His little cart wobbles, wheel still off.",
+              "dialogue": []
+            },
+            {
+              "title": "Miri keeps going",
+              "seconds": 3,
+              "continuity": "Miri still carries the covered linen basket; Nim remains with her.",
+              "action": "She keeps walking.",
+              "dialogue": []
+            },
+            {
+              "title": "Main titles",
+              "seconds": 5,
+              "continuity": "",
+              "action": "MAIN TITLES\nA warm, painted title card unfurls like parchment.\nLITTLE WITNESSES “THE SMALLEST LUNCH”\nACT ONE",
+              "dialogue": []
+            }
+          ],
+          "audio": {
+            "ambience": "village lane ambience that gives way to soft parchment movement; no music",
+            "sfx": [
+              "little cart wobble",
+              "soft footsteps receding",
+              "parchment unfurl"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark",
+            "Match lighting, positions, props, and character appearance to @Image 6",
+            "The title text reads exactly: LITTLE WITNESSES “THE SMALLEST LUNCH” ACT ONE.",
+            "The title card unfurls like parchment without adding extra words or logos."
+          ],
+          "continuity": {
+            "mode": "continue_scene",
+            "previous_clip": "clip-11",
+            "handoff_image": 6
+          }
+        }
+      ]
+    },
+    "3": {
+      "heading": "EXT. SABA ELIOR’S COURTYARD — LATE MORNING",
+      "shots_hash": "9e14ca3278540e02",
+      "problems": [],
+      "reply": {
+        "clips": [
+          {
+            "source": [
+              "s3-1"
+            ],
+            "duration_seconds": 10,
+            "references": [
+              {
+                "n": 1,
+                "role": "Saba character reference"
+              },
+              {
+                "n": 2,
+                "role": "Children group reference"
+              },
+              {
+                "n": 3,
+                "role": "Saba's courtyard scene reference"
+              }
+            ],
+            "scene_image": 3,
+            "shot_details": [
+              {
+                "title": "Saba's sparrow tale beneath the fig tree",
+                "seconds": 10,
+                "continuity": "",
+                "action": "SABA ELIOR sits beneath a fig tree, surrounded by several village children. He is repairing a sandal with one hand and gesturing grandly with the other.",
+                "dialogue": [
+                  {
+                    "character": "SABA",
+                    "line": "And so the little sparrow said to the great camel, “If your knees bend, perhaps your pride may also.”",
+                    "parenthetical": "",
+                    "voice_over": false
+                  }
+                ]
+              }
+            ],
+            "audio": {
+              "ambience": "late morning courtyard ambience, soft breeze through fig leaves, distant village life, quiet children settling and listening",
+              "sfx": [
+                "leather sandal creaks softly as it is repaired",
+                "small hand tools scrape and tug against worn leather",
+                "children shift on the ground with soft cloth rustles"
+              ]
+            },
+            "constraints": []
+          }
+        ]
+      },
+      "clips": [
+        {
+          "id": "clip-13",
+          "scene": "EXT. SABA ELIOR’S COURTYARD — LATE MORNING",
+          "scene_number": 3,
+          "source": [
+            "s3-1"
+          ],
+          "duration_seconds": 10,
+          "api_params": {
+            "model": "dreamina-seedance-2-0-260128",
+            "ratio": "16:9",
+            "duration": 10,
+            "return_last_frame": true
+          },
+          "style": "Warm, stylized 3D storybook animation (feature-film CG), soft global illumination, gentle natural light, rich hand-crafted textures, HD, rich details, heartfelt tone with light comedy",
+          "references": [
+            {
+              "n": 1,
+              "role": "Saba character reference"
+            },
+            {
+              "n": 2,
+              "role": "Children group reference"
+            },
+            {
+              "n": 3,
+              "role": "Saba's courtyard scene reference"
+            }
+          ],
+          "scene_setting": "EXT. SABA ELIOR’S COURTYARD — LATE MORNING (@Image 3)",
+          "shot_details": [
+            {
+              "title": "Saba's sparrow tale beneath the fig tree",
+              "seconds": 10,
+              "continuity": "",
+              "action": "SABA ELIOR sits beneath a fig tree, surrounded by several village children. He is repairing a sandal with one hand and gesturing grandly with the other.",
+              "dialogue": [
+                {
+                  "character": "SABA",
+                  "line": "And so the little sparrow said to the great camel, “If your knees bend, perhaps your pride may also.”",
+                  "parenthetical": "",
+                  "voice_over": false
+                }
+              ]
+            }
+          ],
+          "audio": {
+            "ambience": "late morning courtyard ambience, soft breeze through fig leaves, distant village life, quiet children settling and listening",
+            "sfx": [
+              "leather sandal creaks softly as it is repaired",
+              "small hand tools scrape and tug against worn leather",
+              "children shift on the ground with soft cloth rustles"
+            ]
+          },
+          "constraints": [
+            "One camera move per shot",
+            "Render everything in stylized 3D animation; use the reference images for character design only, not for their 2D drawing style",
+            "Faces and body proportions stay stable without deformation; movements are slow, natural, and smooth, with no stutter or flicker",
+            "Each character appears only once; no duplicate or twin characters",
+            "End on a calm, held frame with no new action in the final second",
+            "Keep it subtitle-free; avoid generating any text or subtitles; do not generate a logo; do not generate a watermark"
+          ],
+          "continuity": {
+            "mode": "new_scene",
+            "previous_clip": "clip-12"
+          }
+        }
+      ]
+    }
+  }
+}

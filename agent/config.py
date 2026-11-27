@@ -19,7 +19,8 @@ CHARACTERS_JSON = DATA_DIR / "characters.json"  # profile_characters
 ASSET_PROMPTS_JSON = DATA_DIR / "asset_prompts.json"  # asset_prompts
 CLIP_PLANS_JSON = DATA_DIR / "clip_plans.json"  # plan_clips checkpoint, after every scene
 CLIP_PROMPTS_JSON = DATA_DIR / "clip_prompts.json"  # direct_prompts checkpoint, after every call
-PROMPT_JSON = DATA_DIR / "prompt.json"  # direct_prompts: every clip with its final prompt
+ENHANCED_PROMPTS_JSON = DATA_DIR / "enhanced_prompts.json"  # enhance_prompts checkpoint
+PROMPT_JSON = DATA_DIR / "prompt.json"  # every clip with its final prompt (after enhancing)
 CURL_JSON = PROJECT_ROOT / "curl" / "curl_commands.json"  # build_curl
 
 # Hosted media, one `NAME : url` per line (see skills/seedance-curl/SKILL.md)
@@ -39,6 +40,7 @@ DIRECTOR_SKILLS: tuple[str, ...] = (
     "acting-system",
     "stylized-3d-film-director",
 )
+ENHANCER_SKILLS: tuple[str, ...] = ("enhancer-prompt",)
 # build_curl is plain code: it follows seedance-curl/SKILL.md and reads the URL
 # files in seedance-curl/references/.
 
@@ -51,6 +53,12 @@ RETRIES = 1
 # direct_prompts writes this many clips of one scene per LLM call; larger
 # scenes are split evenly (10 clips -> 5 + 5).
 DIRECTOR_CLIPS_PER_CALL = 8
+# Run the enhance_prompts node, a second pass over every director prompt.
+# False skips it (no extra LLM calls); build_curl then uses the director prompts.
+ENHANCE_PROMPTS = True
+# enhance_prompts rewrites this many clips per LLM call. Lower than the director's
+# because the reply carries the full rewritten prompts (~1,000 words each).
+ENHANCER_CLIPS_PER_CALL = 4
 
 # --- Project rules -----------------------------------------------------------
 

@@ -13,19 +13,16 @@ How it keeps LLM calls low:
   are unchanged and it still passes the checks.
 """
 
-import json
 import logging
-import math
-import re
-from typing import Any
 
 from agent import config
 from agent.helpers.checkpoints import ProgressFile, fingerprint
-from agent.helpers.clips import clip_speakers
+from agent.helpers.clips import clip_profiles, scene_batches
 from agent.helpers.json_files import write_prompt_json
 from agent.helpers.prompt_repair import prompt_problems, repair_prompt
 from agent.llm import OpenAILLM
-from agent.prompts import director_fix_request, director_request
+from agent.prompts import director_request
+from agent.retry import ask_for_prompts
 from agent.state import Clip, Node, PipelineState, Profile, StateUpdate
 
 log = logging.getLogger("agent")
@@ -36,7 +33,7 @@ def make_direct_prompts(llm: OpenAILLM) -> Node:
         clips = state["clips"]
         characters = state.get("characters", {})
         progress = ProgressFile(config.CLIP_PROMPTS_JSON, state["pdf_path"], key="clips")
-        profiles = {clip["id"]: _profiles_in_clip(clip, characters) for clip in clips}
+        profiles = {clip["id"]: clip_profiles(clip, characters) for clip in clips}
         warnings: list[str] = []
 
         # 1. Reuse saved prompts that still fit.
@@ -55,7 +52,7 @@ def make_direct_prompts(llm: OpenAILLM) -> Node:
             )
 
         # 2. Ask the LLM for the rest, a batch of one scene's clips per call.
-        batches = _batches(todo)
+        batches = scene_batches(todo, config.DIRECTOR_CLIPS_PER_CALL)
         for number, batch in enumerate(batches, start=1):
             log.info(
                 "Director: call %d/%d, %s (%s)",
@@ -119,83 +116,10 @@ def _input_key(clip: Clip, profiles: list[Profile]) -> str:
 # --- One LLM call per batch --------------------------------------------------
 
 
-def _batches(clips: list[Clip]) -> list[list[Clip]]:
-    """Consecutive clips of the same scene, split evenly into batches of at most
-    DIRECTOR_CLIPS_PER_CALL (with 8: 10 clips -> 5 + 5)."""
-    scenes: list[list[Clip]] = []
-    for clip in clips:
-        if scenes and scenes[-1][0].get("scene_number") == clip.get("scene_number"):
-            scenes[-1].append(clip)
-        else:
-            scenes.append([clip])
-
-    batches = []
-    limit = max(1, config.DIRECTOR_CLIPS_PER_CALL)
-    for scene_clips in scenes:
-        size = math.ceil(len(scene_clips) / math.ceil(len(scene_clips) / limit))
-        batches += [scene_clips[i : i + size] for i in range(0, len(scene_clips), size)]
-    return batches
-
-
 def _direct_batch(
     llm: OpenAILLM, batch: list[Clip], profiles: dict[str, list[Profile]]
 ) -> dict[str, tuple[str, list[str]]]:
-    """{clip id: (prompt, problems left)} for one batch of clips.
-
-    One LLM call writes every prompt; each retry asks again only for the clips
-    whose prompts still fail the checks.
-    """
-    by_id = {clip["id"]: clip for clip in batch}
+    """{clip id: (prompt, problems left)} for one batch of one scene's clips."""
     batch_profiles = list({p["name"]: p for c in batch for p in profiles[c["id"]]}.values())
     request = director_request(batch, batch_profiles, config.STYLE_LINE)
-    messages = [{"role": "user", "content": request}]
-
-    prompts: dict[str, str] = {}
-    problems: dict[str, list[str]] = {}
-    asking_for = list(by_id)
-    retries_left = config.RETRIES
-
-    while True:
-        reply = llm.chat_json(messages)
-        for clip_id in asking_for:
-            clip, clip_profiles = by_id[clip_id], profiles[clip_id]
-            text = _returned_prompt(reply, clip_id)
-            if text:  # a clip left out of a retry keeps its earlier prompt
-                prompts[clip_id] = repair_prompt(text, clip, clip_profiles)
-            problems[clip_id] = prompt_problems(prompts.get(clip_id, ""), clip)
-
-        failing = {clip_id: found for clip_id, found in problems.items() if found}
-        if not failing or retries_left == 0:
-            return {clip_id: (prompts.get(clip_id, ""), problems[clip_id]) for clip_id in by_id}
-
-        retries_left -= 1
-        log.info("  %d clip(s) with problems; asking again for those only", len(failing))
-        messages += [
-            {"role": "assistant", "content": json.dumps(reply, ensure_ascii=False)},
-            {"role": "user", "content": director_fix_request(failing)},
-        ]
-        asking_for = list(failing)
-
-
-def _returned_prompt(reply: dict[str, Any], clip_id: str) -> str:
-    """The prompt the reply holds for this clip, stripped; "" if it has none."""
-    returned = reply.get("prompts")
-    text = returned.get(clip_id) if isinstance(returned, dict) else None
-    return text.strip() if isinstance(text, str) else ""
-
-
-# --- Acting profiles ---------------------------------------------------------
-
-
-def _profiles_in_clip(clip: Clip, characters: dict[str, Profile]) -> list[Profile]:
-    """Profiles of the characters who speak in the clip or are named in it."""
-    text = " ".join(
-        [r["role"] for r in clip["references"]]
-        + [shot.get("action", "") for shot in clip["shot_details"]]
-    ).lower()
-    speakers = set(clip_speakers(clip))
-    return [
-        profile
-        for name, profile in characters.items()
-        if name in speakers or re.search(rf"\b{re.escape(name.lower())}\b", text)
-    ]
+    return ask_for_prompts(llm, request, batch, profiles)

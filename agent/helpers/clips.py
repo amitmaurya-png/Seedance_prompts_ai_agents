@@ -8,14 +8,17 @@ shots into clips; everything below then makes those clips consistent:
                       and the hand-off from the previous clip's last frame
     clip_speakers     who speaks in a clip
     clip_lines        what they say
+    clip_profiles     the acting profiles of the characters in a clip
+    scene_batches     one scene's clips, split evenly for one LLM call each
 """
 
 import copy
+import math
 import re
 from typing import Any
 
 from agent import config
-from agent.state import Clip, Scene
+from agent.state import Clip, Profile, Scene
 
 MIN_SECONDS, MAX_SECONDS = 4, 15  # Seedance 2.0 clip length
 MAX_SHOTS = 4  # stylized-3d-film-director: at most 4 shots per generation
@@ -50,6 +53,41 @@ def clip_lines(clip: Clip) -> list[str]:
 
 def _dialogue(clip: Clip) -> list[dict[str, Any]]:
     return [line for shot in clip.get("shot_details", []) for line in shot.get("dialogue", [])]
+
+
+def clip_profiles(clip: Clip, characters: dict[str, Profile]) -> list[Profile]:
+    """Profiles of the characters who speak in the clip or are named in it."""
+    text = " ".join(
+        [r["role"] for r in clip["references"]]
+        + [shot.get("action", "") for shot in clip["shot_details"]]
+    ).lower()
+    speakers = set(clip_speakers(clip))
+    return [
+        profile
+        for name, profile in characters.items()
+        if name in speakers or re.search(rf"\b{re.escape(name.lower())}\b", text)
+    ]
+
+
+# --- Batches -----------------------------------------------------------------
+
+
+def scene_batches(clips: list[Clip], limit: int) -> list[list[Clip]]:
+    """Consecutive clips of the same scene, split evenly into batches of at most
+    `limit` (with 8: 10 clips -> 5 + 5)."""
+    scenes: list[list[Clip]] = []
+    for clip in clips:
+        if scenes and scenes[-1][0].get("scene_number") == clip.get("scene_number"):
+            scenes[-1].append(clip)
+        else:
+            scenes.append([clip])
+
+    batches = []
+    limit = max(1, limit)
+    for scene_clips in scenes:
+        size = math.ceil(len(scene_clips) / math.ceil(len(scene_clips) / limit))
+        batches += [scene_clips[i : i + size] for i in range(0, len(scene_clips), size)]
+    return batches
 
 
 # --- Durations ---------------------------------------------------------------

@@ -1,7 +1,9 @@
 """Graph wiring:
 
 START -> load_skit -> extract_breakdown -> profile_characters -> asset_prompts
-      -> plan_clips -> direct_prompts -> build_curl -> END
+      -> plan_clips -> direct_prompts -> enhance_prompts -> build_curl -> END
+
+enhance_prompts is left out when ENHANCE_PROMPTS is False in agent/config.py.
 """
 
 from langgraph.graph import END, START, StateGraph
@@ -16,6 +18,7 @@ from agent.nodes import (
     load_skit,
     make_asset_prompts,
     make_direct_prompts,
+    make_enhance_prompts,
     make_extract_breakdown,
     make_plan_clips,
     make_profile_characters,
@@ -36,6 +39,7 @@ def build_graph(client: OpenAI | None = None) -> CompiledStateGraph:
     asset_llm = llm(prompts.ASSET_SYSTEM, config.ASSET_SKILLS)
     plan_llm = llm(prompts.PLAN_SYSTEM, config.PLAN_SKILLS)
     director_llm = llm(prompts.DIRECTOR_SYSTEM, config.DIRECTOR_SKILLS)
+    enhancer_llm = llm(prompts.ENHANCER_SYSTEM, config.ENHANCER_SKILLS)
 
     # Nodes in run order.
     pipeline = [
@@ -45,8 +49,11 @@ def build_graph(client: OpenAI | None = None) -> CompiledStateGraph:
         ("asset_prompts", make_asset_prompts(asset_llm)),
         ("plan_clips", make_plan_clips(plan_llm)),
         ("direct_prompts", make_direct_prompts(director_llm)),
+        ("enhance_prompts", make_enhance_prompts(enhancer_llm)),
         ("build_curl", build_curl),
     ]
+    if not config.ENHANCE_PROMPTS:
+        pipeline = [(name, node) for name, node in pipeline if name != "enhance_prompts"]
 
     graph = StateGraph(PipelineState)
     for name, node in pipeline:

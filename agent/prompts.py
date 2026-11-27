@@ -239,8 +239,72 @@ Plan:
 {json.dumps(brief, ensure_ascii=False, indent=1)}"""
 
 
-def director_fix_request(problems: dict[str, list[str]]) -> str:
-    """Ask again only for the clips whose prompts failed a check."""
+# --- enhance_prompts ---------------------------------------------------------
+
+ENHANCER_SYSTEM = (
+    "You are the prompt enhancer for a stylised 3D animated film made with Seedance "
+    "2.0. You receive finished director prompts and rewrite each one following the "
+    "enhancer-prompt skill: replace vague wording with deterministic locks (entities, "
+    "screen geography, first frame, shot timing, FOV and camera speed, prop states, "
+    "eye-lines, physics, lighting, timestamped audio) and finish with its credibility "
+    "lint. You sharpen the prompt; you never change the story. " + UNATTENDED
+)
+
+
+def enhancer_request(clips: list[dict[str, Any]], style_line: str) -> str:
+    """One request to enhance several finished prompts of the same scene."""
+    sections = "\n\n".join(_enhance_section(clip) for clip in clips)
+    ids = ", ".join(clip["id"] for clip in clips)
+    return f"""Enhance the Seedance 2.0 prompt of each of these clips of one scene: {ids}.
+
+Apply the enhancer-prompt skill, with these project rules taking priority over it:
+- Each prompt is sent to Seedance on its own, so each must stay complete and stand alone. Skill 02 (scene inheritance) does not apply: keep the STYLE, ACTIVE REFERENCES, LOCATION MAP, LIGHTING and AUDIO blocks inside every prompt, never replace them with IDs like char_miri, and never refer to another clip.
+- The numbers in the skill (4200K, frame-right sun, 15% haze ...) are examples. Keep the directions, positions and lighting this prompt already sets, and make them exact; never contradict them.
+- Story: add no new characters, actions, props or lines. Only sharpen what is there.
+- Shots: keep the same shots, in the same order, with the same seconds; the total stays the clip's duration. You may add exact second offsets inside a shot.
+- Dialogue: every listed line word for word, in order, by its speaker; no other speech or narration. The skill-11 format `2.7s — SPEAKER (delivery): "Exact words."` is welcome.
+- References: use only the clip's own @Image tags, unchanged; no @Audio or @Video tags. If a reference is the last frame of the previous clip, the clip still opens exactly on it.
+- Style block, word for word: {style_line}
+- AUDIO keeps its "- Voices:" line, each speaker's voice text word for word, and exactly one "no background music" line (no score cues).
+- Keep the meaning of every constraint already in the prompt; end with POSITIVE LOCKS and NEGATIVE / AVOID blocks (skill 12).
+
+The clips:
+
+{sections}
+
+Reply with JSON, one enhanced prompt per clip id:
+{{"prompts": {{"{clips[0]["id"]}": "SCENE CONTEXT\\n..."}}}}"""
+
+
+def _enhance_section(clip: dict[str, Any]) -> str:
+    references = "\n".join(f"  - @Image {r['n']}: {r['role']}" for r in clip["references"])
+    shots = "\n".join(
+        f"  {number}. {shot.get('title', '')} ({shot.get('seconds')} s)"
+        for number, shot in enumerate(clip["shot_details"], start=1)
+    )
+    dialogue = (
+        "\n".join(
+            f"  - {line.get('character')}: {line['line']}"
+            for shot in clip["shot_details"]
+            for line in shot.get("dialogue", [])
+        )
+        or "  - none (no one speaks in this clip)"
+    )
+    return f"""=== {clip["id"]} ({clip["duration_seconds"]} s)
+Reference images:
+{references}
+Shots:
+{shots}
+Spoken lines, in order:
+{dialogue}
+Prompt to enhance:
+\"\"\"
+{clip["prompt"]}
+\"\"\""""
+
+
+def prompts_fix_request(problems: dict[str, list[str]]) -> str:
+    """Ask again only for the clips whose prompts failed a check (director and enhancer)."""
     listed = "\n".join(
         f"{clip_id}:\n" + "\n".join(f"- {p}" for p in found) for clip_id, found in problems.items()
     )

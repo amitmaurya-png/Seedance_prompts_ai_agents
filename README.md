@@ -19,7 +19,7 @@ For a cheap first run, set `MAX_SCENES = 1` in [agent/config.py](agent/config.py
 ## The pipeline
 
 ```
-load_skit → extract_breakdown → profile_characters → asset_prompts → plan_clips → direct_prompts → build_curl
+load_skit → extract_breakdown → profile_characters → asset_prompts → plan_clips → direct_prompts → enhance_prompts → build_curl
 ```
 
 | Node | Kind | Skills | Writes |
@@ -30,6 +30,7 @@ load_skit → extract_breakdown → profile_characters → asset_prompts → pla
 | `asset_prompts` | LLM, 1 call | lira-image-prompts, stylized-3d-film-director | `data/asset_prompts.json`: image prompts for character sheets and location plates |
 | `plan_clips` | LLM, 1 call per scene | stylized-3d-film-director | clips of 4–15 s and 1–4 shots (checkpoint: `data/clip_plans.json`) |
 | `direct_prompts` | LLM, 1 call per scene (up to 8 clips) | cinedance-director, acting-system, stylized-3d-film-director | `data/prompt.json`: each clip's final prompt (checkpoint: `data/clip_prompts.json`) |
+| `enhance_prompts` | LLM, 1 call per scene (up to 4 clips) | enhancer-prompt | `data/prompt.json` again, with each prompt sharpened: FOV, camera speed, timestamps, prop states, lighting locks (checkpoint: `data/enhanced_prompts.json`). A clip whose enhanced prompt fails the checks keeps its director prompt. |
 | `build_curl` | code | follows seedance-curl | `curl/curl_commands.json`: one Seedance API request per clip |
 
 Each LLM reply is checked in code: dialogue and actions copied word for word, clip lengths, reference tags, the locked style line. Problems that code can fix are fixed in code; the rest are sent back to the LLM once (`RETRIES`). Anything still wrong is printed as a warning at the end; the run doesn't stop.
@@ -39,7 +40,7 @@ Each LLM reply is checked in code: dialogue and actions copied word for word, cl
 Every LLM step saves its output and reuses it on the next run when its input hasn't changed:
 
 - `breakdown.json`, `characters.json` and `asset_prompts.json` are reused whole when they cover this run's scenes and characters.
-- `clip_plans.json` and `clip_prompts.json` are written after every LLM call and reused scene by scene and clip by clip, so a crashed run resumes where it stopped.
+- `clip_plans.json`, `clip_prompts.json` and `enhanced_prompts.json` are written after every LLM call and reused scene by scene and clip by clip, so a crashed run resumes where it stopped.
 
 To redo a step, delete its file. Earlier versions of every output are kept in `data/backups/`.
 
@@ -86,6 +87,8 @@ ruff check --fix .     # sort imports, modernize syntax, catch mistakes
 | `MAX_SCENES` | Process only the first N scenes (None = all) |
 | `RETRIES` | How often a reply that fails its checks is sent back to the LLM |
 | `DIRECTOR_CLIPS_PER_CALL` | Clips per director call; lower it if replies get cut off |
+| `ENHANCE_PROMPTS` | Run the enhance_prompts pass (False skips it and its LLM calls) |
+| `ENHANCER_CLIPS_PER_CALL` | Clips per enhancer call |
 | `*_SKILLS` | Which skills each LLM node loads |
 | `STYLE_LINE`, `BASE_CONSTRAINTS` | The film's locked style and the rules every clip carries |
 | `SEEDANCE` | Seedance model, ratio, resolution and other API settings |

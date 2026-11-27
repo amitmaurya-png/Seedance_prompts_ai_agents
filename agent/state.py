@@ -30,7 +30,7 @@ class PipelineState(TypedDict, total=False):
     characters: dict[str, Profile]
     # asset_prompts: [{"name", "kind", "model", "platform_settings", "prompt", "notes"}]
     asset_prompts: list[dict[str, Any]]
-    # plan_clips -> direct_prompts: the clips of data/prompt.json
+    # plan_clips -> direct_prompts -> enhance_prompts: the clips of data/prompt.json
     clips: list[Clip]
     # build_curl: {"clips": {clip id: {...}}}
     curl_commands: dict[str, Any]

@@ -1,4 +1,4 @@
-"""Node 7 (code, follows skill: seedance-curl): clips -> curl/curl_commands.json."""
+"""Node 8 (code, follows skill: seedance-curl): clips -> curl/curl_commands.json."""
 
 import logging
 
